@@ -1,6 +1,5 @@
 import Header from "@/components/mobile/Header";
 import Home from "@/components/mobile/Home";
-import Image from "next/image";
 
 export default function page() {
   return (
