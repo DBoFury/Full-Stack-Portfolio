@@ -23,7 +23,8 @@ module.exports = {
         "battleship-gray": "#8E8D89",
       },
       backgroundImage: {
-        "photo-mobile-back": "url('/figures/mobile/PhotoBg.png')",
+        "photo-mobile-back":
+          "url('/Full-Stack-Portfolio/figures/mobile/PhotoBg.png')",
       },
       keyframes: {
         "accordion-down": {
