@@ -1,8 +1,10 @@
-const Home = () => {
+const HeroMobile = () => {
   return (
-    <div className="relative flex flex-col items-center justify-center w-full pt-8 overflow-x-clip">
-      <div className="z-0 absolute w-[400px] h-[300px] bg-no-repeat bg-contain top-0 left-10 bg-photo-mobile-back" />
-      <div className="z-10 rounded-full w-[260px] h-[260px] bg-white"></div>
+    <div className="flex flex-col items-center justify-center w-full pt-8 overflow-x-clip">
+      <div className="relative">
+        <div className="z-[-1] absolute -inset-x-5 -inset-y-8 w-[400px] h-[300px] bg-no-repeat bg-contain bg-photo-mobile-back" />
+        <div className="rounded-full w-[260px] h-[260px] bg-white" />
+      </div>
 
       <div className="px-8 pt-5">
         <h2 className="text-5xl font-bold text-center text-pine-green">
@@ -18,4 +20,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HeroMobile;

@@ -1,8 +1,8 @@
 import Link from "next/link";
 
-const Header = () => {
+const HeaderMobile = () => {
   return (
-    <header className="">
+    <header className="self-start">
       <nav>
         <Link href="/" className="w-fit">
           <h1 className="p-3 text-5xl font-medium uppercase w-fit text-pine-green">
@@ -14,4 +14,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default HeaderMobile;

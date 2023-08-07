@@ -2,7 +2,10 @@ import type { Metadata } from "next";
 import { Work_Sans } from "next/font/google";
 import "./globals.css";
 
-const inter = Work_Sans({ subsets: ["latin"] });
+const work_sans = Work_Sans({
+  subsets: ["latin"],
+  style: ["normal", "italic"],
+});
 
 export const metadata: Metadata = {
   title: "Oleg D.",
@@ -16,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${work_sans.className}`}>{children}</body>
     </html>
   );
 }
