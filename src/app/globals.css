@@ -19,9 +19,6 @@
 .content {
   height: 100vh;
   overflow: auto;
-  overflow-x: hidden;
-  -ms-scroll-snap-type: y mandatory;
-  scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
 }
 
@@ -29,27 +26,9 @@
   z-index: 0;
   height: 100vh;
   width: 100vw;
-  scroll-snap-align: center;
   position: relative;
-}
-
-@keyframes scroll {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-100%);
-  }
 }
 
 .soft-skills-animation {
   @apply -translate-y-[1.5rem] opacity-0 duration-1000 animate-out slide-in-from-top-0 fade-in-100 fill-mode-forwards;
-}
-
-.duration-1500 {
-  animation-duration: 1500ms;
-}
-
-.delay-1400 {
-  animation-delay: 1400ms;
 }

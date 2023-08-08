@@ -9,30 +9,60 @@ import Contact from "@/components/desktop/Contact";
 import ScrollFooter from "@/components/desktop/ScrollFooter";
 
 const Desktop = () => {
-  const [isScrolling, setIsScrolling] = useState<boolean>(false);
+  const [chunkSize, setChunkSize] = useState(0);
+  const [currentChunk, setCurrentChunk] = useState(0);
+  const [isScrolling, setIsScrolling] = useState(false);
 
-  useEffect(() => {
-    const onScroll = (event: WheelEvent) => {
-      if (isScrolling) return;
+  const handleWheel = (event: WheelEvent) => {
+    event.preventDefault();
 
-      event.preventDefault();
-      const delta = event.deltaY;
+    if (isScrolling) {
+      return;
+    }
 
-      const container = document.querySelector(".content") as HTMLElement;
-
-      container.scrollBy({
-        top: delta,
-        behavior: "smooth",
-      });
-
-      setTimeout(() => setIsScrolling(false), 1000);
-    };
+    setIsScrolling(true);
 
     const container = document.querySelector(".content") as HTMLElement;
-    container.addEventListener("wheel", onScroll);
+    const maxChunks = Math.ceil(container.scrollHeight / chunkSize) - 1;
+
+    if (event.deltaY > 0) {
+      scrollToNextChunk(container, maxChunks);
+    } else if (event.deltaY < 0) {
+      scrollToPreviousChunk(container);
+    }
+  };
+
+  const scrollToNextChunk = (container: HTMLElement, maxChunks: number) => {
+    const nextChunk = currentChunk + 1;
+    if (nextChunk <= maxChunks) {
+      setCurrentChunk(nextChunk);
+      container.scrollTo({
+        top: nextChunk * chunkSize,
+        behavior: "smooth",
+      });
+    }
+    setTimeout(() => setIsScrolling(false), 500);
+  };
+
+  const scrollToPreviousChunk = (container: HTMLElement) => {
+    const previousChunk = currentChunk - 1;
+    if (previousChunk >= 0) {
+      setCurrentChunk(previousChunk);
+      container.scrollTo({
+        top: previousChunk * chunkSize,
+        behavior: "smooth",
+      });
+    }
+    setTimeout(() => setIsScrolling(false), 500);
+  };
+
+  useEffect(() => {
+    const container = document.querySelector(".content") as HTMLElement;
+    setChunkSize(window.innerHeight);
+    container.addEventListener("wheel", handleWheel);
 
     return () => {
-      container.removeEventListener("wheel", onScroll);
+      container.removeEventListener("wheel", handleWheel);
     };
   }, []);
 
