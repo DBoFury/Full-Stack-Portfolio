@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const FullStack = () => {
   return (
-    <div className="relative z-0 flex flex-col items-center justify-start w-full h-screen pt-20 space-y-20 overflow-x-clip">
+    <div className="flex flex-col items-center justify-start pt-20 space-y-20 section">
       <div className="absolute bg-no-repeat bg-contain bg-about-3-left top-20 -left-52 w-[28rem] h-[32rem]" />
       <div className="absolute bg-no-repeat bg-contain bg-about-3-right top-[22rem] -right-52 w-[28rem] h-[36rem]" />
       <div className="relative">

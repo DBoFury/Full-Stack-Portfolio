@@ -7,7 +7,7 @@ const DataScience = () => {
   return (
     <div
       id="about"
-      className="z-0 flex flex-col items-center justify-center h-screen mt-5 space-y-16">
+      className="flex flex-col items-center justify-center mt-5 space-y-16 section">
       <h2 className="text-6xl font-bold text-pine-green">About Me</h2>
       <div className="relative">
         <h3 className="absolute w-64 text-4xl italic font-medium text-center -top-8 right-[110%] text-pine-green">

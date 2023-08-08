@@ -5,7 +5,7 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="relative z-0 flex flex-col items-center justify-start w-full h-screen overflow-clip">
+      className="flex flex-col items-center justify-start section overflow-clip">
       <div className="z-[-1] absolute top-20 -left-56 bg-no-repeat bg-contain bg-contact-left w-[26rem] h-[26rem]" />
       <div className="z-[-1] absolute -bottom-80 -right-20 bg-no-repeat bg-contain bg-contact-right w-[32rem] h-[32rem] dt:right-0" />
 

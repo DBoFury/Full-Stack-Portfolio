@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <div
       id="home"
-      className="z-0 flex flex-col items-center justify-center h-screen">
+      className="flex flex-col items-center justify-center section">
       <div className="flex space-x-12 max-w-[78rem] lg:mr-36 dt:mr-56 pt-28">
         <div className="flex flex-col items-end justify-center space-y-4 text-right">
           <h2 className="text-5xl font-bold text-pine-green">

@@ -6,7 +6,7 @@ const First = () => {
   return (
     <div
       id="projects"
-      className="relative z-0 flex flex-col items-center justify-start w-full h-screen px-10 pt-20 space-y-20 overflow-x-clip">
+      className="flex flex-col items-center justify-start px-10 pt-20 space-y-20 section">
       <div className="absolute z-[-1] bg-no-repeat bg-contain bg-project-2 top-96 -left-36 w-72 h-96" />
 
       <div className="flex items-center justify-center space-x-20 dt:space-x-32">

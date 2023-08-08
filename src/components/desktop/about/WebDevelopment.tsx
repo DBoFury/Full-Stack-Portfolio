@@ -5,7 +5,7 @@ import { Separator } from "@/components/ui/separator";
 
 const WebDevelopment = () => {
   return (
-    <div className="relative z-0 flex flex-col items-center justify-center w-full h-screen">
+    <div className="flex flex-col items-center justify-center section">
       <div className="absolute bg-no-repeat bg-contain top-36 -left-36 bg-about-3 w-72 h-[32rem]" />
       <div className="relative">
         <Separator

@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Second = () => {
   return (
-    <div className="relative z-0 flex flex-col items-center justify-start w-full h-screen px-10 space-y-24 pt-44 overflow-x-clip dt:space-y-12 dt:pt-28">
+    <div className="flex flex-col items-center justify-start px-10 space-y-24 section pt-44 dt:space-y-12 dt:pt-28">
       <div className="flex items-center justify-center space-x-20 dt:space-x-32">
         <div className="flex flex-col items-center justify-center space-y-5">
           <div className="flex items-center justify-center space-x-10">
