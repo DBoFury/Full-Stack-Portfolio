@@ -49,24 +49,24 @@ const Hero = () => {
           <TabsContent value="hard" className="h-[210px]">
             <div className="flex flex-col items-center justify-center pt-5">
               <div className="grid items-center grid-cols-3 justify-items-center gap-x-3 gap-y-4 md:grid-cols-6">
-                <Icons.html />
-                <Icons.css />
-                <Icons.js />
-                <Icons.react />
-                <Icons.next />
-                <Icons.tailwindcss />
+                <Icons.html className="duration-1000 animate-in zoom-in" />
+                <Icons.css className="duration-1000 animate-in zoom-in" />
+                <Icons.js className="duration-1000 animate-in zoom-in" />
+                <Icons.react className="duration-1000 animate-in zoom-in" />
+                <Icons.next className="duration-1000 animate-in zoom-in" />
+                <Icons.tailwindcss className="duration-1000 animate-in zoom-in" />
               </div>
 
               <div className="grid items-center grid-cols-3 pt-5 justify-items-center gap-x-4 gap-y-4 max-w-[380px]">
-                <Icons.python className="fill-onyx" />
-                <Icons.node />
-                <Icons.docker />
+                <Icons.python className="duration-1500 animate-in slide-in-from-left" />
+                <Icons.node className="duration-1500 animate-in slide-in-from-left" />
+                <Icons.docker className="duration-1500 animate-in slide-in-from-left" />
               </div>
             </div>
           </TabsContent>
           <TabsContent value="soft" className="h-[210px]">
             <div className="flex flex-col items-center justify-center pt-4 space-y-4">
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-2 soft-skills-animation">
                 <h3 className="text-2xl font-medium text-pine-green">
                   Problem solving
                 </h3>
@@ -77,7 +77,7 @@ const Hero = () => {
                   creative and effective ways to find innovative solutions
                 </p>
               </div>
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-2 delay-700 soft-skills-animation">
                 <p className="pt-[2px] text-left text-onyx text-lg">
                   The ability to analyze situations, evaluate different options
                 </p>
@@ -88,7 +88,7 @@ const Hero = () => {
                   Critical Thinking
                 </h3>
               </div>
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-2 delay-1400 soft-skills-animation">
                 <h3 className="text-2xl font-medium text-pine-green">
                   Adaptability
                 </h3>

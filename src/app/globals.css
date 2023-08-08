@@ -42,15 +42,14 @@
   }
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.soft-skills-animation {
+  @apply -translate-y-[1.5rem] opacity-0 duration-1000 animate-out slide-in-from-top-0 fade-in-100 fill-mode-forwards;
 }
 
-.fade-in {
-  animation: fadeIn 0.5s ease-in-out;
+.duration-1500 {
+  animation-duration: 1500ms;
+}
+
+.delay-1400 {
+  animation-delay: 1400ms;
 }
