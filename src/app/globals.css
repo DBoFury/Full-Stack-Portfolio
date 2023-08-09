@@ -18,7 +18,8 @@
 
 .content {
   height: 100vh;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: clip;
   scroll-behavior: smooth;
 }
 

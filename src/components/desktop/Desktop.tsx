@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Header from "@/components/desktop/Header";
 import Hero from "@/components/desktop/Hero";
 import About from "@/components/desktop/about/About";
@@ -9,60 +9,59 @@ import Contact from "@/components/desktop/Contact";
 import ScrollFooter from "@/components/desktop/ScrollFooter";
 
 const Desktop = () => {
-  const [chunkSize, setChunkSize] = useState(0);
-  const [currentChunk, setCurrentChunk] = useState(0);
-  const [isScrolling, setIsScrolling] = useState(false);
+  const chunkRef = useRef(0);
+  const isScrollingRef = useRef(false);
 
-  const handleWheel = (event: WheelEvent) => {
-    event.preventDefault();
+  const handleScroll = (e: WheelEvent, container: HTMLElement) => {
+    e.preventDefault();
 
-    if (isScrolling) {
+    if (isScrollingRef.current) {
       return;
     }
 
-    setIsScrolling(true);
+    isScrollingRef.current = true;
 
-    const container = document.querySelector(".content") as HTMLElement;
-    const maxChunks = Math.ceil(container.scrollHeight / chunkSize) - 1;
+    const maxChunk =
+      Math.ceil(container.scrollHeight / container.offsetHeight) - 1;
 
-    if (event.deltaY > 0) {
-      scrollToNextChunk(container, maxChunks);
-    } else if (event.deltaY < 0) {
-      scrollToPreviousChunk(container);
+    if (e.deltaY > 0) {
+      const nextChunk = chunkRef.current + 1;
+      if (nextChunk < maxChunk) {
+        chunkRef.current = nextChunk;
+        container.scrollTo({
+          top: nextChunk * container.offsetHeight,
+          behavior: "smooth",
+        });
+        setTimeout(() => {
+          isScrollingRef.current = false;
+        }, 500);
+      }
+    } else {
+      const prevChunk = chunkRef.current - 1;
+      if (prevChunk >= 0) {
+        chunkRef.current = prevChunk;
+        container.scrollTo({
+          top: prevChunk * container.offsetHeight,
+          behavior: "smooth",
+        });
+        setTimeout(() => {
+          isScrollingRef.current = false;
+        }, 500);
+      }
     }
-  };
-
-  const scrollToNextChunk = (container: HTMLElement, maxChunks: number) => {
-    const nextChunk = currentChunk + 1;
-    if (nextChunk <= maxChunks) {
-      setCurrentChunk(nextChunk);
-      container.scrollTo({
-        top: nextChunk * chunkSize,
-        behavior: "smooth",
-      });
-    }
-    setTimeout(() => setIsScrolling(false), 500);
-  };
-
-  const scrollToPreviousChunk = (container: HTMLElement) => {
-    const previousChunk = currentChunk - 1;
-    if (previousChunk >= 0) {
-      setCurrentChunk(previousChunk);
-      container.scrollTo({
-        top: previousChunk * chunkSize,
-        behavior: "smooth",
-      });
-    }
-    setTimeout(() => setIsScrolling(false), 500);
   };
 
   useEffect(() => {
     const container = document.querySelector(".content") as HTMLElement;
-    setChunkSize(window.innerHeight);
-    container.addEventListener("wheel", handleWheel);
+
+    container.addEventListener("wheel", (event: WheelEvent) =>
+      handleScroll(event, container)
+    );
 
     return () => {
-      container.removeEventListener("wheel", handleWheel);
+      container.removeEventListener("wheel", (event: WheelEvent) =>
+        handleScroll(event, container)
+      );
     };
   }, []);
 

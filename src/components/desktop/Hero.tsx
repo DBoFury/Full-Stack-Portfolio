@@ -58,9 +58,9 @@ const Hero = () => {
               </div>
 
               <div className="grid items-center grid-cols-3 pt-5 justify-items-center gap-x-4 gap-y-4 max-w-[380px]">
-                <Icons.python className="duration-1500 animate-in slide-in-from-left" />
-                <Icons.node className="duration-1500 animate-in slide-in-from-left" />
-                <Icons.docker className="duration-1500 animate-in slide-in-from-left" />
+                <Icons.python className="duration-1000 animate-in zoom-in" />
+                <Icons.node className="duration-1000 animate-in zoom-in" />
+                <Icons.docker className="duration-1000 animate-in zoom-in" />
               </div>
             </div>
           </TabsContent>
