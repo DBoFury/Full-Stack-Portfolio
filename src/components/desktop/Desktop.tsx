@@ -1,10 +1,10 @@
 "use client";
 
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useRef } from "react";
 import Header from "@/components/desktop/Header";
 import Hero from "@/components/desktop/Hero";
 import About from "@/components/desktop/about/About";
-import Projects from "@/components/desktop/projects/Projects";
+import Work from "@/components/desktop/work/Work";
 import Contact from "@/components/desktop/Contact";
 import ScrollFooter from "@/components/desktop/ScrollFooter";
 
@@ -15,18 +15,22 @@ const Desktop = () => {
   const handleScroll = (e: WheelEvent, container: HTMLElement) => {
     e.preventDefault();
 
+    console.log(isScrollingRef.current);
+    console.log(chunkRef.current);
+
     if (isScrollingRef.current) {
       return;
     }
 
-    isScrollingRef.current = true;
-
     const maxChunk =
       Math.ceil(container.scrollHeight / container.offsetHeight) - 1;
 
+    console.log(maxChunk);
+
     if (e.deltaY > 0) {
       const nextChunk = chunkRef.current + 1;
-      if (nextChunk < maxChunk) {
+      if (nextChunk <= maxChunk) {
+        isScrollingRef.current = true;
         chunkRef.current = nextChunk;
         container.scrollTo({
           top: nextChunk * container.offsetHeight,
@@ -39,6 +43,7 @@ const Desktop = () => {
     } else {
       const prevChunk = chunkRef.current - 1;
       if (prevChunk >= 0) {
+        isScrollingRef.current = true;
         chunkRef.current = prevChunk;
         container.scrollTo({
           top: prevChunk * container.offsetHeight,
@@ -67,10 +72,10 @@ const Desktop = () => {
 
   return (
     <main className="hidden content lg:block">
-      <Header />
+      <Header chunkRef={chunkRef} />
       <Hero />
       <About />
-      <Projects />
+      <Work />
       <Contact />
       <ScrollFooter />
     </main>

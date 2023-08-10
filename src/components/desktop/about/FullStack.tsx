@@ -1,32 +1,80 @@
 "use client";
 
+import { useEffect, useState } from "react";
+import { useInView } from "react-intersection-observer";
 import { Icons } from "@/components/Icons";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
+import { cn } from "@/lib/utils";
 
 const FullStack = () => {
+  const { ref, inView } = useInView({ threshold: 1 });
+
   return (
-    <div className="flex flex-col items-center justify-start pt-20 space-y-20 section">
+    <div
+      ref={ref}
+      className="flex flex-col items-center justify-start pt-20 space-y-20 section">
       <div className="absolute bg-no-repeat bg-contain bg-about-3-left top-20 -left-52 w-[28rem] h-[32rem]" />
       <div className="absolute bg-no-repeat bg-contain bg-about-3-right top-[22rem] -right-52 w-[28rem] h-[36rem]" />
-      <div className="relative">
+      <div className="relative h-[15vh] dt:mr-20">
         <Separator
-          className="relative w-1 h-[15vh] after:w-6 after:h-6 after:rounded-full after:absolute after:bottom-0 after:left-0 after:-translate-x-[42%] after:translate-y-1/2 after:bg-onyx after:content-[''] bg-onyx"
+          className={cn(
+            "absolute animate-grow-line-vertical duration-700 fill-mode-forwards inset-x-0 -inset-y-5 w-1 h-0 bg-onyx",
+            {
+              paused: !inView,
+              running: inView,
+            }
+          )}
           orientation="vertical"
+          style={{
+            "--line-height": "15vh",
+          }}
         />
-        <h3 className="absolute left-0 text-4xl italic font-medium text-center -translate-x-1/2 w-52 -bottom-16 text-pine-green">
+        <span
+          className={cn(
+            "animate-scale-in duration-700 animate-delay-[500ms] fill-mode-forwards inset-y-[12.5vh] -inset-x-[0.75rem] w-7 h-7 rounded-full absolute bg-onyx",
+            {
+              paused: !inView,
+              running: inView,
+            }
+          )}
+          style={{ scale: 0 }}
+        />
+        <h3
+          className={cn(
+            "animate-scale-in duration-1000 animate-delay-[900ms] fill-mode-forwards absolute left-0 text-4xl italic font-medium text-center w-52 h-10 -inset-x-24 inset-y-[17vh] text-pine-green",
+            {
+              paused: !inView,
+              running: inView,
+            }
+          )}
+          style={{ scale: 0 }}>
           Full-Stack
         </h3>
       </div>
-      <div className="flex flex-col items-center space-y-16">
-        <p className="text-[1.5rem] leading-[150%] pt-3 italic text-center max-w-[44rem] text-onyx">
+      <div className="flex flex-col items-center space-y-16 dt:mr-20">
+        <p
+          className={cn(
+            "animate-fade-down animate-ease-in-out duration-1000 animate-delay-[1500ms] text-[1.5rem] leading-[150%] pt-3 italic text-center max-w-[44rem] text-onyx",
+            {
+              paused: !inView,
+              running: inView,
+            }
+          )}>
           Today, I stand at a crossroads, merging experience with vision.
           Embracing full-stack potential, I've embarked on the Node.js journey.
           I now craft comprehensive applications, seamlessly blending frontend
           and backend expertise, using efficient tools and techniques.
         </p>
-        <div className="flex items-center justify-between w-[24rem]">
+        <div
+          className={cn(
+            "animate-fade-down animate-ease-in-out duration-1000 animate-delay-[1800ms] flex items-center justify-between w-[24rem]",
+            {
+              paused: !inView,
+              running: inView,
+            }
+          )}>
           <Link
             href="https://github.com/DBoFury"
             target="_blank"

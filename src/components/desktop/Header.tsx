@@ -1,6 +1,13 @@
+"use client";
+
+import { FC, MutableRefObject } from "react";
 import Link from "next/link";
 
-const Header = () => {
+interface HeaderProps {
+  chunkRef: MutableRefObject<number>;
+}
+
+const Header: FC<HeaderProps> = ({ chunkRef }) => {
   return (
     <header className="sticky top-0 z-10 w-full h-0 bg-white">
       <nav className="flex items-end justify-between p-3 px-10">
@@ -11,7 +18,7 @@ const Header = () => {
         </Link>
         <ul className="flex mr-6 space-x-5 text-2xl text-pine-green">
           <li>
-            <Link href="#home">
+            <Link href="#home" onClick={() => (chunkRef.current = 0)}>
               <p className="relative group">
                 <span>Home</span>
                 <span className="absolute left-0 w-0 h-1 bg-ruddy-blue -bottom-1 -z-10 group-hover:w-full group-hover:transition-all"></span>
@@ -19,7 +26,7 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link href="#about">
+            <Link href="#about" onClick={() => (chunkRef.current = 1)}>
               <p className="relative group">
                 <span>About</span>
                 <span className="absolute left-0 w-0 h-1 bg-ruddy-blue -bottom-1 -z-10 group-hover:w-full group-hover:transition-all"></span>
@@ -27,15 +34,15 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link href="#projects">
+            <Link href="#work" onClick={() => (chunkRef.current = 4)}>
               <p className="relative group">
-                <span>Projects</span>
+                <span>Work</span>
                 <span className="absolute left-0 w-0 h-1 bg-ruddy-blue -bottom-1 -z-10 group-hover:w-full group-hover:transition-all"></span>
               </p>
             </Link>
           </li>
           <li>
-            <Link href="#contact">
+            <Link href="#contact" onClick={() => (chunkRef.current = 6)}>
               <p className="relative group">
                 <span>Contact</span>
                 <span className="absolute left-0 w-0 h-1 bg-ruddy-blue -bottom-1 -z-10 group-hover:w-full group-hover:transition-all"></span>

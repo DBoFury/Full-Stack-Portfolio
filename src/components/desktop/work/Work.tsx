@@ -1,7 +1,7 @@
 import First from "./First";
 import Second from "./Second";
 
-const Projects = () => {
+const Work = () => {
   return (
     <>
       <First />
@@ -10,4 +10,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default Work;

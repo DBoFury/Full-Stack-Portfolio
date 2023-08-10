@@ -1,52 +1,136 @@
 "use client";
 
+import { useEffect, useState } from "react";
+import { useInView } from "react-intersection-observer";
 import { Icons } from "@/components/Icons";
 import { Separator } from "@/components/ui/separator";
+import { cn } from "@/lib/utils";
 
 const WebDevelopment = () => {
+  const { ref, inView } = useInView({ threshold: 1 });
+
   return (
-    <div className="flex flex-col items-center justify-center section">
+    <div
+      ref={ref}
+      className="flex flex-col items-center justify-center section">
       <div className="absolute bg-no-repeat bg-contain top-36 -left-36 bg-about-3 w-72 h-[32rem]" />
-      <div className="relative">
+      <div className="relative h-[40vh] dt:mr-20">
         <Separator
-          className="mt-6 relative w-1 h-[15vh]  bg-onyx"
+          className={cn(
+            "absolute animate-grow-line-vertical duration-500 fill-mode-forwards inset-x-0 -inset-y-[15vh] w-1 h-0 bg-onyx",
+            {
+              paused: !inView,
+              running: inView,
+            }
+          )}
           orientation="vertical"
+          style={{
+            "--line-height": "15vh",
+          }}
         />
-        <h3 className="absolute w-[22rem] text-4xl italic font-medium text-center top-28 left-5 text-pine-green">
+        <span
+          className={cn(
+            "animate-scale-in duration-700 animate-delay-[300ms] fill-mode-forwards inset-y-0 -inset-x-[0.75rem] w-7 h-7 rounded-full absolute bg-onyx",
+            {
+              paused: !inView,
+              running: inView,
+            }
+          )}
+          style={{ scale: 0 }}
+        />
+        <h3
+          className={cn(
+            "animate-scale-in duration-700 animate-delay-[700ms] fill-mode-forwards absolute w-80 h-10 text-4xl italic font-medium text-center inset-x-6 -inset-y-10 text-pine-green",
+            {
+              paused: !inView,
+              running: inView,
+            }
+          )}
+          style={{ scale: 0 }}>
           Web Development
         </h3>
         <Separator
-          className="relative w-1 h-[57vh] after:w-6 after:h-6 after:rounded-full after:absolute after:top-0 after:left-0 after:-translate-x-[42%] after:-translate-y-1/2 after:bg-onyx after:content-[''] bg-onyx"
+          className={cn(
+            "absolute animate-grow-line-vertical duration-1000 animate-delay-[900ms] fill-mode-forwards inset-0 w-1 h-0 bg-onyx",
+            {
+              paused: !inView,
+              running: inView,
+            }
+          )}
           orientation="vertical"
+          style={{
+            "--line-height": "57vh",
+          }}
         />
-        <div className="absolute inset-y-32 -inset-x-[25.5rem] w-[20rem] h-[22rem] dt:w-[22rem] dt:-inset-x-[29.5rem]">
+        <div className="absolute inset-y-20 -inset-x-[25.5rem] w-[20rem] h-[22rem] dt:w-[22rem] dt:-inset-x-[29.5rem]">
           <div className="relative">
             <Separator
-              className="absolute w-10 top-44 -right-[4rem] bg-battleship-gray"
+              className={cn(
+                "absolute duration-500 animate-delay-[1500ms] animate-grow-line-horizontal fill-mode-forwards w-0 top-44 -right-[5.5rem] bg-battleship-gray",
+                {
+                  paused: !inView,
+                  running: inView,
+                }
+              )}
               orientation="horizontal"
+              style={{
+                "--line-width": "40px",
+              }}
             />
-            <p className="text-[1.6rem] leading-[150%] pt-3 italic text-center text-onyx">
+            <p
+              className={cn(
+                "animate-fade-left animate-delay-[1600ms] animate-ease-in-out text-[1.6rem] leading-[150%] pt-3 italic text-center text-onyx",
+                {
+                  paused: !inView,
+                  running: inView,
+                }
+              )}>
               Transitioning, I immersed myself in web development, powered by
               Python. Guided by Django and Flask frameworks, I sculpted web
               applications, combining functionality and aesthetics seamlessly.
             </p>
           </div>
         </div>
-        <div className="absolute inset-y-96 inset-x-[5.5rem] w-[26rem] h-36">
+        <div className="absolute inset-y-80 inset-x-[5.5rem] w-[26rem] h-36">
           <div className="relative">
             <Separator
-              className="absolute w-10 top-16 -left-[3.5rem] bg-battleship-gray"
+              className={cn(
+                "absolute duration-500 animate-delay-[2200ms] animate-grow-line-horizontal fill-mode-forwards w-0 top-16 -left-[3.5rem] bg-battleship-gray",
+                {
+                  paused: !inView,
+                  running: inView,
+                }
+              )}
               orientation="horizontal"
+              style={{
+                "--line-width": "40px",
+              }}
             />
             <div className="relative flex items-center justify-center p-5 mt-5 space-x-3">
               <Icons.python className="fill-white" />
               <Icons.plus stroke="#FFFFFF" size={60} />
-              <div className="flex items-center justify-center space-x-2">
+              <div
+                className={cn(
+                  "animate-fade-up animate-delay-[2500ms] animate-ease-out flex items-center justify-center space-x-2",
+                  {
+                    paused: !inView,
+                    running: inView,
+                  }
+                )}>
                 <Icons.django />
                 <p className="text-4xl font-semibold text-onyx">/</p>
                 <Icons.flask />
               </div>
-              <div className="z-[-1] absolute -inset-x-4 -inset-y-0 w-[200px] h-[150px] bg-no-repeat bg-contain bg-about-2" />
+              <div
+                className={cn(
+                  "z-[-1] animate-ds-bg-appearance animate-delay-[2200ms] duration-1000 fill-mode-forwards absolute -inset-x-4 -inset-y-0 w-[200px] h-[150px] bg-no-repeat bg-contain bg-about-2",
+                  {
+                    paused: !inView,
+                    running: inView,
+                  }
+                )}
+                style={{ scale: 0 }}
+              />
             </div>
           </div>
         </div>

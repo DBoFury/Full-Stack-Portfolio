@@ -31,8 +31,6 @@ module.exports = {
         "battleship-gray": "#8E8D89",
       },
       backgroundImage: {
-        "photo-back":
-          "url('/Full-Stack-Portfolio/figures/desktop/PhotoBg.png')",
         "about-1": "url('/Full-Stack-Portfolio/figures/desktop/AboutBg 1.png')",
         "about-2": "url('/Full-Stack-Portfolio/figures/desktop/AboutBg 2.png')",
         "about-3": "url('/Full-Stack-Portfolio/figures/desktop/AboutBg 3.png')",
@@ -81,18 +79,35 @@ module.exports = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: 0 },
         },
+        "grow-line-vertical": {
+          from: { height: "0" },
+          to: { height: "var(--line-height)" },
+        },
+        "grow-line-horizontal": {
+          from: { width: "0" },
+          to: { width: "var(--line-width)" },
+        },
+        "scale-in": {
+          from: { scale: 0 },
+          to: { scale: "100%" },
+        },
+        "ds-bg-appearance": {
+          from: { scale: 0, transform: "rotate(-45deg)" },
+          to: { scale: "100%", transform: "rotate(0deg)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-      },
-      animationDelay: {
-        1400: "1400ms",
+        "grow-line-vertical": "grow-line-vertical",
+        "grow-line-horizontal": "grow-line-horizontal",
+        "scale-in": "scale-in",
+        "ds-bg-appearance": "ds-bg-appearance",
       },
       animationDuration: {
         1500: "1500ms",
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), require("tailwindcss-animated")],
 };
