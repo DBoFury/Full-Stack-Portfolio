@@ -76,7 +76,7 @@ const FullStack = () => {
             }
           )}>
           <Link
-            href="https://github.com/DBoFury"
+            href="https://github.com/Olacdy"
             target="_blank"
             rel="noopener noreferrer">
             <Button className="flex items-center justify-center px-6 space-x-3 text-2xl font-semibold ease-out bg-white py-7 rounded-2xl shadow-button text-onyx hover:shadow-button-hover hover:translate-y-1 hover:bg-white">
@@ -85,7 +85,7 @@ const FullStack = () => {
             </Button>
           </Link>
           <Link
-            href="https://dbofury.github.io/Full-Stack-Developer-CV/"
+            href="https://olacdy.github.io/Full-Stack-Developer-CV/"
             target="_blank"
             rel="noopener noreferrer">
             <Button className="flex items-center justify-center px-6 space-x-3 text-2xl font-semibold ease-out bg-white py-7 rounded-2xl shadow-button text-onyx hover:shadow-button-hover hover:translate-y-1 hover:bg-white">

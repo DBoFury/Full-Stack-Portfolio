@@ -33,7 +33,7 @@ const WorkMobile = () => {
         </p>
         <Link
           className="mt-10"
-          href="https://dbofury.github.io/frontend-mentor-challenges/"
+          href="https://olacdy.github.io/frontend-mentor-challenges/"
           target="_blank"
           rel="noopener noreferrer">
           <Button className="text-3xl font-semibold ease-out bg-white px-7 py-7 rounded-2xl shadow-button text-onyx hover:shadow-button-hover hover:translate-y-1 hover:bg-white">
@@ -126,7 +126,7 @@ const WorkMobile = () => {
         </p>
         <Link
           className="mt-10"
-          href="https://github.com/DBoFury/DinoNN"
+          href="https://github.com/Olacdy/DinoNN"
           target="_blank"
           rel="noopener noreferrer">
           <Button className="text-3xl font-semibold ease-out bg-white px-7 py-7 rounded-2xl shadow-button text-onyx hover:shadow-button-hover hover:translate-y-1 hover:bg-white">

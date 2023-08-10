@@ -54,7 +54,7 @@ const Second = () => {
         <div className="flex flex-col items-center justify-center space-y-5">
           <div className="flex items-center justify-center space-x-10">
             <Link
-              href="https://github.com/DBoFury/DinoNN"
+              href="https://github.com/Olacdy/DinoNN"
               target="_blank"
               rel="noopener noreferrer">
               <Button className="text-2xl font-semibold ease-out bg-white px-7 py-7 rounded-2xl shadow-button text-onyx hover:shadow-button-hover hover:translate-y-1 hover:bg-white">

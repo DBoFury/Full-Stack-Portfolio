@@ -72,7 +72,7 @@ const AboutMobile = () => {
         </p>
         <div className="flex flex-col items-center justify-center w-full px-10 pt-10 max-w-[420px] space-y-5 mb:flex-row mb:space-y-0 mb:justify-between">
           <Link
-            href="https://github.com/DBoFury"
+            href="https://github.com/Olacdy"
             target="_blank"
             rel="noopener noreferrer">
             <Button className="flex items-center justify-center space-x-3 text-xl font-semibold ease-out bg-white py-7 rounded-2xl shadow-button text-onyx hover:shadow-button-hover hover:translate-y-1 hover:bg-white">
@@ -81,7 +81,7 @@ const AboutMobile = () => {
             </Button>
           </Link>
           <Link
-            href="https://dbofury.github.io/Full-Stack-Developer-CV/"
+            href="https://Olacdy.github.io/Full-Stack-Developer-CV/"
             target="_blank"
             rel="noopener noreferrer">
             <Button className="flex items-center justify-center space-x-3 text-xl font-semibold ease-out bg-white py-7 rounded-2xl shadow-button text-onyx hover:shadow-button-hover hover:translate-y-1 hover:bg-white">
