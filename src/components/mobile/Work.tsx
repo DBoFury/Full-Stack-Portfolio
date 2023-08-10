@@ -2,17 +2,17 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
-const ProjectsMobile = () => {
+const WorkMobile = () => {
   return (
     <div className="pt-24 overflow-x-clip">
       <h2 className="text-6xl font-semibold text-center text-pine-green">
-        Projects
+        Work
       </h2>
 
       <div className="flex flex-col items-center justify-center pt-10">
         <div className="relative">
           <Image
-            className="px-10 shadow-sm bg-gray-50 rounded-xl"
+            className="px-10 shadow-md bg-gray-50 rounded-xl"
             src="/Full-Stack-Portfolio/Project 1.svg"
             alt="Project 1 image"
             width={340}
@@ -76,7 +76,7 @@ const ProjectsMobile = () => {
       <div className="flex flex-col items-center justify-center pt-16">
         <div className="relative">
           <Image
-            className="shadow-sm rounded-xl"
+            className="shadow-md rounded-xl"
             src="/Full-Stack-Portfolio/Project 3.png"
             alt="Project 3 image"
             width={320}
@@ -138,4 +138,4 @@ const ProjectsMobile = () => {
   );
 };
 
-export default ProjectsMobile;
+export default WorkMobile;

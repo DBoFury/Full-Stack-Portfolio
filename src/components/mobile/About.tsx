@@ -47,15 +47,15 @@ const AboutMobile = () => {
           applications, combining functionality and aesthetics seamlessly.
         </p>
         <Separator className="w-1 h-10 mt-3 bg-onyx" orientation="vertical" />
-        <div className="relative flex items-center justify-center p-5 mt-5 space-x-3 rounded-lg shadow-sm bg-gray-50">
-          <Icons.python className="fill-onyx" />
+        <div className="relative flex items-center justify-center mt-5 space-x-3 rounded-lg shadow-sm">
+          <Icons.python className="fill-white" />
           <Icons.plus stroke="#424241" size={60} />
           <div className="flex items-center justify-center space-x-2">
             <Icons.django />
             <p className="text-4xl font-semibold text-onyx">/</p>
             <Icons.flask />
           </div>
-          <div className="z-[-1] absolute -inset-x-16 -inset-y-8 w-[300px] h-[200px] bg-no-repeat bg-contain bg-mobile-about-2" />
+          <div className="z-[-1] absolute -inset-x-20 -inset-y-12 w-[300px] h-[200px] bg-no-repeat bg-contain bg-mobile-about-2" />
         </div>
         <Separator
           className="mt-6 relative w-1 h-40 after:w-6 after:h-6 after:rounded-full after:absolute after:bottom-0 after:left-0 after:-translate-x-[42%] after:translate-y-1/2 after:bg-onyx after:content-[''] bg-onyx"

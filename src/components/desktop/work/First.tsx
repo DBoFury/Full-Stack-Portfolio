@@ -5,7 +5,7 @@ import Link from "next/link";
 const First = () => {
   return (
     <div
-      id="projects"
+      id="work"
       className="flex flex-col items-center justify-start px-10 pt-20 space-y-20 section">
       <div className="absolute z-[-1] bg-no-repeat bg-contain bg-project-2 top-96 -left-36 w-72 h-96" />
 

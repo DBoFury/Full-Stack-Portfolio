@@ -4,7 +4,7 @@ import Mobile from "@/components/mobile/Mobile";
 export default function page() {
   return (
     <>
-      {/* <Mobile /> */}
+      <Mobile />
       <Desktop />
     </>
   );
