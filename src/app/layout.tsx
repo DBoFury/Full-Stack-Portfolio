@@ -8,7 +8,7 @@ const work_sans = Work_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Oleg D.",
+  title: "leg D.",
   description: "Personal full-stack portfolio of Didechkin Oleg.",
 };
 
