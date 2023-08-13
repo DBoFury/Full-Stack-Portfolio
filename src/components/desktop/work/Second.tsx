@@ -15,7 +15,9 @@ const Second = () => {
               href="https://bellify.org/"
               target="_blank"
               rel="noopener noreferrer">
-              <Button className="text-2xl font-semibold ease-out bg-white px-7 py-7 rounded-2xl shadow-button text-onyx hover:shadow-button-hover hover:translate-y-1 hover:bg-white">
+              <Button
+                aria-label="Third Projects Page"
+                className="text-2xl font-semibold ease-out bg-white px-7 py-7 rounded-2xl shadow-button text-onyx hover:shadow-button-hover hover:translate-y-1 hover:bg-white">
                 Preview
               </Button>
             </Link>
@@ -57,7 +59,9 @@ const Second = () => {
               href="https://github.com/Olacdy/DinoNN"
               target="_blank"
               rel="noopener noreferrer">
-              <Button className="text-2xl font-semibold ease-out bg-white px-7 py-7 rounded-2xl shadow-button text-onyx hover:shadow-button-hover hover:translate-y-1 hover:bg-white">
+              <Button
+                aria-label="Fourth Projects Repository"
+                className="text-2xl font-semibold ease-out bg-white px-7 py-7 rounded-2xl shadow-button text-onyx hover:shadow-button-hover hover:translate-y-1 hover:bg-white">
                 Repository
               </Button>
             </Link>

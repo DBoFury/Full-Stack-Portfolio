@@ -79,7 +79,9 @@ const FullStack = () => {
             href="https://github.com/Olacdy"
             target="_blank"
             rel="noopener noreferrer">
-            <Button className="flex items-center justify-center px-6 space-x-3 text-2xl font-semibold ease-out bg-white py-7 rounded-2xl shadow-button text-onyx hover:shadow-button-hover hover:translate-y-1 hover:bg-white">
+            <Button
+              aria-label="GitHub Page"
+              className="flex items-center justify-center px-6 space-x-3 text-2xl font-semibold ease-out bg-white py-7 rounded-2xl shadow-button text-onyx hover:shadow-button-hover hover:translate-y-1 hover:bg-white">
               <Icons.github />
               <span>GitHub</span>
             </Button>
@@ -88,7 +90,9 @@ const FullStack = () => {
             href="https://olacdy.github.io/Full-Stack-Developer-CV/"
             target="_blank"
             rel="noopener noreferrer">
-            <Button className="flex items-center justify-center px-6 space-x-3 text-2xl font-semibold ease-out bg-white py-7 rounded-2xl shadow-button text-onyx hover:shadow-button-hover hover:translate-y-1 hover:bg-white">
+            <Button
+              aria-label="Resume Page"
+              className="flex items-center justify-center px-6 space-x-3 text-2xl font-semibold ease-out bg-white py-7 rounded-2xl shadow-button text-onyx hover:shadow-button-hover hover:translate-y-1 hover:bg-white">
               <Icons.resume />
               <span>Resume</span>
             </Button>

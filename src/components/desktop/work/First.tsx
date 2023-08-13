@@ -19,7 +19,9 @@ const First = () => {
               href="https://olacdy.github.io/frontend-mentor-challenges/"
               target="_blank"
               rel="noopener noreferrer">
-              <Button className="text-2xl font-semibold ease-out bg-white px-7 py-7 rounded-2xl shadow-button text-onyx hover:shadow-button-hover hover:translate-y-1 hover:bg-white">
+              <Button
+                aria-label="First Projects Page"
+                className="text-2xl font-semibold ease-out bg-white px-7 py-7 rounded-2xl shadow-button text-onyx hover:shadow-button-hover hover:translate-y-1 hover:bg-white">
                 Preview
               </Button>
             </Link>
@@ -59,7 +61,9 @@ const First = () => {
               href="https://interactive-comments-section-mocha.vercel.app/"
               target="_blank"
               rel="noopener noreferrer">
-              <Button className="text-2xl font-semibold ease-out bg-white px-7 py-7 rounded-2xl shadow-button text-onyx hover:shadow-button-hover hover:translate-y-1 hover:bg-white">
+              <Button
+                aria-label="Second Projects Page"
+                className="text-2xl font-semibold ease-out bg-white px-7 py-7 rounded-2xl shadow-button text-onyx hover:shadow-button-hover hover:translate-y-1 hover:bg-white">
                 Preview
               </Button>
             </Link>

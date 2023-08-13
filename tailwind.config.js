@@ -33,44 +33,47 @@ module.exports = {
       backgroundImage: {
         "oleg-d": "url('/Full-Stack-Portfolio/Oleg-D.webp')",
 
-        "about-1": "url('/Full-Stack-Portfolio/figures/desktop/AboutBg 1.png')",
-        "about-2": "url('/Full-Stack-Portfolio/figures/desktop/AboutBg 2.png')",
-        "about-3": "url('/Full-Stack-Portfolio/figures/desktop/AboutBg 3.png')",
+        "about-1":
+          "url('/Full-Stack-Portfolio/figures/desktop/AboutBg 1.webp')",
+        "about-2":
+          "url('/Full-Stack-Portfolio/figures/desktop/AboutBg 2.webp')",
+        "about-3":
+          "url('/Full-Stack-Portfolio/figures/desktop/AboutBg 3.webp')",
         "about-3-left":
-          "url('/Full-Stack-Portfolio/figures/desktop/AboutBg 3 (Left).png')",
+          "url('/Full-Stack-Portfolio/figures/desktop/AboutBg-3-Left.webp')",
         "about-3-right":
-          "url('/Full-Stack-Portfolio/figures/desktop/AboutBg 3 (Right).png')",
+          "url('/Full-Stack-Portfolio/figures/desktop/AboutBg-3-Right.webp')",
         "project-1":
-          "url('/Full-Stack-Portfolio/figures/desktop/ProjectBg 1.png')",
+          "url('/Full-Stack-Portfolio/figures/desktop/ProjectBg-1.webp')",
         "project-2":
-          "url('/Full-Stack-Portfolio/figures/desktop/ProjectBg 2.png')",
+          "url('/Full-Stack-Portfolio/figures/desktop/ProjectBg-2.webp')",
         "project-3":
-          "url('/Full-Stack-Portfolio/figures/desktop/ProjectBg 3.png')",
+          "url('/Full-Stack-Portfolio/figures/desktop/ProjectBg-3.webp')",
         "project-4":
-          "url('/Full-Stack-Portfolio/figures/desktop/ProjectBg 4.png')",
+          "url('/Full-Stack-Portfolio/figures/desktop/ProjectBg-4.webp')",
         "contact-left":
-          "url('/Full-Stack-Portfolio/figures/desktop/ContactBg (Left).png')",
+          "url('/Full-Stack-Portfolio/figures/desktop/ContactBg-Left.webp')",
         "contact-right":
-          "url('/Full-Stack-Portfolio/figures/desktop/ContactBg (Right).png')",
+          "url('/Full-Stack-Portfolio/figures/desktop/ContactBg-Right.webp')",
 
         "photo-mobile-back":
-          "url('/Full-Stack-Portfolio/figures/mobile/PhotoBg.png')",
+          "url('/Full-Stack-Portfolio/figures/mobile/PhotoBg.webp')",
         "mobile-about-1":
-          "url('/Full-Stack-Portfolio/figures/mobile/AboutBg 1.png')",
+          "url('/Full-Stack-Portfolio/figures/mobile/AboutBg-1.webp')",
         "mobile-about-2":
-          "url('/Full-Stack-Portfolio/figures/mobile/AboutBg 2.png')",
+          "url('/Full-Stack-Portfolio/figures/mobile/AboutBg-2.webp')",
         "mobile-project-1":
-          "url('/Full-Stack-Portfolio/figures/mobile/ProjectBg 1.png')",
+          "url('/Full-Stack-Portfolio/figures/mobile/ProjectBg-1.webp')",
         "mobile-project-2":
-          "url('/Full-Stack-Portfolio/figures/mobile/ProjectBg 2.png')",
+          "url('/Full-Stack-Portfolio/figures/mobile/ProjectBg-2.webp')",
         "mobile-project-3":
-          "url('/Full-Stack-Portfolio/figures/mobile/ProjectBg 3.png')",
+          "url('/Full-Stack-Portfolio/figures/mobile/ProjectBg-3.webp')",
         "mobile-project-4":
-          "url('/Full-Stack-Portfolio/figures/mobile/ProjectBg 4.png')",
+          "url('/Full-Stack-Portfolio/figures/mobile/ProjectBg-4.webp')",
         "mobile-contact-1":
-          "url('/Full-Stack-Portfolio/figures/mobile/ContactBg (Left).png')",
+          "url('/Full-Stack-Portfolio/figures/mobile/ContactBg-Left.webp')",
         "mobile-contact-2":
-          "url('/Full-Stack-Portfolio/figures/mobile/ContactBg (Right).png')",
+          "url('/Full-Stack-Portfolio/figures/mobile/ContactBg-Right.webp')",
       },
       keyframes: {
         "accordion-down": {

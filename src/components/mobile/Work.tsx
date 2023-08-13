@@ -36,7 +36,9 @@ const WorkMobile = () => {
           href="https://olacdy.github.io/frontend-mentor-challenges/"
           target="_blank"
           rel="noopener noreferrer">
-          <Button className="text-3xl font-semibold ease-out bg-white px-7 py-7 rounded-2xl shadow-button text-onyx hover:shadow-button-hover hover:translate-y-1 hover:bg-white">
+          <Button
+            aria-label="First Project Page"
+            className="text-3xl font-semibold ease-out bg-white px-7 py-7 rounded-2xl shadow-button text-onyx hover:shadow-button-hover hover:translate-y-1 hover:bg-white">
             Preview
           </Button>
         </Link>
@@ -67,7 +69,9 @@ const WorkMobile = () => {
           href="https://interactive-comments-section-mocha.vercel.app/"
           target="_blank"
           rel="noopener noreferrer">
-          <Button className="text-3xl font-semibold ease-out bg-white px-7 py-7 rounded-2xl shadow-button text-onyx hover:shadow-button-hover hover:translate-y-1 hover:bg-white">
+          <Button
+            aria-label="Second Project Page"
+            className="text-3xl font-semibold ease-out bg-white px-7 py-7 rounded-2xl shadow-button text-onyx hover:shadow-button-hover hover:translate-y-1 hover:bg-white">
             Preview
           </Button>
         </Link>
@@ -99,7 +103,9 @@ const WorkMobile = () => {
           href="http://bellify.org/"
           target="_blank"
           rel="noopener noreferrer">
-          <Button className="text-3xl font-semibold ease-out bg-white px-7 py-7 rounded-2xl shadow-button text-onyx hover:shadow-button-hover hover:translate-y-1 hover:bg-white">
+          <Button
+            aria-label="Third Project Page"
+            className="text-3xl font-semibold ease-out bg-white px-7 py-7 rounded-2xl shadow-button text-onyx hover:shadow-button-hover hover:translate-y-1 hover:bg-white">
             Preview
           </Button>
         </Link>
@@ -129,7 +135,9 @@ const WorkMobile = () => {
           href="https://github.com/Olacdy/DinoNN"
           target="_blank"
           rel="noopener noreferrer">
-          <Button className="text-3xl font-semibold ease-out bg-white px-7 py-7 rounded-2xl shadow-button text-onyx hover:shadow-button-hover hover:translate-y-1 hover:bg-white">
+          <Button
+            aria-label="Fourth Project Repository"
+            className="text-3xl font-semibold ease-out bg-white px-7 py-7 rounded-2xl shadow-button text-onyx hover:shadow-button-hover hover:translate-y-1 hover:bg-white">
             Repository
           </Button>
         </Link>
