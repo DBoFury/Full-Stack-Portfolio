@@ -43,13 +43,12 @@ const FullStack = () => {
         />
         <h3
           className={cn(
-            "animate-scale-in animate-duration-[1000ms] animate-delay-[900ms] fill-mode-forwards absolute left-0 text-4xl italic font-medium text-center w-52 h-10 -inset-x-24 inset-y-[17vh] text-pine-green",
+            "animate-fade-down animate-duration-[1000ms] animate-delay-[900ms] absolute left-0 text-4xl italic font-medium text-center w-52 h-10 -inset-x-24 inset-y-[17vh] text-pine-green",
             {
               paused: !inView,
               running: inView,
             }
-          )}
-          style={{ scale: 0 }}>
+          )}>
           Full-Stack
         </h3>
       </div>

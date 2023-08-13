@@ -40,13 +40,12 @@ const WebDevelopment = () => {
         />
         <h3
           className={cn(
-            "animate-scale-in animate-duration-[1500ms] animate-delay-[700ms] fill-mode-forwards absolute w-80 h-10 text-4xl italic font-medium text-center inset-x-6 -inset-y-10 text-pine-green",
+            "animate-fade-right animate-duration-[1000ms] animate-delay-[900ms] absolute w-80 h-10 text-4xl italic font-medium text-center inset-x-6 -inset-y-10 text-pine-green",
             {
               paused: !inView,
               running: inView,
             }
-          )}
-          style={{ scale: 0 }}>
+          )}>
           Web Development
         </h3>
         <Separator

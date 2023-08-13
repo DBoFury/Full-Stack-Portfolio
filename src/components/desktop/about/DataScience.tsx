@@ -17,13 +17,12 @@ const DataScience = () => {
       <div className="relative h-[60vh] dt:mr-20">
         <h3
           className={cn(
-            "animate-scale-in animate-duration-[1000ms] animate-delay-[500ms] fill-mode-forwards absolute w-64 text-4xl italic font-medium text-center -top-8 right-[110%] text-pine-green",
+            "animate-fade-left animate-duration-[1000ms] animate-delay-[300ms] absolute w-64 text-4xl italic font-medium text-center -top-8 right-[110%] text-pine-green",
             {
               paused: !inView,
               running: inView,
             }
-          )}
-          style={{ scale: 0 }}>
+          )}>
           Data Science
         </h3>
         <Separator
