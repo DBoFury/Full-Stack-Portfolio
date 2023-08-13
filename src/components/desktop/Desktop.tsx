@@ -54,8 +54,10 @@ const Desktop = () => {
   useEffect(() => {
     const container = document.querySelector(".content") as HTMLElement;
 
-    container.addEventListener("wheel", (event: WheelEvent) =>
-      handleScroll(event, container)
+    container.addEventListener(
+      "wheel",
+      (event: WheelEvent) => handleScroll(event, container),
+      { passive: true }
     );
 
     return () => {
