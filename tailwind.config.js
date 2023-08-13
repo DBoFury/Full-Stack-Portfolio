@@ -31,7 +31,7 @@ module.exports = {
         "battleship-gray": "#8E8D89",
       },
       backgroundImage: {
-        "oleg-d": "url('/Full-Stack-Portfolio/Oleg D.png')",
+        "oleg-d": "url('/Full-Stack-Portfolio/Oleg D.webp')",
 
         "about-1": "url('/Full-Stack-Portfolio/figures/desktop/AboutBg 1.png')",
         "about-2": "url('/Full-Stack-Portfolio/figures/desktop/AboutBg 2.png')",
