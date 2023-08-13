@@ -58,7 +58,7 @@ const DataScience = () => {
                   running: inView,
                 }
               )}
-              src="/Full-Stack-Portfolio/DS.png"
+              src="/Full-Stack-Portfolio/DS.webp"
               alt="Data Science Illustration"
               width={440}
               height={440}

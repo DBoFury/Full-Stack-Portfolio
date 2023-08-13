@@ -13,7 +13,7 @@ const WorkMobile = () => {
         <div className="relative">
           <Image
             className="px-10 shadow-md bg-gray-50 rounded-xl"
-            src="/Full-Stack-Portfolio/Project 1.svg"
+            src="/Full-Stack-Portfolio/Project 1.webp"
             alt="Project 1 image"
             width={340}
             height={200}
@@ -45,7 +45,7 @@ const WorkMobile = () => {
       <div className="flex flex-col items-center justify-center pt-16">
         <div className="relative">
           <Image
-            src="/Full-Stack-Portfolio/Project 2.png"
+            src="/Full-Stack-Portfolio/Project 2.webp"
             alt="Project 2 image"
             width={320}
             height={200}
@@ -77,7 +77,7 @@ const WorkMobile = () => {
         <div className="relative">
           <Image
             className="shadow-md rounded-xl"
-            src="/Full-Stack-Portfolio/Project 3.png"
+            src="/Full-Stack-Portfolio/Project 3.webp"
             alt="Project 3 image"
             width={320}
             height={300}
@@ -108,7 +108,7 @@ const WorkMobile = () => {
       <div className="flex flex-col items-center justify-center pt-16">
         <div className="relative">
           <Image
-            src="/Full-Stack-Portfolio/Project 4.png"
+            src="/Full-Stack-Portfolio/Project 4.webp"
             alt="Project 4 image"
             width={460}
             height={300}

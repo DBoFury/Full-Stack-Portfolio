@@ -31,7 +31,7 @@ const Second = () => {
         <div className="relative">
           <Image
             className="shadow-lg rounded-xl"
-            src="/Full-Stack-Portfolio/Project 3.png"
+            src="/Full-Stack-Portfolio/Project 3.webp"
             alt="Project 3 image"
             width={300}
             height={200}
@@ -44,7 +44,7 @@ const Second = () => {
         <div className="relative">
           <Image
             className="rounded-lg"
-            src="/Full-Stack-Portfolio/Project 4.png"
+            src="/Full-Stack-Portfolio/Project 4.webp"
             alt="Project 4 image"
             width={420}
             height={300}

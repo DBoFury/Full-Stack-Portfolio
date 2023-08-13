@@ -35,7 +35,7 @@ const First = () => {
         <div className="relative">
           <Image
             className="px-10 shadow-lg bg-gray-50 rounded-xl"
-            src="/Full-Stack-Portfolio/Project 1.svg"
+            src="/Full-Stack-Portfolio/Project 1.webp"
             alt="Project 1 image"
             width={300}
             height={200}
@@ -47,7 +47,7 @@ const First = () => {
       <div className="flex items-center justify-center space-x-10 dt:space-x-20">
         <div className="relative">
           <Image
-            src="/Full-Stack-Portfolio/Project 2.png"
+            src="/Full-Stack-Portfolio/Project 2.webp"
             alt="Project 2 image"
             width={460}
             height={300}
