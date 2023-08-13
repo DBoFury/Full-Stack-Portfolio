@@ -34,11 +34,11 @@ module.exports = {
         "oleg-d": "url('/Full-Stack-Portfolio/Oleg-D.webp')",
 
         "about-1":
-          "url('/Full-Stack-Portfolio/figures/desktop/AboutBg 1.webp')",
+          "url('/Full-Stack-Portfolio/figures/desktop/AboutBg-1.webp')",
         "about-2":
-          "url('/Full-Stack-Portfolio/figures/desktop/AboutBg 2.webp')",
+          "url('/Full-Stack-Portfolio/figures/desktop/AboutBg-2.webp')",
         "about-3":
-          "url('/Full-Stack-Portfolio/figures/desktop/AboutBg 3.webp')",
+          "url('/Full-Stack-Portfolio/figures/desktop/AboutBg-3.webp')",
         "about-3-left":
           "url('/Full-Stack-Portfolio/figures/desktop/AboutBg-3-Left.webp')",
         "about-3-right":

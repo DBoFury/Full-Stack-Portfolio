@@ -21,12 +21,12 @@ const Hero = () => {
     <div
       id="home"
       className="flex flex-col items-center justify-center section">
-      <div className="flex space-x-12 max-w-[78rem] lg:mr-16 dt:mr-24 pt-28">
+      <div className="flex space-x-12 max-w-[78rem] lg:mx-16 dt:mx-24 pt-28">
         <div className="flex flex-col items-start justify-center space-y-4 text-left">
           <h2 className="text-5xl font-bold text-pine-green">
             Full-Stack Developer
           </h2>
-          <p className="text-onyx  text-2xl leading-[165%] pr-1">
+          <p className="text-onyx text-2xl leading-[165%] pr-1">
             Greetings! I'm Oleg Didechkin, a dedicated and imaginative
             web-developer with a rich array of expertise and a passion for
             crafting digital experiences.
