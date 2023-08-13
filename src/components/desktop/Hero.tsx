@@ -36,7 +36,11 @@ const Hero = () => {
           <span className="absolute font-semibold -inset-y-8 text-2xl rotate-45 inset-x-[200px] text-pine-green">
             *click
           </span>
-          <Switch className="rotate-45" onCheckedChange={handleTabChange} />
+          <Switch
+            className="rotate-45"
+            onCheckedChange={handleTabChange}
+            aria-label="Skills toggle button"
+          />
         </div>
       </div>
 

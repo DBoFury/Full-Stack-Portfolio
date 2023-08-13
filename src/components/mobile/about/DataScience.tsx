@@ -53,8 +53,8 @@ const DataScience = () => {
           )}
           src="/Full-Stack-Portfolio/DS.webp"
           alt="Data Science Illustration"
-          width={340}
-          height={380}
+          width={460}
+          height={400}
           style={{ scale: 0 }}
         />
         <div
