@@ -20,7 +20,7 @@ const FullStack = () => {
       <div className="relative h-[15vh] dt:mr-20">
         <Separator
           className={cn(
-            "absolute animate-grow-line-vertical duration-700 fill-mode-forwards inset-x-0 -inset-y-5 w-1 h-0 bg-onyx",
+            "absolute animate-grow-line-vertical animate-duration-[700ms] fill-mode-forwards inset-x-0 -inset-y-5 w-1 h-0 bg-onyx",
             {
               paused: !inView,
               running: inView,
@@ -33,7 +33,7 @@ const FullStack = () => {
         />
         <span
           className={cn(
-            "animate-scale-in duration-700 animate-delay-[500ms] fill-mode-forwards inset-y-[12.5vh] -inset-x-[0.75rem] w-7 h-7 rounded-full absolute bg-onyx",
+            "animate-scale-in animate-duration-[700ms] animate-delay-[500ms] fill-mode-forwards inset-y-[12.5vh] -inset-x-[0.75rem] w-7 h-7 rounded-full absolute bg-onyx",
             {
               paused: !inView,
               running: inView,
@@ -43,7 +43,7 @@ const FullStack = () => {
         />
         <h3
           className={cn(
-            "animate-scale-in duration-1000 animate-delay-[900ms] fill-mode-forwards absolute left-0 text-4xl italic font-medium text-center w-52 h-10 -inset-x-24 inset-y-[17vh] text-pine-green",
+            "animate-scale-in animate-duration-[1000ms] animate-delay-[900ms] fill-mode-forwards absolute left-0 text-4xl italic font-medium text-center w-52 h-10 -inset-x-24 inset-y-[17vh] text-pine-green",
             {
               paused: !inView,
               running: inView,
@@ -56,7 +56,7 @@ const FullStack = () => {
       <div className="flex flex-col items-center space-y-16 dt:mr-20">
         <p
           className={cn(
-            "animate-fade-down animate-ease-in-out duration-1000 animate-delay-[1500ms] text-[1.5rem] leading-[150%] pt-3 italic text-center max-w-[44rem] text-onyx",
+            "animate-fade-down animate-ease-in-out animate-duration-[1000ms] animate-delay-[1500ms] text-[1.5rem] leading-[150%] pt-3 italic text-center max-w-[44rem] text-onyx",
             {
               paused: !inView,
               running: inView,
@@ -69,7 +69,7 @@ const FullStack = () => {
         </p>
         <div
           className={cn(
-            "animate-fade-down animate-ease-in-out duration-1000 animate-delay-[1800ms] flex items-center justify-between w-[24rem]",
+            "animate-fade-down animate-ease-in-out animate-duration-[1000ms] animate-delay-[1800ms] flex items-center justify-between w-[24rem]",
             {
               paused: !inView,
               running: inView,

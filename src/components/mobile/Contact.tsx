@@ -39,7 +39,7 @@ const ContactMobile = () => {
         </div>
       </div>
 
-      <span className="absolute text-xl font-semibold -translate-x-1/2 bottom-2 left-1/2 text-battleship-gray">
+      <span className="absolute w-full text-xl font-semibold text-center bottom-2 text-battleship-gray">
         Oleg Didechkin 2023
       </span>
     </div>

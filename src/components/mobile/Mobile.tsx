@@ -1,4 +1,4 @@
-import AboutMobile from "@/components/mobile/About";
+import AboutMobile from "@/components/mobile/about/About";
 import ContactMobile from "@/components/mobile/Contact";
 import HeaderMobile from "@/components/mobile/Header";
 import HeroMobile from "@/components/mobile/Hero";

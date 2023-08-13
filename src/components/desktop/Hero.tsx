@@ -51,32 +51,32 @@ const Hero = () => {
               <div className="grid items-center grid-cols-3 justify-items-center gap-x-3 gap-y-4 md:grid-cols-6">
                 <Icons.html
                   className={cn({
-                    "duration-1000 animate-in zoom-in": !isInit,
+                    "animate-duration-[1000ms] animate-in zoom-in": !isInit,
                   })}
                 />
                 <Icons.css
                   className={cn({
-                    "duration-1000 animate-in zoom-in": !isInit,
+                    "animate-duration-[1000ms] animate-in zoom-in": !isInit,
                   })}
                 />
                 <Icons.js
                   className={cn({
-                    "duration-1000 animate-in zoom-in": !isInit,
+                    "animate-duration-[1000ms] animate-in zoom-in": !isInit,
                   })}
                 />
                 <Icons.react
                   className={cn({
-                    "duration-1000 animate-in zoom-in": !isInit,
+                    "animate-duration-[1000ms] animate-in zoom-in": !isInit,
                   })}
                 />
                 <Icons.next
                   className={cn({
-                    "duration-1000 animate-in zoom-in": !isInit,
+                    "animate-duration-[1000ms] animate-in zoom-in": !isInit,
                   })}
                 />
                 <Icons.tailwindcss
                   className={cn({
-                    "duration-1000 animate-in zoom-in": !isInit,
+                    "animate-duration-[1000ms] animate-in zoom-in": !isInit,
                   })}
                 />
               </div>
@@ -84,17 +84,17 @@ const Hero = () => {
               <div className="grid items-center grid-cols-3 pt-5 justify-items-center gap-x-4 gap-y-4 max-w-[380px]">
                 <Icons.python
                   className={cn({
-                    "duration-1000 animate-in zoom-in": !isInit,
+                    "animate-duration-[1000ms] animate-in zoom-in": !isInit,
                   })}
                 />
                 <Icons.node
                   className={cn({
-                    "duration-1000 animate-in zoom-in": !isInit,
+                    "animate-duration-[1000ms] animate-in zoom-in": !isInit,
                   })}
                 />
                 <Icons.docker
                   className={cn({
-                    "duration-1000 animate-in zoom-in": !isInit,
+                    "animate-duration-[1000ms] animate-in zoom-in": !isInit,
                   })}
                 />
               </div>
@@ -105,7 +105,7 @@ const Hero = () => {
         {tabsValue === "soft" && (
           <div className="h-[210px]">
             <div className="flex flex-col items-center justify-center pt-4 space-y-4">
-              <div className="flex items-center space-x-2 animate-fade-down animate-duration-1000 animate-ease-out">
+              <div className="flex items-center space-x-2 animate-fade-down animate-duration-[1000ms] animate-ease-out">
                 <h3 className="text-2xl font-medium text-pine-green">
                   Problem solving
                 </h3>
@@ -116,7 +116,7 @@ const Hero = () => {
                   creative and effective ways to find innovative solutions
                 </p>
               </div>
-              <div className="flex items-center space-x-2 animate-delay-[700ms] animate-fade-down animate-duration-1000 animate-ease-out">
+              <div className="flex items-center space-x-2 animate-delay-[700ms] animate-fade-down animate-duration-[1000ms] animate-ease-out">
                 <p className="pt-[2px] text-left text-onyx text-lg">
                   The ability to analyze situations, evaluate different options
                 </p>
@@ -127,7 +127,7 @@ const Hero = () => {
                   Critical Thinking
                 </h3>
               </div>
-              <div className="flex items-center space-x-2 animate-delay-[1400ms] animate-fade-down animate-duration-1000 animate-ease-out">
+              <div className="flex items-center space-x-2 animate-delay-[1400ms] animate-fade-down animate-duration-[1000ms] animate-ease-out">
                 <h3 className="text-2xl font-medium text-pine-green">
                   Adaptability
                 </h3>

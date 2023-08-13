@@ -3,7 +3,7 @@ const HeroMobile = () => {
     <div className="flex flex-col items-center justify-center w-full pt-8 overflow-x-clip">
       <div className="relative">
         <div className="z-[-1] absolute -inset-x-5 -inset-y-8 w-[400px] h-[300px] bg-no-repeat bg-contain bg-photo-mobile-back" />
-        <div className="rounded-full w-[260px] h-[260px] bg-white" />
+        <div className="rounded-full w-[260px] h-[260px] bg-oleg-d bg-cover bg-no-repeat bg-center" />
       </div>
 
       <div className="px-8 pt-5">

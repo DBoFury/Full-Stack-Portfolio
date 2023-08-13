@@ -45,32 +45,32 @@ const SkillsMobile = () => {
             <div className="grid items-center grid-cols-3 justify-items-center gap-x-3 gap-y-4 md:grid-cols-6">
               <Icons.html
                 className={cn({
-                  "duration-1000 animate-in zoom-in": !isInit,
+                  "animate-duration-[1000ms] animate-in zoom-in": !isInit,
                 })}
               />
               <Icons.css
                 className={cn({
-                  "duration-1000 animate-in zoom-in": !isInit,
+                  "animate-duration-[1000ms] animate-in zoom-in": !isInit,
                 })}
               />
               <Icons.js
                 className={cn({
-                  "duration-1000 animate-in zoom-in": !isInit,
+                  "animate-duration-[1000ms] animate-in zoom-in": !isInit,
                 })}
               />
               <Icons.react
                 className={cn({
-                  "duration-1000 animate-in zoom-in": !isInit,
+                  "animate-duration-[1000ms] animate-in zoom-in": !isInit,
                 })}
               />
               <Icons.next
                 className={cn({
-                  "duration-1000 animate-in zoom-in": !isInit,
+                  "animate-duration-[1000ms] animate-in zoom-in": !isInit,
                 })}
               />
               <Icons.tailwindcss
                 className={cn({
-                  "duration-1000 animate-in zoom-in": !isInit,
+                  "animate-duration-[1000ms] animate-in zoom-in": !isInit,
                 })}
               />
             </div>
@@ -78,17 +78,17 @@ const SkillsMobile = () => {
             <div className="grid items-center grid-cols-3 pt-5 justify-items-center gap-x-4 gap-y-4 max-w-[380px]">
               <Icons.python
                 className={cn({
-                  "duration-1000 animate-in zoom-in": !isInit,
+                  "animate-duration-[1000ms] animate-in zoom-in": !isInit,
                 })}
               />
               <Icons.node
                 className={cn({
-                  "duration-1000 animate-in zoom-in": !isInit,
+                  "animate-duration-[1000ms] animate-in zoom-in": !isInit,
                 })}
               />
               <Icons.docker
                 className={cn({
-                  "duration-1000 animate-in zoom-in": !isInit,
+                  "animate-duration-[1000ms] animate-in zoom-in": !isInit,
                 })}
               />
             </div>
@@ -96,17 +96,17 @@ const SkillsMobile = () => {
         </TabsContent>
         <TabsContent value="soft" className="h-[320px]">
           <div className="flex flex-col items-center justify-center pt-4 space-y-5">
-            <div className="animate-fade-down animate-duration-1000 animate-ease-out w-[340px] h-[85px] flex items-center justify-center px-5 space-x-5 border rounded-lg shadow-md border-onyx">
+            <div className="animate-fade-down animate-duration-[1000ms] animate-ease-out w-[340px] h-[85px] flex items-center justify-center px-5 space-x-5 border rounded-lg shadow-md border-onyx">
               <Icons.cogs />
               <p className="text-2xl font-medium text-onyx">Problem solving</p>
             </div>
-            <div className="animate-delay-[700ms] animate-fade-down animate-duration-1000 animate-ease-out w-[340px] h-[85px] flex items-center justify-center px-5 space-x-5 border rounded-lg shadow-md border-onyx">
+            <div className="animate-delay-[700ms] animate-fade-down animate-duration-[1000ms] animate-ease-out w-[340px] h-[85px] flex items-center justify-center px-5 space-x-5 border rounded-lg shadow-md border-onyx">
               <Icons.chart />
               <p className="text-2xl font-medium text-onyx">
                 Critical thinking
               </p>
             </div>
-            <div className="animate-delay-[1400ms] animate-fade-down animate-duration-1000 animate-ease-out w-[340px] h-[85px] flex items-center justify-center px-5 space-x-5 border rounded-lg shadow-md border-onyx">
+            <div className="animate-delay-[1400ms] animate-fade-down animate-duration-[1000ms] animate-ease-out w-[340px] h-[85px] flex items-center justify-center px-5 space-x-5 border rounded-lg shadow-md border-onyx">
               <Icons.shapes />
               <p className="text-2xl font-medium text-onyx">Adaptability</p>
             </div>

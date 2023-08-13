@@ -15,17 +15,12 @@ const Desktop = () => {
   const handleScroll = (e: WheelEvent, container: HTMLElement) => {
     e.preventDefault();
 
-    console.log(isScrollingRef.current);
-    console.log(chunkRef.current);
-
     if (isScrollingRef.current) {
       return;
     }
 
     const maxChunk =
       Math.ceil(container.scrollHeight / container.offsetHeight) - 1;
-
-    console.log(maxChunk);
 
     if (e.deltaY > 0) {
       const nextChunk = chunkRef.current + 1;

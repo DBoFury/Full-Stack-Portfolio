@@ -17,7 +17,7 @@ const WebDevelopment = () => {
       <div className="relative h-[40vh] dt:mr-20">
         <Separator
           className={cn(
-            "absolute animate-grow-line-vertical duration-500 fill-mode-forwards inset-x-0 -inset-y-[15vh] w-1 h-0 bg-onyx",
+            "absolute animate-grow-line-vertical animate-duration-[500ms] fill-mode-forwards inset-x-0 -inset-y-[15vh] w-1 h-0 bg-onyx",
             {
               paused: !inView,
               running: inView,
@@ -30,7 +30,7 @@ const WebDevelopment = () => {
         />
         <span
           className={cn(
-            "animate-scale-in duration-700 animate-delay-[300ms] fill-mode-forwards inset-y-0 -inset-x-[0.75rem] w-7 h-7 rounded-full absolute bg-onyx",
+            "animate-scale-in animate-duration-[700ms] animate-delay-[300ms] fill-mode-forwards inset-y-0 -inset-x-[0.75rem] w-7 h-7 rounded-full absolute bg-onyx",
             {
               paused: !inView,
               running: inView,
@@ -40,7 +40,7 @@ const WebDevelopment = () => {
         />
         <h3
           className={cn(
-            "animate-scale-in duration-700 animate-delay-[700ms] fill-mode-forwards absolute w-80 h-10 text-4xl italic font-medium text-center inset-x-6 -inset-y-10 text-pine-green",
+            "animate-scale-in animate-duration-[1500ms] animate-delay-[700ms] fill-mode-forwards absolute w-80 h-10 text-4xl italic font-medium text-center inset-x-6 -inset-y-10 text-pine-green",
             {
               paused: !inView,
               running: inView,
@@ -51,7 +51,7 @@ const WebDevelopment = () => {
         </h3>
         <Separator
           className={cn(
-            "absolute animate-grow-line-vertical duration-1000 animate-delay-[900ms] fill-mode-forwards inset-0 w-1 h-0 bg-onyx",
+            "absolute animate-grow-line-vertical animate-duration-[1000ms] animate-delay-[900ms] fill-mode-forwards inset-0 w-1 h-0 bg-onyx",
             {
               paused: !inView,
               running: inView,
@@ -66,7 +66,7 @@ const WebDevelopment = () => {
           <div className="relative">
             <Separator
               className={cn(
-                "absolute duration-500 animate-delay-[1500ms] animate-grow-line-horizontal fill-mode-forwards w-0 top-44 -right-[5.5rem] bg-battleship-gray",
+                "absolute animate-duration-[500ms] animate-delay-[1500ms] animate-grow-line-horizontal fill-mode-forwards w-0 top-44 -right-[5.5rem] bg-battleship-gray",
                 {
                   paused: !inView,
                   running: inView,
@@ -95,7 +95,7 @@ const WebDevelopment = () => {
           <div className="relative">
             <Separator
               className={cn(
-                "absolute duration-500 animate-delay-[2200ms] animate-grow-line-horizontal fill-mode-forwards w-0 top-16 -left-[3.5rem] bg-battleship-gray",
+                "absolute animate-duration-[500ms] animate-delay-[2200ms] animate-grow-line-horizontal fill-mode-forwards w-0 top-16 -left-[3.5rem] bg-battleship-gray",
                 {
                   paused: !inView,
                   running: inView,
@@ -123,7 +123,7 @@ const WebDevelopment = () => {
               </div>
               <div
                 className={cn(
-                  "z-[-1] animate-ds-bg-appearance animate-delay-[2200ms] duration-1000 fill-mode-forwards absolute -inset-x-4 -inset-y-0 w-[200px] h-[150px] bg-no-repeat bg-contain bg-about-2",
+                  "z-[-1] animate-bg-appearance animate-delay-[2200ms] animate-duration-[1000ms] fill-mode-forwards absolute -inset-x-4 -inset-y-0 w-[200px] h-[150px] bg-no-repeat bg-contain bg-about-2",
                   {
                     paused: !inView,
                     running: inView,

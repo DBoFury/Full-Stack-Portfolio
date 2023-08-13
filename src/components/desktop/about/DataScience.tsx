@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
@@ -18,7 +17,7 @@ const DataScience = () => {
       <div className="relative h-[60vh] dt:mr-20">
         <h3
           className={cn(
-            "animate-scale-in duration-1000 animate-delay-[500ms] fill-mode-forwards absolute w-64 text-4xl italic font-medium text-center -top-8 right-[110%] text-pine-green",
+            "animate-scale-in animate-duration-[1000ms] animate-delay-[500ms] fill-mode-forwards absolute w-64 text-4xl italic font-medium text-center -top-8 right-[110%] text-pine-green",
             {
               paused: !inView,
               running: inView,
@@ -29,7 +28,7 @@ const DataScience = () => {
         </h3>
         <Separator
           className={cn(
-            "absolute mt-6 w-1 h-0 animate-grow-line-vertical duration-1000 animate-delay-[500ms] fill-mode-forwards bg-onyx",
+            "absolute mt-6 w-1 h-0 animate-grow-line-vertical animate-duration-[1000ms] animate-delay-[500ms] fill-mode-forwards bg-onyx",
             {
               paused: !inView,
               running: inView,
@@ -53,7 +52,7 @@ const DataScience = () => {
           <div className="relative">
             <Image
               className={cn(
-                "animate-scale-in duration-1000 animate-delay-[1700ms] fill-mode-forwards py-6 rounded-lg shadow-xl bg-gray-50",
+                "animate-scale-in animate-duration-[1000ms] animate-delay-[1700ms] fill-mode-forwards py-6 rounded-lg shadow-xl bg-gray-50",
                 {
                   paused: !inView,
                   running: inView,
@@ -67,7 +66,7 @@ const DataScience = () => {
             />
             <Separator
               className={cn(
-                "absolute w-0 top-48 -right-[4.5rem] duration-500 animate-delay-[1500ms] animate-grow-line-horizontal fill-mode-forwards bg-battleship-gray",
+                "absolute w-0 top-48 -right-[4.5rem] animate-duration-[500ms] animate-delay-[1500ms] animate-grow-line-horizontal fill-mode-forwards bg-battleship-gray",
                 {
                   paused: !inView,
                   running: inView,
@@ -80,7 +79,7 @@ const DataScience = () => {
             />
             <div
               className={cn(
-                "animate-ds-bg-appearance animate-delay-[1600ms] duration-1000 fill-mode-forwards absolute bg-no-repeat bg-contain -inset-x-36 z-[-1] -inset-y-36 bg-about-1 w-96 h-96",
+                "animate-bg-appearance animate-delay-[1600ms] animate-duration-[1000ms] fill-mode-forwards absolute bg-no-repeat bg-contain -inset-x-36 z-[-1] -inset-y-36 bg-about-1 w-96 h-96",
                 {
                   paused: !inView,
                   running: inView,
@@ -94,7 +93,7 @@ const DataScience = () => {
           <div className="relative">
             <Separator
               className={cn(
-                "absolute w-0 top-36 -left-[4rem] duration-500 animate-delay-[2300ms] animate-grow-line-horizontal fill-mode-forwards bg-battleship-gray",
+                "absolute w-0 top-36 -left-[4rem] animate-duration-[500ms] animate-delay-[2300ms] animate-grow-line-horizontal fill-mode-forwards bg-battleship-gray",
                 {
                   paused: !inView,
                   running: inView,

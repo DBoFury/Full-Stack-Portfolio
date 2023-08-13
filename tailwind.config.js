@@ -31,6 +31,8 @@ module.exports = {
         "battleship-gray": "#8E8D89",
       },
       backgroundImage: {
+        "oleg-d": "url('/Full-Stack-Portfolio/Oleg D.png')",
+
         "about-1": "url('/Full-Stack-Portfolio/figures/desktop/AboutBg 1.png')",
         "about-2": "url('/Full-Stack-Portfolio/figures/desktop/AboutBg 2.png')",
         "about-3": "url('/Full-Stack-Portfolio/figures/desktop/AboutBg 3.png')",
@@ -91,8 +93,12 @@ module.exports = {
           from: { scale: 0 },
           to: { scale: "100%" },
         },
-        "ds-bg-appearance": {
+        "bg-appearance": {
           from: { scale: 0, transform: "rotate(-45deg)" },
+          to: { scale: "100%", transform: "rotate(0deg)" },
+        },
+        "plus-appearance": {
+          from: { scale: 0, transform: "rotate(-180deg)" },
           to: { scale: "100%", transform: "rotate(0deg)" },
         },
       },
@@ -102,7 +108,8 @@ module.exports = {
         "grow-line-vertical": "grow-line-vertical",
         "grow-line-horizontal": "grow-line-horizontal",
         "scale-in": "scale-in",
-        "ds-bg-appearance": "ds-bg-appearance",
+        "bg-appearance": "bg-appearance",
+        "plus-appearance": "plus-appearance",
       },
       animationDuration: {
         1500: "1500ms",
