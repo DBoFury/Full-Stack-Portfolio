@@ -18,11 +18,12 @@ const First = () => {
             <Link
               href="https://olacdy.github.io/frontend-mentor-challenges/"
               target="_blank"
-              rel="noopener noreferrer">
+              rel="noopener noreferrer"
+              aria-label="Review a first project">
               <Button
-                aria-label="First Projects Page"
+                aria-label="Review first project"
                 className="text-2xl font-semibold ease-out bg-white px-7 py-7 rounded-2xl shadow-button text-onyx hover:shadow-button-hover hover:translate-y-1 hover:bg-white">
-                Preview
+                Review
               </Button>
             </Link>
           </div>
@@ -60,11 +61,12 @@ const First = () => {
             <Link
               href="https://interactive-comments-section-mocha.vercel.app/"
               target="_blank"
-              rel="noopener noreferrer">
+              rel="noopener noreferrer"
+              aria-label="Review a second project">
               <Button
-                aria-label="Second Projects Page"
+                aria-label="Review second project"
                 className="text-2xl font-semibold ease-out bg-white px-7 py-7 rounded-2xl shadow-button text-onyx hover:shadow-button-hover hover:translate-y-1 hover:bg-white">
-                Preview
+                Review
               </Button>
             </Link>
             <h2 className="text-[1.6rem] dt:text-[2.5rem] font-semibold text-pine-green">

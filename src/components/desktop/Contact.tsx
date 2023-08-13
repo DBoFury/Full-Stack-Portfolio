@@ -17,7 +17,8 @@ const Contact = () => {
           className="flex items-center justify-center space-x-6 group"
           href="https://www.linkedin.com/in/oleg-didechkin/"
           target="_blank"
-          rel="noopener noreferrer">
+          rel="noopener noreferrer"
+          aria-label="LinkedIn profile">
           <Icons.linkedin className="w-32 h-32 transition-all ease-out group-hover:-translate-y-6" />
           <span className="font-semibold text-7xl text-onyx">LinkedIn</span>
         </Link>
@@ -26,7 +27,8 @@ const Contact = () => {
           className="flex items-center justify-center space-x-6 group"
           href="https://t.me/golovakanta"
           target="_blank"
-          rel="noopener noreferrer">
+          rel="noopener noreferrer"
+          aria-label="Telegram contact">
           <Icons.telegram className="w-32 h-32 transition-all ease-out group-hover:-translate-y-6" />
           <span className="font-semibold text-7xl text-onyx">Telegram</span>
         </Link>
@@ -35,7 +37,8 @@ const Contact = () => {
           className="flex items-center justify-center space-x-6 group"
           href="mailto:oleg.didechkin@gmail.com"
           target="_blank"
-          rel="noopener noreferrer">
+          rel="noopener noreferrer"
+          aria-label="Send an email">
           <Icons.email className="w-32 h-32 transition-all ease-out group-hover:-translate-y-6" />
           <span className="font-semibold text-7xl text-onyx">Email</span>
         </Link>

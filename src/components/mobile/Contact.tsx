@@ -14,7 +14,8 @@ const ContactMobile = () => {
             className="group"
             href="https://www.linkedin.com/in/oleg-didechkin/"
             target="_blank"
-            rel="noopener noreferrer">
+            rel="noopener noreferrer"
+            aria-label="LinkedIn profile">
             <div className="group">
               <Icons.linkedin className="focus:outline-none group-hover:scale-90" />
             </div>
@@ -23,7 +24,8 @@ const ContactMobile = () => {
             className="group"
             href="https://t.me/golovakanta"
             target="_blank"
-            rel="noopener noreferrer">
+            rel="noopener noreferrer"
+            aria-label="Telegram contact">
             <div className="group">
               <Icons.telegram className="focus:outline-none group-hover:scale-90" />
             </div>
@@ -31,7 +33,8 @@ const ContactMobile = () => {
           <Link
             href="mailto:oleg.didechkin@gmail.com"
             target="_blank"
-            rel="noopener noreferrer">
+            rel="noopener noreferrer"
+            aria-label="Send an email">
             <div className="group">
               <Icons.email className="focus:outline-none group-hover:scale-90" />
             </div>

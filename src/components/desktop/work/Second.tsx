@@ -14,9 +14,10 @@ const Second = () => {
             <Link
               href="https://bellify.org/"
               target="_blank"
-              rel="noopener noreferrer">
+              rel="noopener noreferrer"
+              aria-label="Review a third project">
               <Button
-                aria-label="Third Projects Page"
+                aria-label="Review third project"
                 className="text-2xl font-semibold ease-out bg-white px-7 py-7 rounded-2xl shadow-button text-onyx hover:shadow-button-hover hover:translate-y-1 hover:bg-white">
                 Preview
               </Button>
@@ -58,9 +59,10 @@ const Second = () => {
             <Link
               href="https://github.com/Olacdy/DinoNN"
               target="_blank"
-              rel="noopener noreferrer">
+              rel="noopener noreferrer"
+              aria-label="Review a repository of a fourth project">
               <Button
-                aria-label="Fourth Projects Repository"
+                aria-label="Repository of fourth project"
                 className="text-2xl font-semibold ease-out bg-white px-7 py-7 rounded-2xl shadow-button text-onyx hover:shadow-button-hover hover:translate-y-1 hover:bg-white">
                 Repository
               </Button>

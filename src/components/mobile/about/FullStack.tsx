@@ -45,9 +45,10 @@ const FullStack = () => {
         <Link
           href="https://github.com/Olacdy"
           target="_blank"
-          rel="noopener noreferrer">
+          rel="noopener noreferrer"
+          aria-label="Review a GitHub page">
           <Button
-            aria-label="GitHub Page"
+            aria-label="GitHub page"
             className="flex items-center justify-center space-x-3 text-xl font-semibold ease-out bg-white py-7 rounded-2xl shadow-button text-onyx hover:shadow-button-hover hover:translate-y-1 hover:bg-white">
             <Icons.github />
             <span>GitHub</span>
@@ -56,9 +57,10 @@ const FullStack = () => {
         <Link
           href="https://Olacdy.github.io/Full-Stack-Developer-CV/"
           target="_blank"
-          rel="noopener noreferrer">
+          rel="noopener noreferrer"
+          aria-label="Review a resume">
           <Button
-            aria-label="Resume Page"
+            aria-label="Resume page"
             className="flex items-center justify-center space-x-3 text-xl font-semibold ease-out bg-white py-7 rounded-2xl shadow-button text-onyx hover:shadow-button-hover hover:translate-y-1 hover:bg-white">
             <Icons.resume />
             <span>Resume</span>

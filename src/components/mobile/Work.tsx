@@ -35,11 +35,12 @@ const WorkMobile = () => {
           className="mt-10"
           href="https://olacdy.github.io/frontend-mentor-challenges/"
           target="_blank"
-          rel="noopener noreferrer">
+          rel="noopener noreferrer"
+          aria-label="Review first project">
           <Button
-            aria-label="First Project Page"
+            aria-label="Review first project"
             className="text-3xl font-semibold ease-out bg-white px-7 py-7 rounded-2xl shadow-button text-onyx hover:shadow-button-hover hover:translate-y-1 hover:bg-white">
-            Preview
+            Review
           </Button>
         </Link>
       </div>
@@ -68,11 +69,12 @@ const WorkMobile = () => {
           className="mt-10"
           href="https://interactive-comments-section-mocha.vercel.app/"
           target="_blank"
-          rel="noopener noreferrer">
+          rel="noopener noreferrer"
+          aria-label="Review second project">
           <Button
-            aria-label="Second Project Page"
+            aria-label="Review second project"
             className="text-3xl font-semibold ease-out bg-white px-7 py-7 rounded-2xl shadow-button text-onyx hover:shadow-button-hover hover:translate-y-1 hover:bg-white">
-            Preview
+            Review
           </Button>
         </Link>
       </div>
@@ -102,11 +104,12 @@ const WorkMobile = () => {
           className="mt-10"
           href="http://bellify.org/"
           target="_blank"
-          rel="noopener noreferrer">
+          rel="noopener noreferrer"
+          aria-label="Review third project">
           <Button
-            aria-label="Third Project Page"
+            aria-label="Review third project"
             className="text-3xl font-semibold ease-out bg-white px-7 py-7 rounded-2xl shadow-button text-onyx hover:shadow-button-hover hover:translate-y-1 hover:bg-white">
-            Preview
+            Review
           </Button>
         </Link>
       </div>
@@ -134,9 +137,10 @@ const WorkMobile = () => {
           className="mt-10"
           href="https://github.com/Olacdy/DinoNN"
           target="_blank"
-          rel="noopener noreferrer">
+          rel="noopener noreferrer"
+          aria-label="Review a repository of a fourth project">
           <Button
-            aria-label="Fourth Project Repository"
+            aria-label="Repository of fourth project"
             className="text-3xl font-semibold ease-out bg-white px-7 py-7 rounded-2xl shadow-button text-onyx hover:shadow-button-hover hover:translate-y-1 hover:bg-white">
             Repository
           </Button>
