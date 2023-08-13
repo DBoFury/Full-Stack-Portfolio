@@ -60,7 +60,7 @@ const Second = () => {
               href="https://github.com/Olacdy/DinoNN"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Review a repository of a fourth project">
+              aria-label="Repository of fourth project">
               <Button
                 aria-label="Repository of fourth project"
                 className="text-2xl font-semibold ease-out bg-white px-7 py-7 rounded-2xl shadow-button text-onyx hover:shadow-button-hover hover:translate-y-1 hover:bg-white">
