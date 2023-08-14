@@ -1,12 +1,20 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 const DataScience = () => {
+  const [isViewed, setIsViewed] = useState<boolean>(false);
   const { ref, inView } = useInView({ threshold: 1 });
+
+  useEffect(() => {
+    if (!isViewed && inView) {
+      setIsViewed(true);
+    }
+  }, [inView]);
 
   return (
     <div
@@ -19,8 +27,8 @@ const DataScience = () => {
           className={cn(
             "animate-fade-left animate-duration-[1000ms] animate-delay-[300ms] absolute w-64 text-4xl italic font-medium text-center -top-8 right-[110%] text-pine-green",
             {
-              paused: !inView,
-              running: inView,
+              paused: !isViewed,
+              running: isViewed,
             }
           )}>
           Data Science
@@ -29,8 +37,8 @@ const DataScience = () => {
           className={cn(
             "absolute mt-6 w-1 h-0 animate-grow-line-vertical animate-duration-[1000ms] animate-delay-[500ms] fill-mode-forwards bg-onyx",
             {
-              paused: !inView,
-              running: inView,
+              paused: !isViewed,
+              running: isViewed,
             }
           )}
           orientation="vertical"
@@ -42,8 +50,8 @@ const DataScience = () => {
           className={cn(
             "animate-in zoom-in duration-700 inset-y-0 -inset-x-[0.75rem] w-7 h-7 rounded-full absolute bg-onyx",
             {
-              paused: !inView,
-              running: inView,
+              paused: !isViewed,
+              running: isViewed,
             }
           )}
         />
@@ -53,8 +61,8 @@ const DataScience = () => {
               className={cn(
                 "animate-scale-in animate-duration-[1000ms] animate-delay-[1700ms] fill-mode-forwards py-6 rounded-lg shadow-xl bg-gray-50",
                 {
-                  paused: !inView,
-                  running: inView,
+                  paused: !isViewed,
+                  running: isViewed,
                 }
               )}
               src="/DS.webp"
@@ -67,8 +75,8 @@ const DataScience = () => {
               className={cn(
                 "absolute w-0 top-48 -right-[4.5rem] animate-duration-[500ms] animate-delay-[1500ms] animate-grow-line-horizontal fill-mode-forwards bg-battleship-gray",
                 {
-                  paused: !inView,
-                  running: inView,
+                  paused: !isViewed,
+                  running: isViewed,
                 }
               )}
               orientation="horizontal"
@@ -80,8 +88,8 @@ const DataScience = () => {
               className={cn(
                 "animate-bg-appearance animate-delay-[1600ms] animate-duration-[1000ms] fill-mode-forwards absolute -inset-x-28 z-[-1] -inset-y-28 w-80 h-80 bg-ruddy-blue rounded-2xl",
                 {
-                  paused: !inView,
-                  running: inView,
+                  paused: !isViewed,
+                  running: isViewed,
                 }
               )}
               style={{ scale: 0, "--rotation": "rotate(-45deg)" }}
@@ -94,8 +102,8 @@ const DataScience = () => {
               className={cn(
                 "absolute w-0 top-36 -left-[4rem] animate-duration-[500ms] animate-delay-[2300ms] animate-grow-line-horizontal fill-mode-forwards bg-battleship-gray",
                 {
-                  paused: !inView,
-                  running: inView,
+                  paused: !isViewed,
+                  running: isViewed,
                 }
               )}
               orientation="horizontal"
@@ -107,8 +115,8 @@ const DataScience = () => {
               className={cn(
                 "animate-fade-right animate-delay-[2450ms] animate-ease-in-out text-[1.75rem] leading-[150%] pt-3 italic text-left max-w-[420px] text-onyx",
                 {
-                  paused: !inView,
-                  running: inView,
+                  paused: !isViewed,
+                  running: isViewed,
                 }
               )}>
               My expedition as a software developer commenced with the elegant

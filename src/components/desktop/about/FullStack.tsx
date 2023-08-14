@@ -9,7 +9,14 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 
 const FullStack = () => {
+  const [isViewed, setIsViewed] = useState<boolean>(false);
   const { ref, inView } = useInView({ threshold: 1 });
+
+  useEffect(() => {
+    if (!isViewed && inView) {
+      setIsViewed(true);
+    }
+  }, [inView]);
 
   return (
     <div
@@ -22,8 +29,8 @@ const FullStack = () => {
           className={cn(
             "absolute animate-grow-line-vertical animate-duration-[700ms] fill-mode-forwards inset-x-0 -inset-y-5 w-1 h-0 bg-onyx",
             {
-              paused: !inView,
-              running: inView,
+              paused: !isViewed,
+              running: isViewed,
             }
           )}
           orientation="vertical"
@@ -35,8 +42,8 @@ const FullStack = () => {
           className={cn(
             "animate-scale-in animate-duration-[700ms] animate-delay-[500ms] fill-mode-forwards inset-y-[12.5vh] -inset-x-[0.75rem] w-7 h-7 rounded-full absolute bg-onyx",
             {
-              paused: !inView,
-              running: inView,
+              paused: !isViewed,
+              running: isViewed,
             }
           )}
           style={{ scale: 0 }}
@@ -45,8 +52,8 @@ const FullStack = () => {
           className={cn(
             "animate-fade-down animate-duration-[1000ms] animate-delay-[900ms] absolute left-0 text-4xl italic font-medium text-center w-52 h-10 -inset-x-24 inset-y-[17vh] text-pine-green",
             {
-              paused: !inView,
-              running: inView,
+              paused: !isViewed,
+              running: isViewed,
             }
           )}>
           Full-Stack
@@ -57,8 +64,8 @@ const FullStack = () => {
           className={cn(
             "animate-fade-down animate-ease-in-out animate-duration-[1000ms] animate-delay-[1500ms] text-[1.5rem] leading-[150%] pt-3 italic text-center max-w-[44rem] text-onyx",
             {
-              paused: !inView,
-              running: inView,
+              paused: !isViewed,
+              running: isViewed,
             }
           )}>
           Today, I stand at a crossroads, merging experience with vision.
@@ -70,8 +77,8 @@ const FullStack = () => {
           className={cn(
             "animate-fade-down animate-ease-in-out animate-duration-[1000ms] animate-delay-[1800ms] flex items-center justify-between w-[24rem]",
             {
-              paused: !inView,
-              running: inView,
+              paused: !isViewed,
+              running: isViewed,
             }
           )}>
           <Link

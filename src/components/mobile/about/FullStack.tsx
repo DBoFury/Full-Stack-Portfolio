@@ -42,14 +42,7 @@ const FullStack = () => {
         now craft comprehensive applications, seamlessly blending frontend and
         backend expertise, using efficient tools and techniques.
       </p>
-      <div
-        className={cn(
-          "animate-fade animate-duration-[1500ms] animate-delay-[2500ms] animate-ease-in-out absolute inset-y-[38rem] -inset-x-[2rem] flex flex-col items-center justify-center w-[340px] px-2 space-y-5 mb:flex-row mb:space-y-0 mb:justify-between mb:-inset-x-[1.75rem] mb:inset-y-[36rem]",
-          {
-            paused: !isViewed,
-            running: isViewed,
-          }
-        )}>
+      <div className="absolute inset-y-[38rem] -inset-x-[2rem] flex flex-col items-center justify-center w-[340px] px-2 space-y-5 mb:flex-row mb:space-y-0 mb:justify-between mb:-inset-x-[1.75rem] mb:inset-y-[36rem]">
         <Link
           href="https://github.com/Olacdy"
           target="_blank"
