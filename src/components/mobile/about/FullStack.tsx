@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import { Icons } from "@/components/Icons";
 import { cn } from "@/lib/utils";
@@ -7,7 +8,14 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 const FullStack = () => {
+  const [isViewed, setIsViewed] = useState<boolean>(false);
   const { ref, inView } = useInView({ threshold: 0.4 });
+
+  useEffect(() => {
+    if (!isViewed && inView) {
+      setIsViewed(true);
+    }
+  }, [inView]);
 
   return (
     <div ref={ref} className="relative h-[40rem] w-full max-w-[340px]">
@@ -15,8 +23,8 @@ const FullStack = () => {
         className={cn(
           "animate-fade-down animate-duration-[1500ms] animate-delay-[500ms] animate-ease-in-out absolute inset-0 h-16 pt-5 text-4xl italic font-medium text-center text-onyx",
           {
-            paused: !inView,
-            running: inView,
+            paused: !isViewed,
+            running: isViewed,
           }
         )}>
         Full-Stack
@@ -25,8 +33,8 @@ const FullStack = () => {
         className={cn(
           "animate-fade-up animate-duration-[1500ms] animate-delay-[500ms] animate-ease-in-out absolute -inset-x-8 inset-y-16 w-[340px] text-2xl leading-[150%] pt-3 italic text-center text-onyx",
           {
-            paused: !inView,
-            running: inView,
+            paused: !isViewed,
+            running: isViewed,
           }
         )}>
         Today, I stand at a crossroads, merging experience with vision.
@@ -38,8 +46,8 @@ const FullStack = () => {
         className={cn(
           "animate-fade animate-duration-[1500ms] animate-delay-[2500ms] animate-ease-in-out absolute inset-y-[38rem] -inset-x-[2rem] flex flex-col items-center justify-center w-[340px] px-2 space-y-5 mb:flex-row mb:space-y-0 mb:justify-between mb:-inset-x-[1.75rem] mb:inset-y-[36rem]",
           {
-            paused: !inView,
-            running: inView,
+            paused: !isViewed,
+            running: isViewed,
           }
         )}>
         <Link
