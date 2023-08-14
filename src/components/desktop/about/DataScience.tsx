@@ -78,13 +78,13 @@ const DataScience = () => {
             />
             <div
               className={cn(
-                "animate-bg-appearance animate-delay-[1600ms] animate-duration-[1000ms] fill-mode-forwards absolute bg-no-repeat bg-contain -inset-x-36 z-[-1] -inset-y-36 bg-about-1 w-96 h-96",
+                "animate-bg-appearance animate-delay-[1600ms] animate-duration-[1000ms] fill-mode-forwards absolute -inset-x-28 z-[-1] -inset-y-28 w-80 h-80 bg-ruddy-blue rounded-2xl",
                 {
                   paused: !inView,
                   running: inView,
                 }
               )}
-              style={{ scale: 0 }}
+              style={{ scale: 0, "--rotation": "rotate(-45deg)" }}
             />
           </div>
         </div>

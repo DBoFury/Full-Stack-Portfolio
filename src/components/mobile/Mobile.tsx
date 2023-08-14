@@ -14,8 +14,6 @@ const Mobile = () => {
       <AboutMobile />
       <WorkMobile />
       <ContactMobile />
-      <div className="z-[-1] absolute bottom-[26rem] -left-36 w-80 h-72 bg-no-repeat bg-contain bg-mobile-contact-1" />
-      <div className="z-[-1] absolute bottom-16 -right-48 w-72 h-64 bg-no-repeat bg-contain bg-mobile-contact-2" />
     </main>
   );
 };

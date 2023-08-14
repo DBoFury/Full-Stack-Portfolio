@@ -7,7 +7,7 @@ const First = () => {
     <div
       id="work"
       className="flex flex-col items-center justify-start px-10 pt-20 space-y-20 section">
-      <div className="absolute z-[-1] bg-no-repeat bg-contain bg-project-2 top-96 -left-36 w-72 h-96" />
+      <div className="absolute z-[-1] -inset-x-44 inset-y-96 w-72 h-96 bg-ruddy-blue rounded-2xl -rotate-12" />
 
       <div className="flex items-center justify-center space-x-20 dt:space-x-32">
         <div className="flex flex-col items-center justify-center space-y-5">
@@ -44,7 +44,7 @@ const First = () => {
             height={200}
             loading="eager"
           />
-          <div className="absolute z-[-1] bg-no-repeat bg-contain bg-project-1 top-3 -right-24 w-48 h-48" />
+          <div className="absolute z-[-1] inset-y-10 -right-24 w-48 h-40 bg-ruddy-blue rounded-2xl -rotate-12" />
         </div>
       </div>
 

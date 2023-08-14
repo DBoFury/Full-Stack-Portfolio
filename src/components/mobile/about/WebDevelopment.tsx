@@ -86,13 +86,13 @@ const WebDevelopment = () => {
         </div>
         <div
           className={cn(
-            "animate-bg-appearance animate-delay-[4500ms] animate-duration-[1000ms] fill-mode-forwards z-[-1] absolute -inset-x-20 -inset-y-12 w-[300px] h-[200px] bg-no-repeat bg-contain bg-mobile-about-2",
+            "animate-bg-appearance animate-delay-[4500ms] animate-duration-[1000ms] fill-mode-forwards z-[-1] absolute -inset-x-24 -inset-y-[6rem] w-[150px] h-[200px] bg-ruddy-blue rounded-2xl",
             {
               paused: !inView,
               running: inView,
             }
           )}
-          style={{ scale: 0 }}
+          style={{ scale: 0, "--rotation": "rotate(-65deg)" }}
         />
       </div>
       <Separator

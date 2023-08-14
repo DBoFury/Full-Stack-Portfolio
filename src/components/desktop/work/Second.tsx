@@ -40,7 +40,7 @@ const Second = () => {
             height={200}
             loading="eager"
           />
-          <div className="absolute z-[-1] bg-no-repeat bg-contain bg-project-3 -bottom-16 -right-24 w-80 h-80" />
+          <div className="absolute z-[-1] inset-y-20 -right-24 w-64 h-64 bg-ruddy-blue rounded-2xl -rotate-12" />
         </div>
       </div>
 
@@ -54,7 +54,7 @@ const Second = () => {
             height={300}
             loading="eager"
           />
-          <div className="absolute z-[-1] bg-no-repeat bg-contain bg-project-4 -top-20 -left-24 w-64 h-64" />
+          <div className="absolute z-[-1] -inset-y-12 -inset-x-16 w-52 h-52 bg-ruddy-blue rounded-2xl -rotate-[25deg]" />
         </div>
         <div className="flex flex-col items-center justify-center space-y-5">
           <div className="flex items-center justify-center space-x-10">

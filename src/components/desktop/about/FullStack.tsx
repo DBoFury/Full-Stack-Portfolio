@@ -15,8 +15,8 @@ const FullStack = () => {
     <div
       ref={ref}
       className="flex flex-col items-center justify-start pt-20 space-y-20 section">
-      <div className="absolute bg-no-repeat bg-contain bg-about-3-left top-20 -left-52 w-[28rem] h-[32rem]" />
-      <div className="absolute bg-no-repeat bg-contain bg-about-3-right top-[22rem] -right-52 w-[28rem] h-[36rem]" />
+      <div className="absolute -inset-x-36 inset-y-44 w-[20rem] h-[32rem] bg-ruddy-blue rounded-2xl rotate-12" />
+      <div className="absolute -right-32 inset-y-80 w-[20rem] h-[36rem] bg-ruddy-blue rounded-2xl rotate-12" />
       <div className="relative h-[15vh] dt:mr-20">
         <Separator
           className={cn(

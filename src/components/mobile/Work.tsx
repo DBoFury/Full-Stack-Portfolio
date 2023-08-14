@@ -19,7 +19,7 @@ const WorkMobile = () => {
             height={200}
             loading="eager"
           />
-          <div className="z-[-1] absolute inset-x-64 inset-y-16 w-[200px] h-full bg-no-repeat bg-contain bg-mobile-project-1" />
+          <div className="z-[-1] absolute inset-x-64 inset-y-16 w-[200px] h-[140px] bg-ruddy-blue rounded-2xl -rotate-12" />
         </div>
 
         <h3 className="px-24 pt-10 text-4xl font-semibold text-center text-pine-green">
@@ -55,7 +55,7 @@ const WorkMobile = () => {
             height={200}
             loading="eager"
           />
-          <div className="z-[-1] absolute -inset-x-32 w-64 h-40 bg-contain -inset-y-10 bg-no-repeat bg-mobile-project-2" />
+          <div className="z-[-1] absolute -inset-x-36 w-52 h-32 -inset-y-10 bg-ruddy-blue rounded-2xl rotate-12" />
         </div>
         <h3 className="px-24 pt-10 text-4xl font-semibold text-center text-pine-green">
           Interactive Comments Section
@@ -91,7 +91,7 @@ const WorkMobile = () => {
             height={300}
             loading="eager"
           />
-          <div className="z-[-1] absolute inset-x-6 -inset-y-16 w-72 h-72 bg-no-repeat bg-contain bg-mobile-project-3" />
+          <div className="z-[-1] absolute inset-x-6 -inset-y-10 w-64 h-40 bg-ruddy-blue rounded-2xl rotate-12" />
         </div>
         <h3 className="px-24 pt-10 text-4xl font-semibold text-center text-pine-green">
           Bellify
@@ -126,7 +126,7 @@ const WorkMobile = () => {
             height={300}
             loading="eager"
           />
-          <div className="z-[-1] absolute inset-x-20 -inset-y-28 w-[300px] h-full bg-no-repeat bg-contain bg-mobile-project-4" />
+          <div className="z-[-1] absolute inset-x-20 -inset-y-20 w-[300px] h-[200px] bg-ruddy-blue rounded-2xl rotate-12" />
         </div>
         <h3 className="px-24 pt-10 text-4xl font-semibold text-center text-pine-green">
           DynoNN

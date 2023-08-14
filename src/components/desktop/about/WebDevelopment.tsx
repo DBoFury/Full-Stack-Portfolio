@@ -13,7 +13,7 @@ const WebDevelopment = () => {
     <div
       ref={ref}
       className="flex flex-col items-center justify-center section">
-      <div className="absolute bg-no-repeat bg-contain top-36 -left-36 bg-about-3 w-72 h-[32rem]" />
+      <div className="absolute -inset-x-52 inset-y-40 w-72 h-[32rem] bg-ruddy-blue rounded-2xl -rotate-12" />
       <div className="relative h-[40vh] dt:mr-20">
         <Separator
           className={cn(
@@ -122,13 +122,13 @@ const WebDevelopment = () => {
               </div>
               <div
                 className={cn(
-                  "z-[-1] animate-bg-appearance animate-delay-[2200ms] animate-duration-[1000ms] fill-mode-forwards absolute -inset-x-4 -inset-y-0 w-[200px] h-[150px] bg-no-repeat bg-contain bg-about-2",
+                  "z-[-1] animate-bg-appearance animate-delay-[2200ms] animate-duration-[1000ms] fill-mode-forwards absolute -inset-x-4 -inset-y-0 w-[180px] h-[130px] bg-ruddy-blue rounded-2xl",
                   {
                     paused: !inView,
                     running: inView,
                   }
                 )}
-                style={{ scale: 0 }}
+                style={{ scale: 0, "--rotation": "rotate(-168deg)" }}
               />
             </div>
           </div>
