@@ -38,6 +38,7 @@ const Second = () => {
             alt="Project 3 image"
             width={300}
             height={200}
+            loading="eager"
           />
           <div className="absolute z-[-1] bg-no-repeat bg-contain bg-project-3 -bottom-16 -right-24 w-80 h-80" />
         </div>
@@ -51,6 +52,7 @@ const Second = () => {
             alt="Project 4 image"
             width={420}
             height={300}
+            loading="eager"
           />
           <div className="absolute z-[-1] bg-no-repeat bg-contain bg-project-4 -top-20 -left-24 w-64 h-64" />
         </div>

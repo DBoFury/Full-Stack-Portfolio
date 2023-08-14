@@ -42,6 +42,7 @@ const First = () => {
             alt="Project 1 image"
             width={300}
             height={200}
+            loading="eager"
           />
           <div className="absolute z-[-1] bg-no-repeat bg-contain bg-project-1 top-3 -right-24 w-48 h-48" />
         </div>
@@ -54,6 +55,7 @@ const First = () => {
             alt="Project 2 image"
             width={460}
             height={300}
+            loading="eager"
           />
         </div>
         <div className="flex flex-col items-center justify-center space-y-5">

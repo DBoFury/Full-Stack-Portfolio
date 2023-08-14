@@ -17,6 +17,7 @@ const WorkMobile = () => {
             alt="Project 1 image"
             width={340}
             height={200}
+            loading="eager"
           />
           <div className="z-[-1] absolute inset-x-64 inset-y-16 w-[200px] h-full bg-no-repeat bg-contain bg-mobile-project-1" />
         </div>
@@ -52,6 +53,7 @@ const WorkMobile = () => {
             alt="Project 2 image"
             width={320}
             height={200}
+            loading="eager"
           />
           <div className="z-[-1] absolute -inset-x-32 w-64 h-40 bg-contain -inset-y-10 bg-no-repeat bg-mobile-project-2" />
         </div>
@@ -87,6 +89,7 @@ const WorkMobile = () => {
             alt="Project 3 image"
             width={320}
             height={300}
+            loading="eager"
           />
           <div className="z-[-1] absolute inset-x-6 -inset-y-16 w-72 h-72 bg-no-repeat bg-contain bg-mobile-project-3" />
         </div>
@@ -121,6 +124,7 @@ const WorkMobile = () => {
             alt="Project 4 image"
             width={460}
             height={300}
+            loading="eager"
           />
           <div className="z-[-1] absolute inset-x-20 -inset-y-28 w-[300px] h-full bg-no-repeat bg-contain bg-mobile-project-4" />
         </div>
