@@ -8,7 +8,7 @@ I am a dedicated Full-Stack Developer with a passion for creating innovative web
 
 ## Portfolio Website
 
-For a comprehensive view of my projects, skills, and experience, please visit my [Full-Stack Developer Portfolio Website](https://www.olegdidechkin.com). There, you'll find details about various projects I've worked on, technologies I've utilized, and the impact of my contributions. The website serves as a showcase of my abilities and a testament to my commitment to delivering high-quality software.
+For a comprehensive view of my projects, skills, and experience, please visit my [Full-Stack Developer Portfolio Website](https://olegdidechkin.com). There, you'll find details about various projects I've worked on, technologies I've utilized, and the impact of my contributions. The website serves as a showcase of my abilities and a testament to my commitment to delivering high-quality software.
 
 ## Contact
 
