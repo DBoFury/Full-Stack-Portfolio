@@ -8,7 +8,7 @@ const Second = () => {
       <div className="flex items-center justify-center space-x-20 dt:space-x-32">
         <div className="flex flex-col items-center justify-center space-y-5">
           <div className="flex items-center justify-center space-x-10">
-            <h2 className="text-[1.6rem] font-semibold text-pine-green dt:text-[2.8rem]">
+            <h2 className="text-[1.6rem] font-semibold text-pine-green dt:text-[2.8rem] cursor-default">
               Bellify
             </h2>
             <Link
@@ -23,7 +23,7 @@ const Second = () => {
               </Button>
             </Link>
           </div>
-          <p className="text-xl leading-[150%] dt:text-2xl italic text-center text-onyx max-w-[50rem]">
+          <p className="text-xl leading-[150%] dt:text-2xl italic text-center text-onyx max-w-[50rem] cursor-default">
             Telegram bot project – a user-centered hub for tracking preferred
             YouTube and Twitch channels. Receive instant notifications for new
             content while benefiting from commerce practices like user
@@ -33,7 +33,7 @@ const Second = () => {
         </div>
         <div className="relative">
           <Image
-            className="shadow-lg rounded-xl"
+            className="shadow-lg pointer-events-none rounded-xl"
             src="/Project-3.webp"
             alt="Project 3 image"
             width={300}
@@ -47,7 +47,7 @@ const Second = () => {
       <div className="flex items-center justify-center space-x-10 dt:space-x-20">
         <div className="relative">
           <Image
-            className="rounded-lg"
+            className="rounded-lg pointer-events-none"
             src="/Project-4.webp"
             alt="Project 4 image"
             width={420}
@@ -69,11 +69,11 @@ const Second = () => {
                 Repository
               </Button>
             </Link>
-            <h2 className="text-[1.6rem] dt:text-[2.5rem] font-semibold text-pine-green">
+            <h2 className="text-[1.6rem] dt:text-[2.5rem] font-semibold text-pine-green cursor-default">
               DinoNN
             </h2>
           </div>
-          <p className="text-xl leading-[150%] dt:text-2xl italic text-center text-onyx max-w-[50rem]">
+          <p className="text-xl leading-[150%] dt:text-2xl italic text-center text-onyx max-w-[50rem] cursor-default">
             Python script that launches a Chrome browser, generates multiple
             agents (neural networks) to compete for top scores in Dino game,
             identifies the most successful agent, and mutates its genes to spawn

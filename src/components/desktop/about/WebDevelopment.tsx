@@ -1,33 +1,25 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import { Icons } from "@/components/Icons";
 import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
 
 const WebDevelopment = () => {
-  const [isViewed, setIsViewed] = useState<boolean>(false);
-  const { ref, inView } = useInView({ threshold: 1 });
-
-  useEffect(() => {
-    if (!isViewed && inView) {
-      setIsViewed(true);
-    }
-  }, [inView]);
+  const { ref, inView } = useInView({ threshold: 1, triggerOnce: true });
 
   return (
     <div
       ref={ref}
-      className="flex flex-col items-center justify-center section">
+      className="flex flex-col items-center justify-center cursor-default section">
       <div className="absolute -inset-x-52 inset-y-40 w-72 h-[32rem] bg-ruddy-blue rounded-2xl -rotate-12" />
       <div className="relative h-[40vh] dt:mr-20">
         <Separator
           className={cn(
             "absolute animate-grow-line-vertical animate-duration-[500ms] fill-mode-forwards inset-x-0 -inset-y-[15vh] w-1 h-0 bg-onyx",
             {
-              paused: !isViewed,
-              running: isViewed,
+              paused: !inView,
+              running: inView,
             }
           )}
           orientation="vertical"
@@ -39,8 +31,8 @@ const WebDevelopment = () => {
           className={cn(
             "animate-scale-in animate-duration-[700ms] animate-delay-[300ms] fill-mode-forwards inset-y-0 -inset-x-[0.75rem] w-7 h-7 rounded-full absolute bg-onyx",
             {
-              paused: !isViewed,
-              running: isViewed,
+              paused: !inView,
+              running: inView,
             }
           )}
           style={{ scale: 0 }}
@@ -49,8 +41,8 @@ const WebDevelopment = () => {
           className={cn(
             "animate-fade-right animate-duration-[1000ms] animate-delay-[900ms] absolute w-80 h-10 text-4xl italic font-medium text-center inset-x-6 -inset-y-10 text-pine-green",
             {
-              paused: !isViewed,
-              running: isViewed,
+              paused: !inView,
+              running: inView,
             }
           )}>
           Web Development
@@ -59,8 +51,8 @@ const WebDevelopment = () => {
           className={cn(
             "absolute animate-grow-line-vertical animate-duration-[1000ms] animate-delay-[900ms] fill-mode-forwards inset-0 w-1 h-0 bg-onyx",
             {
-              paused: !isViewed,
-              running: isViewed,
+              paused: !inView,
+              running: inView,
             }
           )}
           orientation="vertical"
@@ -74,8 +66,8 @@ const WebDevelopment = () => {
               className={cn(
                 "absolute animate-duration-[500ms] animate-delay-[1500ms] animate-grow-line-horizontal fill-mode-forwards w-0 top-44 -right-[5.5rem] bg-battleship-gray",
                 {
-                  paused: !isViewed,
-                  running: isViewed,
+                  paused: !inView,
+                  running: inView,
                 }
               )}
               orientation="horizontal"
@@ -87,8 +79,8 @@ const WebDevelopment = () => {
               className={cn(
                 "animate-fade-left animate-delay-[1600ms] animate-ease-in-out text-[1.6rem] leading-[150%] pt-3 italic text-center text-onyx",
                 {
-                  paused: !isViewed,
-                  running: isViewed,
+                  paused: !inView,
+                  running: inView,
                 }
               )}>
               Transitioning, I immersed myself in web development, powered by
@@ -103,8 +95,8 @@ const WebDevelopment = () => {
               className={cn(
                 "absolute animate-duration-[500ms] animate-delay-[2200ms] animate-grow-line-horizontal fill-mode-forwards w-0 top-16 -left-[3.5rem] bg-battleship-gray",
                 {
-                  paused: !isViewed,
-                  running: isViewed,
+                  paused: !inView,
+                  running: inView,
                 }
               )}
               orientation="horizontal"
@@ -119,8 +111,8 @@ const WebDevelopment = () => {
                 className={cn(
                   "animate-fade-up animate-delay-[2500ms] animate-ease-out flex items-center justify-center space-x-2",
                   {
-                    paused: !isViewed,
-                    running: isViewed,
+                    paused: !inView,
+                    running: inView,
                   }
                 )}>
                 <Icons.django />
@@ -131,8 +123,8 @@ const WebDevelopment = () => {
                 className={cn(
                   "z-[-1] animate-bg-appearance animate-delay-[2200ms] animate-duration-[1000ms] fill-mode-forwards absolute -inset-x-4 -inset-y-0 w-[180px] h-[130px] bg-ruddy-blue rounded-2xl",
                   {
-                    paused: !isViewed,
-                    running: isViewed,
+                    paused: !inView,
+                    running: inView,
                   }
                 )}
                 style={{ scale: 0, "--rotation": "rotate(-168deg)" }}

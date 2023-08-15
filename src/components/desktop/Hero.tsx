@@ -23,17 +23,17 @@ const Hero = () => {
       className="flex flex-col items-center justify-center section">
       <div className="flex space-x-12 max-w-[78rem] lg:mx-16 dt:mx-24 pt-28">
         <div className="flex flex-col items-start justify-center space-y-4 text-left">
-          <h2 className="text-5xl font-bold text-pine-green">
+          <h2 className="text-5xl font-bold cursor-default text-pine-green">
             Full-Stack Developer
           </h2>
-          <p className="text-onyx text-2xl leading-[165%] pr-1">
+          <p className="text-onyx text-2xl leading-[165%] pr-1 cursor-default">
             Greetings! I'm Oleg Didechkin, a dedicated and imaginative
             web-developer with a rich array of expertise and a passion for
             crafting digital experiences.
           </p>
         </div>
         <div className="relative">
-          <span className="absolute font-semibold -inset-y-8 text-2xl rotate-45 inset-x-[200px] text-pine-green">
+          <span className="absolute font-semibold -inset-y-8 text-2xl rotate-45 inset-x-[200px] text-pine-green cursor-default">
             *click
           </span>
           <Switch
@@ -45,7 +45,7 @@ const Hero = () => {
       </div>
 
       <div className="pt-16">
-        <h2 className="text-4xl font-semibold text-center text-pine-green">
+        <h2 className="text-4xl font-semibold text-center cursor-default text-pine-green">
           Skills
         </h2>
 
@@ -107,7 +107,7 @@ const Hero = () => {
         )}
 
         {tabsValue === "soft" && (
-          <div className="h-[210px]">
+          <div className="h-[210px] cursor-default">
             <div className="flex flex-col items-center justify-center pt-4 space-y-4">
               <div className="flex items-center space-x-2 animate-fade-down animate-duration-[1000ms] animate-ease-out">
                 <h3 className="text-2xl font-medium text-pine-green">

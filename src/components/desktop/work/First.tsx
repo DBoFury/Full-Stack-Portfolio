@@ -12,7 +12,7 @@ const First = () => {
       <div className="flex items-center justify-center space-x-20 dt:space-x-32">
         <div className="flex flex-col items-center justify-center space-y-5">
           <div className="flex items-center justify-center space-x-10">
-            <h2 className="text-[1.6rem] font-semibold text-pine-green dt:text-[2.8rem]">
+            <h2 className="text-[1.6rem] font-semibold text-pine-green dt:text-[2.8rem] cursor-default">
               Frontend Mentor Challenges
             </h2>
             <Link
@@ -27,7 +27,7 @@ const First = () => {
               </Button>
             </Link>
           </div>
-          <p className="text-xl leading-[150%] dt:text-2xl italic text-center text-onyx max-w-[50rem]">
+          <p className="text-xl leading-[150%] dt:text-2xl italic text-center text-onyx max-w-[50rem] cursor-default">
             A collection of Frontend Mentor tasks I've solved and deployed on
             GitHub Pages. Utilizing the Next router, I've harmoniously
             integrated all pages into one cohesive website, dedicating a unique
@@ -37,7 +37,7 @@ const First = () => {
         </div>
         <div className="relative">
           <Image
-            className="px-10 shadow-lg bg-gray-50 rounded-xl"
+            className="px-10 shadow-lg pointer-events-none bg-gray-50 rounded-xl"
             src="/Project-1.webp"
             alt="Project 1 image"
             width={300}
@@ -51,6 +51,7 @@ const First = () => {
       <div className="flex items-center justify-center space-x-10 dt:space-x-20">
         <div className="relative">
           <Image
+            className="pointer-events-none"
             src="/Project-2.webp"
             alt="Project 2 image"
             width={460}
@@ -71,11 +72,11 @@ const First = () => {
                 Review
               </Button>
             </Link>
-            <h2 className="text-[1.6rem] dt:text-[2.5rem] font-semibold text-pine-green">
+            <h2 className="text-[1.6rem] dt:text-[2.5rem] font-semibold text-pine-green cursor-default">
               Interactive Comments Section
             </h2>
           </div>
-          <p className="text-xl leading-[150%] dt:text-2xl italic text-center text-onyx max-w-[50rem]">
+          <p className="text-xl leading-[150%] dt:text-2xl italic text-center text-onyx max-w-[50rem] cursor-default">
             All-encompassing full-stack web application empowering users to
             create, edit, and delete diverse comments within a unified global
             comments section. Account creation is a prerequisite for accessing

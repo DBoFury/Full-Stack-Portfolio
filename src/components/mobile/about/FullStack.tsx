@@ -1,40 +1,39 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { useInView } from "react-intersection-observer";
+import { useRef } from "react";
+import useOnScreen from "@/hooks/useOnScreen";
 import { Icons } from "@/components/Icons";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 const FullStack = () => {
-  const [isViewed, setIsViewed] = useState<boolean>(false);
-  const { ref, inView } = useInView({ threshold: 0.4 });
+  const titleRef = useRef<HTMLHeadingElement>(null);
+  const isTitleVisible = useOnScreen(titleRef);
 
-  useEffect(() => {
-    if (!isViewed && inView) {
-      setIsViewed(true);
-    }
-  }, [inView]);
+  const textRef = useRef<HTMLParagraphElement>(null);
+  const isTextVisible = useOnScreen(textRef);
 
   return (
-    <div ref={ref} className="relative h-[40rem] w-full max-w-[340px]">
+    <div className="relative h-[40rem] w-full max-w-[340px]">
       <h3
+        ref={titleRef}
         className={cn(
-          "animate-fade-down animate-duration-[1500ms] animate-delay-[500ms] animate-ease-in-out absolute inset-0 h-16 pt-5 text-4xl italic font-medium text-center text-onyx",
+          "animate-fade-down animate-duration-[1500ms] animate-ease-in-out absolute inset-0 h-16 pt-5 text-4xl italic font-medium text-center text-onyx",
           {
-            paused: !isViewed,
-            running: isViewed,
+            paused: !isTitleVisible,
+            running: isTitleVisible,
           }
         )}>
         Full-Stack
       </h3>
       <p
+        ref={textRef}
         className={cn(
-          "animate-fade-up animate-duration-[1500ms] animate-delay-[500ms] animate-ease-in-out absolute -inset-x-8 inset-y-16 w-[340px] text-2xl leading-[150%] pt-3 italic text-center text-onyx",
+          "animate-fade-up animate-duration-[1500ms] animate-ease-in-out absolute h-96 -inset-x-8 inset-y-16 w-[340px] text-2xl leading-[150%] italic text-center text-onyx",
           {
-            paused: !isViewed,
-            running: isViewed,
+            paused: !isTextVisible,
+            running: isTextVisible,
           }
         )}>
         Today, I stand at a crossroads, merging experience with vision.
