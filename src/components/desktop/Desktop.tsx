@@ -11,8 +11,17 @@ import ScrollFooter from "@/components/desktop/ScrollFooter";
 const Desktop = () => {
   const chunkRef = useRef(0);
   const isScrollingRef = useRef(false);
+  const isTouchPadRef = useRef(false);
 
   const handleScroll = (e: WheelEvent, container: HTMLElement) => {
+    if (!isTouchPadRef.current) {
+      isTouchPadRef.current = !Number.isInteger(e.deltaY);
+    }
+
+    if (isTouchPadRef.current) {
+      return;
+    }
+
     e.preventDefault();
 
     if (isScrollingRef.current) {
