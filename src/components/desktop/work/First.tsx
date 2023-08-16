@@ -37,7 +37,7 @@ const First = () => {
         </div>
         <div className="relative">
           <Image
-            className="px-10 shadow-lg pointer-events-none bg-gray-50 rounded-xl"
+            className="p-10 shadow-lg pointer-events-none bg-gray-50 rounded-xl"
             src="/Project-1.webp"
             alt="Project 1 image"
             width={300}
