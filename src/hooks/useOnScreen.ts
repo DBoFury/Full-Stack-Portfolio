@@ -6,20 +6,22 @@ export default function useOnScreen(
 ) {
   const [isIntersecting, setIsIntersecting] = useState(false);
 
-  const observer = useMemo(
-    () =>
-      new IntersectionObserver(
+  const observer = useMemo(() => {
+    try {
+      return new IntersectionObserver(
         ([entry]) => {
           if (!isIntersecting && entry.isIntersecting) setIsIntersecting(true);
         },
         { threshold: threshold }
-      ),
-    []
-  );
+      );
+    } catch (error) {
+      return null;
+    }
+  }, []);
 
   useEffect(() => {
-    observer.observe(ref.current!);
-    return () => observer.disconnect();
+    observer?.observe(ref.current!);
+    return () => observer?.disconnect();
   }, []);
 
   return isIntersecting;
