@@ -15,7 +15,7 @@ const Contact = () => {
         Contact Me
       </h2>
       <div className='flex flex-col items-start justify-center flex-1 pt-20 space-y-8 dt:space-x-12 dt:flex-row dt:space-y-0 dt:pt-0 dt:items-center'>
-        {contacts.slice(3).map((contact) => {
+        {contacts.slice(2).map((contact) => {
           const Icon = Icons[contact.icon as keyof typeof Icons];
 
           return (
@@ -33,9 +33,10 @@ const Contact = () => {
           );
         })}
       </div>
-      <span className='absolute text-xl font-semibold -translate-x-1/2 cursor-default bottom-2 left-1/2 text-battleship-gray'>
-        Oleg Didechkin 2023
-      </span>
+
+      <small className='absolute text-xs font-semibold text-center -translate-x-1/2 cursor-default bottom-2 left-1/2 text-battleship-gray'>
+        &copy; 2023 Oleg Didechkin. All rights reserved.
+      </small>
     </div>
   );
 };
