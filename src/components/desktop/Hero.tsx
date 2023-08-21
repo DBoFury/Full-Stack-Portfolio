@@ -2,10 +2,26 @@
 
 import { useState } from 'react';
 
+import { motion } from 'framer-motion';
+
 import { Icons } from '@/components/Icons';
 import { Switch } from '@/components/ui/switch';
 
-import { cn } from '@/lib/utils';
+import { skills } from '@/helpers/data';
+
+const fadeInAnimationVariants = {
+  initial: {
+    opacity: 0,
+    y: 100,
+  },
+  animate: (index: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.05 * index,
+    },
+  }),
+};
 
 const Hero = () => {
   const [tabsValue, setTabsValue] = useState<string>('hard');
@@ -54,56 +70,39 @@ const Hero = () => {
         {tabsValue === 'hard' && (
           <div className='h-[210px]'>
             <div className='flex flex-col items-center justify-center pt-5'>
-              <div className='grid items-center grid-cols-3 justify-items-center gap-x-3 gap-y-4 md:grid-cols-6'>
-                <Icons.html
-                  className={cn({
-                    'animate-duration-[1000ms] animate-in zoom-in': !isInit,
-                  })}
-                />
-                <Icons.css
-                  className={cn({
-                    'animate-duration-[1000ms] animate-in zoom-in': !isInit,
-                  })}
-                />
-                <Icons.js
-                  className={cn({
-                    'animate-duration-[1000ms] animate-in zoom-in': !isInit,
-                  })}
-                />
-                <Icons.react
-                  className={cn({
-                    'animate-duration-[1000ms] animate-in zoom-in': !isInit,
-                  })}
-                />
-                <Icons.next
-                  className={cn({
-                    'animate-duration-[1000ms] animate-in zoom-in': !isInit,
-                  })}
-                />
-                <Icons.tailwindcss
-                  className={cn({
-                    'animate-duration-[1000ms] animate-in zoom-in': !isInit,
-                  })}
-                />
-              </div>
+              <ul className='grid items-center grid-cols-3 justify-items-center gap-x-3 gap-y-4 md:grid-cols-6'>
+                {skills.frontend.map((skill, index) => {
+                  const Icon = Icons[skill.icon as keyof typeof Icons];
 
-              <div className='grid items-center grid-cols-3 pt-5 justify-items-center gap-x-4 gap-y-4 max-w-[380px]'>
-                <Icons.python
-                  className={cn({
-                    'animate-duration-[1000ms] animate-in zoom-in': !isInit,
-                  })}
-                />
-                <Icons.node
-                  className={cn({
-                    'animate-duration-[1000ms] animate-in zoom-in': !isInit,
-                  })}
-                />
-                <Icons.docker
-                  className={cn({
-                    'animate-duration-[1000ms] animate-in zoom-in': !isInit,
-                  })}
-                />
-              </div>
+                  return (
+                    <motion.li
+                      key={skill.name.toLowerCase()}
+                      variants={fadeInAnimationVariants}
+                      initial={isInit ? false : 'initial'}
+                      whileInView='animate'
+                      custom={index}>
+                      <Icon />
+                    </motion.li>
+                  );
+                })}
+              </ul>
+
+              <ul className='grid items-center grid-cols-3 pt-5 justify-items-center gap-x-4 gap-y-4 max-w-[380px]'>
+                {skills.backend.map((skill, index) => {
+                  const Icon = Icons[skill.icon as keyof typeof Icons];
+
+                  return (
+                    <motion.li
+                      key={skill.name.toLowerCase()}
+                      variants={fadeInAnimationVariants}
+                      initial={isInit ? false : 'initial'}
+                      whileInView='animate'
+                      custom={index}>
+                      <Icon />
+                    </motion.li>
+                  );
+                })}
+              </ul>
             </div>
           </div>
         )}

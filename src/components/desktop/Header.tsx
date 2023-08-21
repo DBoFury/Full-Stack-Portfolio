@@ -27,11 +27,9 @@ const Header: FC<HeaderProps> = () => {
         <ul className='flex gap-8 mr-6 text-2xl text-pine-green'>
           {sections.map((section) => {
             return (
-              <motion.li
+              <li
                 className='relative flex items-center justify-center h-3/4'
-                key={section.id}
-                initial={{ y: -100, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}>
+                key={section.id}>
                 <Link
                   className='flex items-center justify-center w-full transition hover:text-gray-950 dark:text-gray-500 dark:hover:text-gray-300'
                   href={`#${section.id}`}
@@ -52,7 +50,7 @@ const Header: FC<HeaderProps> = () => {
                       }}></motion.span>
                   )}
                 </Link>
-              </motion.li>
+              </li>
             );
           })}
         </ul>

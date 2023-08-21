@@ -77,3 +77,46 @@ export const projects = [
     image: '/Project-4.webp',
   },
 ];
+
+export const skills = {
+  frontend: [
+    {
+      name: 'HTML',
+      icon: 'html',
+    },
+    {
+      name: 'CSS',
+      icon: 'css',
+    },
+    {
+      name: 'JS',
+      icon: 'js',
+    },
+    {
+      name: 'React',
+      icon: 'react',
+    },
+    {
+      name: 'Next',
+      icon: 'next',
+    },
+    {
+      name: 'TailwindCSS',
+      icon: 'tailwindcss',
+    },
+  ],
+  backend: [
+    {
+      name: 'Python',
+      icon: 'python',
+    },
+    {
+      name: 'Node',
+      icon: 'node',
+    },
+    {
+      name: 'Docker',
+      icon: 'docker',
+    },
+  ],
+};
