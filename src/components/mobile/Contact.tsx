@@ -1,6 +1,7 @@
 import Link from 'next/link';
 
-import { Icons } from '../Icons';
+import { Icons } from '@/components/Icons';
+import { contactLinks } from '@/helpers/data';
 
 const ContactMobile = () => {
   return (
@@ -13,7 +14,7 @@ const ContactMobile = () => {
         <div className='flex flex-col items-center space-x-0 space-y-7 mb:flex-row mb:space-y-0 mb:space-x-10'>
           <Link
             className='group'
-            href='https://www.linkedin.com/in/oleg-didechkin/'
+            href={contactLinks['linkedin']}
             target='_blank'
             rel='noopener noreferrer'
             aria-label='LinkedIn profile'>
@@ -23,7 +24,7 @@ const ContactMobile = () => {
           </Link>
           <Link
             className='group'
-            href='https://t.me/golovakanta'
+            href={contactLinks['telegram']}
             target='_blank'
             rel='noopener noreferrer'
             aria-label='Telegram contact'>
@@ -32,7 +33,7 @@ const ContactMobile = () => {
             </div>
           </Link>
           <Link
-            href='mailto:oleg.didechkin@gmail.com'
+            href={contactLinks['mail']}
             target='_blank'
             rel='noopener noreferrer'
             aria-label='Send an email'>

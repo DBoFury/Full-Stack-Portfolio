@@ -1,5 +1,7 @@
-import { Icons } from '@/components/Icons';
 import Link from 'next/link';
+
+import { Icons } from '@/components/Icons';
+import { contactLinks } from '@/helpers/data';
 
 const Contact = () => {
   return (
@@ -15,7 +17,7 @@ const Contact = () => {
       <div className='flex flex-col items-start justify-center flex-1 pt-20 space-y-8 dt:space-x-12 dt:flex-row dt:space-y-0 dt:pt-0 dt:items-center'>
         <Link
           className='flex items-center justify-center space-x-6 group'
-          href='https://www.linkedin.com/in/oleg-didechkin/'
+          href={contactLinks['linkedin']}
           target='_blank'
           rel='noopener noreferrer'
           aria-label='LinkedIn profile'>
@@ -25,7 +27,7 @@ const Contact = () => {
 
         <Link
           className='flex items-center justify-center space-x-6 group'
-          href='https://t.me/golovakanta'
+          href={contactLinks['telegram']}
           target='_blank'
           rel='noopener noreferrer'
           aria-label='Telegram contact'>
@@ -35,7 +37,7 @@ const Contact = () => {
 
         <Link
           className='flex items-center justify-center space-x-6 group'
-          href='mailto:oleg.didechkin@gmail.com'
+          href={contactLinks['mail']}
           target='_blank'
           rel='noopener noreferrer'
           aria-label='Send an email'>

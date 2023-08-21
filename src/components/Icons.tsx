@@ -1,10 +1,12 @@
 import { cn } from '@/lib/utils';
-import { Plus, type LucideIcon, type LucideProps } from 'lucide-react';
+import { Plus, Sun, Moon, type LucideIcon, type LucideProps } from 'lucide-react';
 
 export type Icon = LucideIcon;
 
 export const Icons = {
   plus: Plus,
+  sun: Sun,
+  moon: Moon,
   css: ({ ...props }: LucideProps) => (
     <svg
       width='61'
