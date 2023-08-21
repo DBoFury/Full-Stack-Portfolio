@@ -20,6 +20,7 @@ const Contact = () => {
 
           return (
             <Link
+              key={contact.name.toLowerCase()}
               className='flex items-center justify-center space-x-6 group'
               href={contact.link}
               target='_blank'

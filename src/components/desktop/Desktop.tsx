@@ -2,6 +2,8 @@
 
 import { useEffect, useRef } from 'react';
 
+import { useActiveSectionContext } from '@/context/active-section-context';
+
 import Contact from '@/components/desktop/Contact';
 import Header from '@/components/desktop/Header';
 import Hero from '@/components/desktop/Hero';
@@ -9,8 +11,11 @@ import ScrollFooter from '@/components/desktop/ScrollFooter';
 import About from '@/components/desktop/about/About';
 import Work from '@/components/desktop/work/Work';
 
+import { sections } from '@/helpers/data';
+import { getNameByNumber } from '@/lib/utils';
+
 const Desktop = () => {
-  const chunkRef = useRef(0);
+  const { setActiveSection, chunkRef } = useActiveSectionContext();
   const isScrollingRef = useRef(false);
   const isTouchPadRef = useRef(false);
 
@@ -59,6 +64,8 @@ const Desktop = () => {
         }, 500);
       }
     }
+
+    setActiveSection(getNameByNumber(sections, chunkRef.current));
   };
 
   useEffect(() => {
@@ -77,7 +84,7 @@ const Desktop = () => {
 
   return (
     <main className='hidden content lg:block'>
-      <Header chunkRef={chunkRef} />
+      <Header />
       <Hero />
       <About />
       <Work />

@@ -17,6 +17,7 @@ const ContactMobile = () => {
 
             return (
               <Link
+                key={contact.name.toLowerCase()}
                 className='group'
                 href={contact.link}
                 target='_blank'

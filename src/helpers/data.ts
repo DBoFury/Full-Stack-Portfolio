@@ -1,8 +1,23 @@
 export const sections = [
-  { name: 'Home', id: 'home' },
-  { name: 'About', id: 'about' },
-  { name: 'Projects', id: 'projects' },
-  { name: 'Contact', id: 'contact' },
+  { name: 'Home', id: 'home', ariaLabel: 'Go to a home section', number: 0 },
+  {
+    name: 'About',
+    id: 'about',
+    ariaLabel: 'Go to an about section',
+    number: 1,
+  },
+  {
+    name: 'Work',
+    id: 'work',
+    ariaLabel: 'Go to a work section',
+    number: 4,
+  },
+  {
+    name: 'Contact',
+    id: 'contact',
+    ariaLabel: 'Go to a contact section',
+    number: 6,
+  },
 ];
 
 export const contacts = [

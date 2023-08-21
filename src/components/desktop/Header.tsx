@@ -1,14 +1,21 @@
 'use client';
 
-import { FC, MutableRefObject } from 'react';
+import { FC } from 'react';
+
+import { useActiveSectionContext } from '@/context/active-section-context';
 
 import Link from 'next/link';
 
-interface HeaderProps {
-  chunkRef: MutableRefObject<number>;
-}
+import { motion } from 'framer-motion';
 
-const Header: FC<HeaderProps> = ({ chunkRef }) => {
+import { sections } from '@/helpers/data';
+
+interface HeaderProps {}
+
+const Header: FC<HeaderProps> = () => {
+  const { activeSection, setActiveSection, chunkRef } =
+    useActiveSectionContext();
+
   return (
     <header className='sticky top-0 z-10 w-full h-0 bg-white'>
       <nav className='flex items-end justify-between p-3 px-10'>
@@ -17,51 +24,37 @@ const Header: FC<HeaderProps> = ({ chunkRef }) => {
             Oleg D.
           </h1>
         </Link>
-        <ul className='flex mr-6 space-x-5 text-2xl text-pine-green'>
-          <li>
-            <Link
-              href='#home'
-              onClick={() => (chunkRef.current = 0)}
-              aria-label='Go to a home section'>
-              <p className='relative group'>
-                <span>Home</span>
-                <span className='absolute left-0 w-0 h-1 bg-ruddy-blue -bottom-1 -z-10 group-hover:w-full group-hover:transition-all'></span>
-              </p>
-            </Link>
-          </li>
-          <li>
-            <Link
-              href='#about'
-              onClick={() => (chunkRef.current = 1)}
-              aria-label='Go to an about section'>
-              <p className='relative group'>
-                <span>About</span>
-                <span className='absolute left-0 w-0 h-1 bg-ruddy-blue -bottom-1 -z-10 group-hover:w-full group-hover:transition-all'></span>
-              </p>
-            </Link>
-          </li>
-          <li>
-            <Link
-              href='#work'
-              onClick={() => (chunkRef.current = 4)}
-              aria-label='Go to a work section'>
-              <p className='relative group'>
-                <span>Work</span>
-                <span className='absolute left-0 w-0 h-1 bg-ruddy-blue -bottom-1 -z-10 group-hover:w-full group-hover:transition-all'></span>
-              </p>
-            </Link>
-          </li>
-          <li>
-            <Link
-              href='#contact'
-              onClick={() => (chunkRef.current = 6)}
-              aria-label='Go to a contact section'>
-              <p className='relative group'>
-                <span>Contact</span>
-                <span className='absolute left-0 w-0 h-1 bg-ruddy-blue -bottom-1 -z-10 group-hover:w-full group-hover:transition-all'></span>
-              </p>
-            </Link>
-          </li>
+        <ul className='flex gap-8 mr-6 text-2xl text-pine-green'>
+          {sections.map((section) => {
+            return (
+              <motion.li
+                className='relative flex items-center justify-center h-3/4'
+                key={section.id}
+                initial={{ y: -100, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}>
+                <Link
+                  className='flex items-center justify-center w-full transition hover:text-gray-950 dark:text-gray-500 dark:hover:text-gray-300'
+                  href={`#${section.id}`}
+                  onClick={() => {
+                    setActiveSection(section.name);
+                    chunkRef.current = section.number;
+                  }}>
+                  {section.name}
+
+                  {activeSection === section.name && (
+                    <motion.span
+                      className='absolute left-0 w-full h-1 bg-ruddy-blue -bottom-1 -z-10 dark:bg-gray-800'
+                      layoutId='activeSection'
+                      transition={{
+                        type: 'spring',
+                        stiffness: 380,
+                        damping: 30,
+                      }}></motion.span>
+                  )}
+                </Link>
+              </motion.li>
+            );
+          })}
         </ul>
       </nav>
     </header>

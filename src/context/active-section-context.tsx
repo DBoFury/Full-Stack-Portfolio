@@ -1,7 +1,7 @@
 'use client';
 
-import { SectionName } from '@/types/sections';
-import React, { createContext, useContext, useState } from 'react';
+import { SectionName } from '@/types/data';
+import React, { createContext, useContext, useRef, useState } from 'react';
 
 type ActiveSectionContextProviderProps = {
   children: React.ReactNode;
@@ -10,8 +10,7 @@ type ActiveSectionContextProviderProps = {
 type ActiveSectionContextType = {
   activeSection: SectionName;
   setActiveSection: React.Dispatch<React.SetStateAction<SectionName>>;
-  timeOfLastClick: number;
-  setTimeOfLastClick: React.Dispatch<React.SetStateAction<number>>;
+  chunkRef: React.MutableRefObject<number>;
 };
 
 export const ActiveSectionContext =
@@ -21,15 +20,14 @@ export default function ActiveSectionContextProvider({
   children,
 }: ActiveSectionContextProviderProps) {
   const [activeSection, setActiveSection] = useState<SectionName>('Home');
-  const [timeOfLastClick, setTimeOfLastClick] = useState(0); // we need to keep track of this to disable the observer temporarily when user clicks on a link
+  const chunkRef = useRef(0);
 
   return (
     <ActiveSectionContext.Provider
       value={{
         activeSection,
         setActiveSection,
-        timeOfLastClick,
-        setTimeOfLastClick,
+        chunkRef,
       }}>
       {children}
     </ActiveSectionContext.Provider>
