@@ -9,19 +9,7 @@ import { Switch } from '@/components/ui/switch';
 
 import { skills } from '@/helpers/data';
 
-const fadeInAnimationVariants = {
-  initial: {
-    opacity: 0,
-    y: 100,
-  },
-  animate: (index: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      delay: 0.05 * index,
-    },
-  }),
-};
+import { fadeInAnimationVariants } from '@/helpers/animations';
 
 const Hero = () => {
   const [tabsValue, setTabsValue] = useState<string>('hard');
@@ -110,7 +98,13 @@ const Hero = () => {
         {tabsValue === 'soft' && (
           <div className='h-[210px] cursor-default'>
             <div className='flex flex-col items-center justify-center pt-4 space-y-4'>
-              <div className='flex items-center space-x-2 animate-fade-down animate-duration-[1000ms] animate-ease-out'>
+              <motion.div
+                className='flex items-center space-x-2'
+                initial={{ opacity: 0, y: -30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.5,
+                }}>
                 <h3 className='text-2xl font-medium text-pine-green'>
                   Problem solving
                 </h3>
@@ -120,8 +114,15 @@ const Hero = () => {
                 <p className='pt-[2px] text-left text-onyx text-lg'>
                   creative and effective ways to find innovative solutions
                 </p>
-              </div>
-              <div className='flex items-center space-x-2 animate-delay-[700ms] animate-fade-down animate-duration-[1000ms] animate-ease-out'>
+              </motion.div>
+              <motion.div
+                className='flex items-center space-x-2 animate-delay-[700ms]'
+                initial={{ opacity: 0, y: -30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.5,
+                  delay: 0.4,
+                }}>
                 <p className='pt-[2px] text-left text-onyx text-lg'>
                   The ability to analyze situations, evaluate different options
                 </p>
@@ -131,8 +132,15 @@ const Hero = () => {
                 <h3 className='text-2xl font-medium text-pine-green'>
                   Critical Thinking
                 </h3>
-              </div>
-              <div className='flex items-center space-x-2 animate-delay-[1400ms] animate-fade-down animate-duration-[1000ms] animate-ease-out'>
+              </motion.div>
+              <motion.div
+                className='flex items-center space-x-2 animate-delay-[1400ms]'
+                initial={{ opacity: 0, y: -30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.5,
+                  delay: 0.8,
+                }}>
                 <h3 className='text-2xl font-medium text-pine-green'>
                   Adaptability
                 </h3>
@@ -142,7 +150,7 @@ const Hero = () => {
                 <p className='pt-[2px] text-left text-onyx text-lg'>
                   fluent flexibility across full-stack technologies and tasks
                 </p>
-              </div>
+              </motion.div>
             </div>
           </div>
         )}

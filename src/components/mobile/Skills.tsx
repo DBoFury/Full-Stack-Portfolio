@@ -6,7 +6,11 @@ import { Icons } from '@/components/Icons';
 import { Separator } from '@/components/ui/separator';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
-import { cn } from '@/lib/utils';
+import { motion } from 'framer-motion';
+
+import { skills } from '@/helpers/data';
+
+import { fadeInAnimationVariants } from '@/helpers/animations';
 
 const SkillsMobile = () => {
   const [tabsValue, setTabsValue] = useState<string>('hard');
@@ -44,74 +48,80 @@ const SkillsMobile = () => {
         </TabsList>
         <TabsContent value='hard' className='h-[320px]'>
           <div className='flex flex-col items-center justify-center pt-5'>
-            <div className='grid items-center grid-cols-3 justify-items-center gap-x-3 gap-y-4 md:grid-cols-6'>
-              <Icons.html
-                className={cn({
-                  'animate-duration-[1000ms] animate-in zoom-in': !isInit,
-                })}
-              />
-              <Icons.css
-                className={cn({
-                  'animate-duration-[1000ms] animate-in zoom-in': !isInit,
-                })}
-              />
-              <Icons.js
-                className={cn({
-                  'animate-duration-[1000ms] animate-in zoom-in': !isInit,
-                })}
-              />
-              <Icons.react
-                className={cn({
-                  'animate-duration-[1000ms] animate-in zoom-in': !isInit,
-                })}
-              />
-              <Icons.next
-                className={cn({
-                  'animate-duration-[1000ms] animate-in zoom-in': !isInit,
-                })}
-              />
-              <Icons.tailwindcss
-                className={cn({
-                  'animate-duration-[1000ms] animate-in zoom-in': !isInit,
-                })}
-              />
-            </div>
+            <ul className='grid items-center grid-cols-3 justify-items-center gap-x-3 gap-y-4 md:grid-cols-6'>
+              {skills.frontend.map((skill, index) => {
+                const Icon = Icons[skill.icon as keyof typeof Icons];
 
-            <div className='grid items-center grid-cols-3 pt-5 justify-items-center gap-x-4 gap-y-4 max-w-[380px]'>
-              <Icons.python
-                className={cn({
-                  'animate-duration-[1000ms] animate-in zoom-in': !isInit,
-                })}
-              />
-              <Icons.node
-                className={cn({
-                  'animate-duration-[1000ms] animate-in zoom-in': !isInit,
-                })}
-              />
-              <Icons.docker
-                className={cn({
-                  'animate-duration-[1000ms] animate-in zoom-in': !isInit,
-                })}
-              />
-            </div>
+                return (
+                  <motion.li
+                    key={skill.name.toLowerCase()}
+                    variants={fadeInAnimationVariants}
+                    initial={isInit ? false : 'initial'}
+                    whileInView='animate'
+                    custom={index}>
+                    <Icon />
+                  </motion.li>
+                );
+              })}
+            </ul>
+
+            <ul className='grid items-center grid-cols-3 pt-5 justify-items-center gap-x-4 gap-y-4 max-w-[380px]'>
+              {skills.backend.map((skill, index) => {
+                const Icon = Icons[skill.icon as keyof typeof Icons];
+
+                return (
+                  <motion.li
+                    key={skill.name.toLowerCase()}
+                    variants={fadeInAnimationVariants}
+                    initial={isInit ? false : 'initial'}
+                    whileInView='animate'
+                    custom={index + skills.frontend.length}>
+                    <Icon />
+                  </motion.li>
+                );
+              })}
+            </ul>
           </div>
         </TabsContent>
         <TabsContent value='soft' className='h-[320px]'>
           <div className='flex flex-col items-center justify-center pt-4 space-y-5'>
-            <div className='animate-fade-down animate-duration-[1000ms] animate-ease-out w-[340px] h-[85px] flex items-center justify-center px-5 space-x-5 border rounded-lg shadow-md border-onyx'>
+            <motion.div
+              className='w-[340px] h-[85px] flex items-center justify-center px-5 space-x-5 border rounded-lg shadow-md border-onyx'
+              initial={{ opacity: 0, y: -50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 1,
+                ease: [0, 0.6, 0.8, 1],
+              }}>
               <Icons.cogs />
               <p className='text-2xl font-medium text-onyx'>Problem solving</p>
-            </div>
-            <div className='animate-delay-[700ms] animate-fade-down animate-duration-[1000ms] animate-ease-out w-[340px] h-[85px] flex items-center justify-center px-5 space-x-5 border rounded-lg shadow-md border-onyx'>
+            </motion.div>
+            <motion.div
+              className='w-[340px] h-[85px] flex items-center justify-center px-5 space-x-5 border rounded-lg shadow-md border-onyx'
+              initial={{ opacity: 0, y: -50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 1,
+                delay: 0.7,
+                ease: [0, 0.7, 0.8, 1],
+              }}>
               <Icons.chart />
               <p className='text-2xl font-medium text-onyx'>
                 Critical thinking
               </p>
-            </div>
-            <div className='animate-delay-[1400ms] animate-fade-down animate-duration-[1000ms] animate-ease-out w-[340px] h-[85px] flex items-center justify-center px-5 space-x-5 border rounded-lg shadow-md border-onyx'>
+            </motion.div>
+            <motion.div
+              className='w-[340px] h-[85px] flex items-center justify-center px-5 space-x-5 border rounded-lg shadow-md border-onyx'
+              initial={{ opacity: 0, y: -50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 1,
+                delay: 1.4,
+                ease: [0, 0.7, 0.8, 1],
+              }}>
               <Icons.shapes />
               <p className='text-2xl font-medium text-onyx'>Adaptability</p>
-            </div>
+            </motion.div>
           </div>
         </TabsContent>
       </Tabs>
