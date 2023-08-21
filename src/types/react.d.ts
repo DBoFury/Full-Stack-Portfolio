@@ -1,9 +1,9 @@
-import { CSSProperties } from "react";
+import 'react';
 
-declare module "react" {
+declare module 'react' {
   interface CSSProperties extends CSSProperties {
-    "--line-height"?: string | number;
-    "--line-width"?: string | number;
-    "--rotation"?: string;
+    '--line-height'?: string | number;
+    '--line-width'?: string | number;
+    '--rotation'?: string;
   }
 }

@@ -1,6 +1,6 @@
-import DataScience from "./DataScience";
-import FullStack from "./FullStack";
-import WebDevelopment from "./WebDevelopment";
+import DataScience from './DataScience';
+import FullStack from './FullStack';
+import WebDevelopment from './WebDevelopment';
 
 const About = () => {
   return (

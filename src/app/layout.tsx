@@ -1,15 +1,15 @@
-import type { Metadata } from "next";
-import { Work_Sans } from "next/font/google";
-import "./globals.css";
+import type { Metadata } from 'next';
+import { Work_Sans } from 'next/font/google';
+import './globals.css';
 
 const work_sans = Work_Sans({
-  subsets: ["latin"],
-  style: ["normal", "italic"],
+  subsets: ['latin'],
+  style: ['normal', 'italic'],
 });
 
 export const metadata: Metadata = {
-  title: "leg D.",
-  description: "Personal full-stack portfolio of Didechkin Oleg.",
+  title: 'leg D.',
+  description: 'Personal full-stack portfolio of Didechkin Oleg.',
 };
 
 export default function RootLayout({
@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang='en'>
       <body className={`${work_sans.className}`}>{children}</body>
     </html>
   );

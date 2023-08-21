@@ -1,12 +1,13 @@
-"use client";
+'use client';
 
-import { useEffect, useRef } from "react";
-import Header from "@/components/desktop/Header";
-import Hero from "@/components/desktop/Hero";
-import About from "@/components/desktop/about/About";
-import Work from "@/components/desktop/work/Work";
-import Contact from "@/components/desktop/Contact";
-import ScrollFooter from "@/components/desktop/ScrollFooter";
+import { useEffect, useRef } from 'react';
+
+import Contact from '@/components/desktop/Contact';
+import Header from '@/components/desktop/Header';
+import Hero from '@/components/desktop/Hero';
+import ScrollFooter from '@/components/desktop/ScrollFooter';
+import About from '@/components/desktop/about/About';
+import Work from '@/components/desktop/work/Work';
 
 const Desktop = () => {
   const chunkRef = useRef(0);
@@ -38,7 +39,7 @@ const Desktop = () => {
         chunkRef.current = nextChunk;
         container.scrollTo({
           top: nextChunk * container.offsetHeight,
-          behavior: "smooth",
+          behavior: 'smooth',
         });
         setTimeout(() => {
           isScrollingRef.current = false;
@@ -51,7 +52,7 @@ const Desktop = () => {
         chunkRef.current = prevChunk;
         container.scrollTo({
           top: prevChunk * container.offsetHeight,
-          behavior: "smooth",
+          behavior: 'smooth',
         });
         setTimeout(() => {
           isScrollingRef.current = false;
@@ -61,21 +62,21 @@ const Desktop = () => {
   };
 
   useEffect(() => {
-    const container = document.querySelector(".content") as HTMLElement;
+    const container = document.querySelector('.content') as HTMLElement;
 
-    container.addEventListener("wheel", (event: WheelEvent) =>
+    container.addEventListener('wheel', (event: WheelEvent) =>
       handleScroll(event, container)
     );
 
     return () => {
-      container.removeEventListener("wheel", (event: WheelEvent) =>
+      container.removeEventListener('wheel', (event: WheelEvent) =>
         handleScroll(event, container)
       );
     };
   }, []);
 
   return (
-    <main className="hidden content lg:block">
+    <main className='hidden content lg:block'>
       <Header chunkRef={chunkRef} />
       <Hero />
       <About />

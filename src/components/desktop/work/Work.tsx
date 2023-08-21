@@ -1,5 +1,5 @@
-import First from "./First";
-import Second from "./Second";
+import First from './First';
+import Second from './Second';
 
 const Work = () => {
   return (
