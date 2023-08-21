@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 import { Icons } from '@/components/Icons';
-import { contactLinks } from '@/helpers/data';
+import { contacts } from '@/helpers/data';
 
 const Contact = () => {
   return (
@@ -15,35 +15,23 @@ const Contact = () => {
         Contact Me
       </h2>
       <div className='flex flex-col items-start justify-center flex-1 pt-20 space-y-8 dt:space-x-12 dt:flex-row dt:space-y-0 dt:pt-0 dt:items-center'>
-        <Link
-          className='flex items-center justify-center space-x-6 group'
-          href={contactLinks['linkedin']}
-          target='_blank'
-          rel='noopener noreferrer'
-          aria-label='LinkedIn profile'>
-          <Icons.linkedin className='w-32 h-32 transition-all ease-out group-hover:-translate-y-6' />
-          <span className='font-semibold text-7xl text-onyx'>LinkedIn</span>
-        </Link>
+        {contacts.slice(3).map((contact) => {
+          const Icon = Icons[contact.icon as keyof typeof Icons];
 
-        <Link
-          className='flex items-center justify-center space-x-6 group'
-          href={contactLinks['telegram']}
-          target='_blank'
-          rel='noopener noreferrer'
-          aria-label='Telegram contact'>
-          <Icons.telegram className='w-32 h-32 transition-all ease-out group-hover:-translate-y-6' />
-          <span className='font-semibold text-7xl text-onyx'>Telegram</span>
-        </Link>
-
-        <Link
-          className='flex items-center justify-center space-x-6 group'
-          href={contactLinks['mail']}
-          target='_blank'
-          rel='noopener noreferrer'
-          aria-label='Send an email'>
-          <Icons.email className='w-32 h-32 transition-all ease-out group-hover:-translate-y-6' />
-          <span className='font-semibold text-7xl text-onyx'>Email</span>
-        </Link>
+          return (
+            <Link
+              className='flex items-center justify-center space-x-6 group'
+              href={contact.link}
+              target='_blank'
+              rel='noopener noreferrer'
+              aria-label={contact.ariaLabel}>
+              <Icon className='w-32 h-32 transition-all ease-out group-hover:-translate-y-6' />
+              <span className='font-semibold text-7xl text-onyx'>
+                {contact.name}
+              </span>
+            </Link>
+          );
+        })}
       </div>
       <span className='absolute text-xl font-semibold -translate-x-1/2 cursor-default bottom-2 left-1/2 text-battleship-gray'>
         Oleg Didechkin 2023

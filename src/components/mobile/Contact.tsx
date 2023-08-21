@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 import { Icons } from '@/components/Icons';
-import { contactLinks } from '@/helpers/data';
+import { contacts } from '@/helpers/data';
 
 const ContactMobile = () => {
   return (
@@ -12,35 +12,22 @@ const ContactMobile = () => {
 
       <div className='flex items-center justify-center flex-grow w-full'>
         <div className='flex flex-col items-center space-x-0 space-y-7 mb:flex-row mb:space-y-0 mb:space-x-10'>
-          <Link
-            className='group'
-            href={contactLinks['linkedin']}
-            target='_blank'
-            rel='noopener noreferrer'
-            aria-label='LinkedIn profile'>
-            <div className='group'>
-              <Icons.linkedin className='focus:outline-none group-hover:scale-90' />
-            </div>
-          </Link>
-          <Link
-            className='group'
-            href={contactLinks['telegram']}
-            target='_blank'
-            rel='noopener noreferrer'
-            aria-label='Telegram contact'>
-            <div className='group'>
-              <Icons.telegram className='focus:outline-none group-hover:scale-90' />
-            </div>
-          </Link>
-          <Link
-            href={contactLinks['mail']}
-            target='_blank'
-            rel='noopener noreferrer'
-            aria-label='Send an email'>
-            <div className='group'>
-              <Icons.email className='focus:outline-none group-hover:scale-90' />
-            </div>
-          </Link>
+          {contacts.slice(3).map((contact) => {
+            const Icon = Icons[contact.icon as keyof typeof Icons];
+
+            return (
+              <Link
+                className='group'
+                href={contact.link}
+                target='_blank'
+                rel='noopener noreferrer'
+                aria-label={contact.ariaLabel}>
+                <div className='group'>
+                  <Icon className='focus:outline-none group-hover:scale-90' />
+                </div>
+              </Link>
+            );
+          })}
         </div>
       </div>
 

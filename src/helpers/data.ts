@@ -5,37 +5,60 @@ export const sections = [
   { name: 'Contact', id: 'contact' },
 ];
 
-export const contactLinks = {
-  github: '',
-  resume: '',
-  linkedin: 'https://www.linkedin.com/in/oleg-didechkin/',
-  telegram: 'https://t.me/golovakanta',
-  mail: 'mailto:oleg.didechkin@gmail.com',
-};
+export const contacts = [
+  { name: 'GitHub', link: '', ariaLabel: '', icon: '' },
+  { name: 'GitHub', link: '', ariaLabel: '', icon: '' },
+  {
+    name: 'LinkedIn',
+    link: 'https://www.linkedin.com/in/oleg-didechkin/',
+    ariaLabel: 'LinkedIn profil',
+    icon: 'linkedin',
+  },
+  {
+    name: 'Telegram',
+    link: 'https://t.me/golovakanta',
+    ariaLabel: 'Telegram contact',
+    icon: 'telegram',
+  },
+  {
+    name: 'Email',
+    link: 'mailto:oleg.didechkin@gmail.com',
+    ariaLabel: 'Send an email',
+    icon: 'email',
+  },
+];
 
 export const projects = [
   {
-    title: '',
-    description: '',
+    title: 'Frontend Mentor Challenges',
+    description:
+      "A collection of Frontend Mentor tasks I've solved and deployed on GitHub Pages. Utilizing the Next router, I've harmoniously integrated all pages into one cohesive website, dedicating a unique page to each solution. Dive into this exhibit of my technical skills and creative design.",
     tags: '',
-    image: '',
+    link: 'https://olacdy.github.io/frontend-mentor-challenges/',
+    image: '/Project-1.webp',
   },
   {
-    title: '',
-    description: '',
+    title: 'Interactive Comments Section',
+    description:
+      'All-encompassing full-stack web application empowering users to create, edit, and delete diverse comments within a unified global comments section. Account creation is a prerequisite for accessing this feature-rich platform. Originally initiated as a Frontend Mentor task, I expanded its scope to develop a comprehensive web application.',
     tags: '',
-    image: '',
+    link: 'https://interactive-comments-section-mocha.vercel.app/',
+    image: '/Project-2.webp',
   },
   {
-    title: '',
-    description: '',
+    title: 'Bellify',
+    description:
+      'Telegram bot project – a user-centered hub for tracking preferred YouTube and Twitch channels. Receive instant notifications for new content while benefiting from commerce practices like user agreements, tutorials, and plan upgrades, with payments via Stripe for a seamless experience.',
     tags: '',
-    image: '',
+    link: 'https://bellify.org/',
+    image: '/Project-3.webp',
   },
   {
-    title: '',
-    description: '',
+    title: 'DinoNN',
+    description:
+      'Python script that launches a Chrome browser, generates multiple agents (neural networks) to compete for top scores in Dino game, identifies the most successful agent, and mutates its genes to spawn a new generation of agents.',
     tags: '',
-    image: '',
+    link: 'https://github.com/Olacdy/DinoNN',
+    image: '/Project-4.webp',
   },
 ];

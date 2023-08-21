@@ -1,11 +1,13 @@
-import First from './First';
-import Second from './Second';
+import { projects } from '@/helpers/data';
+
+import FirstWorkSection from './FirstWorkSection';
+import SecondWorkSection from './SecondWorkSection';
 
 const Work = () => {
   return (
     <>
-      <First />
-      <Second />
+      <FirstWorkSection projects={projects.slice(0, 2)} />
+      <SecondWorkSection projects={projects.slice(2)} />
     </>
   );
 };
