@@ -6,10 +6,10 @@ import { useActiveSectionContext } from '@/context/active-section-context';
 
 import Contact from '@/components/desktop/Contact';
 import Header from '@/components/desktop/Header';
-import Hero from '@/components/desktop/Hero';
 import ScrollFooter from '@/components/desktop/ScrollFooter';
 import About from '@/components/desktop/about/About';
 import Work from '@/components/desktop/work/Work';
+import Hero from './Hero';
 
 import { sections } from '@/helpers/data';
 import { getNameByNumber } from '@/lib/utils';

@@ -21,8 +21,18 @@ export const sections = [
 ];
 
 export const contacts = [
-  { name: 'GitHub', link: '', ariaLabel: '', icon: '' },
-  { name: 'GitHub', link: '', ariaLabel: '', icon: '' },
+  {
+    name: 'GitHub',
+    link: 'https://github.com/Olacdy',
+    ariaLabel: 'Review a GitHub page',
+    icon: 'github',
+  },
+  {
+    name: 'Resume',
+    link: 'https://olacdy.github.io/Full-Stack-Developer-CV/',
+    ariaLabel: 'Review a resume',
+    icon: 'resume',
+  },
   {
     name: 'LinkedIn',
     link: 'https://www.linkedin.com/in/oleg-didechkin/',
