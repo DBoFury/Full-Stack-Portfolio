@@ -5,7 +5,7 @@ import { contacts } from '@/helpers/data';
 
 const ContactMobile = () => {
   return (
-    <div className='relative w-full h-[110vh] pt-36 flex items-center flex-col overflow-clip min-h-[700px]'>
+    <section className='relative w-full h-[110vh] pt-36 flex items-center flex-col overflow-clip min-h-[700px]'>
       <h2 className='text-6xl font-semibold text-center text-pine-green'>
         Contact Me
       </h2>
@@ -38,7 +38,7 @@ const ContactMobile = () => {
 
       <Icons.triangle className='z-[-1] absolute bottom-[50%] -left-[100px] w-[200px] h-[200px] fill-ruddy-blue rotate-[61deg] sm:w-[300px] sm:h-[300px] sm:-left-[130px]' />
       <Icons.triangle className='z-[-1] absolute -bottom-[10%] -right-[100px] w-[200px] h-[200px] fill-ruddy-blue rotate-[85deg] sm:w-[300px] sm:h-[300px] sm:-right-[130px]' />
-    </div>
+    </section>
   );
 };
 

@@ -25,7 +25,7 @@ const SkillsMobile = () => {
   };
 
   return (
-    <div className='pt-16'>
+    <section className='pt-16'>
       <h2 className='text-4xl font-semibold text-center text-pine-green'>
         Skills
       </h2>
@@ -125,7 +125,7 @@ const SkillsMobile = () => {
           </div>
         </TabsContent>
       </Tabs>
-    </div>
+    </section>
   );
 };
 

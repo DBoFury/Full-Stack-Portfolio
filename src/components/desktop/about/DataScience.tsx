@@ -65,6 +65,15 @@ const DataScience = () => {
         />
 
         <div className='absolute inset-y-36 -inset-x-[30rem] w-96 h-96'>
+          <motion.div
+            className='absolute top-48 h-px -right-[4.5rem] bg-battleship-gray'
+            variants={lineWidthGrowthVariants}
+            custom={{ lineWidth: '40px', delay: 1.9 }}
+            whileInView='animate'
+            viewport={{
+              once: true,
+            }}
+          />
           <motion.img
             className='py-6 rounded-lg shadow-xl pointer-events-none bg-gray-50'
             src='/DS.webp'
@@ -82,15 +91,6 @@ const DataScience = () => {
               duration: 1,
               delay: 1.7,
             }}
-            viewport={{
-              once: true,
-            }}
-          />
-          <motion.div
-            className='absolute top-48 h-px -right-[4.5rem] bg-battleship-gray'
-            variants={lineWidthGrowthVariants}
-            custom={{ lineWidth: '40px', delay: 1.9 }}
-            whileInView='animate'
             viewport={{
               once: true,
             }}

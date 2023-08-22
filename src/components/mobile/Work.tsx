@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 
 const WorkMobile = () => {
   return (
-    <div className='pt-24 overflow-x-clip'>
+    <section className='pt-24 overflow-x-clip'>
       <h2 className='text-6xl font-semibold text-center text-pine-green'>
         Work
       </h2>
@@ -151,7 +151,7 @@ const WorkMobile = () => {
           </Button>
         </Link>
       </div>
-    </div>
+    </section>
   );
 };
 

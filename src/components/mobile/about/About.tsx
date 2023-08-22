@@ -1,19 +1,17 @@
-import DataScience from "./DataScience";
-import WebDevelopment from "./WebDevelopment";
-import FullStack from "./FullStack";
+import DataScience from './DataScience';
+import FullStack from './FullStack';
+import WebDevelopment from './WebDevelopment';
 
 const AboutMobile = () => {
   return (
-    <div className="pt-24">
-      <h2 className="text-6xl font-semibold text-center text-pine-green">
+    <section className='flex flex-col items-center justify-center gap-3 pt-24'>
+      <h2 className='text-6xl font-semibold text-center text-pine-green'>
         About Me
       </h2>
-      <div className="flex flex-col items-center justify-center pt-16">
-        <DataScience />
-        <WebDevelopment />
-        <FullStack />
-      </div>
-    </div>
+      <DataScience />
+      <WebDevelopment />
+      <FullStack />
+    </section>
   );
 };
 

@@ -1,136 +1,145 @@
-"use client";
+'use client';
 
-import { useRef } from "react";
-import { Separator } from "@/components/ui/separator";
-import Image from "next/image";
-import { cn } from "@/lib/utils";
-import useOnScreen from "@/hooks/useOnScreen";
+import { motion } from 'framer-motion';
+
+import { lineHeightGrowthVariants } from '@/helpers/animations';
 
 const DataScience = () => {
-  const titleRef = useRef<HTMLHeadingElement>(null);
-  const isTitleVisible = useOnScreen(titleRef);
-
-  const circleRef = useRef<HTMLSpanElement>(null);
-  const isCircleVisible = useOnScreen(circleRef);
-
-  const firstSeparatorRef = useRef<HTMLDivElement>(null);
-  const isFirstSeparatorVisible = useOnScreen(firstSeparatorRef);
-
-  const imagesRef = useRef<HTMLDivElement>(null);
-  const isImagesVisible = useOnScreen(imagesRef, 0.5);
-
-  const textSeparatorRef = useRef<HTMLDivElement>(null);
-  const isTextSeparatorVisible = useOnScreen(textSeparatorRef);
-
-  const textRef = useRef<HTMLParagraphElement>(null);
-  const isTextVisible = useOnScreen(textRef);
-
-  const lastSeparatorRef = useRef<HTMLDivElement>(null);
-  const isLastSeparatorVisible = useOnScreen(lastSeparatorRef);
-
   return (
-    <div className="relative h-[56rem] w-full max-w-[340px]">
-      <h3
-        ref={titleRef}
-        className={cn(
-          "animate-fade-up animate-duration-[2000ms] h-40 absolute inset-0 text-4xl italic font-medium text-center text-onyx",
-          {
-            paused: !isTitleVisible,
-            running: isTitleVisible,
-          }
-        )}>
-        Data Science
-      </h3>
-      <span
-        ref={circleRef}
-        className={cn(
-          "animate-scale-in animate-duration-[700ms] animate-delay-[700ms] fill-mode-forwards inset-y-16 inset-x-[8.225rem] w-6 h-6 rounded-full absolute bg-onyx",
-          { paused: !isCircleVisible, running: isCircleVisible }
-        )}
-        style={{ scale: 0 }}
-      />
-      <Separator
-        ref={firstSeparatorRef}
-        className={cn(
-          "absolute inset-x-[50%] inset-y-20 w-1 h-0 animate-grow-line-vertical animate-duration-[1000ms] animate-delay-[900ms] fill-mode-forwards bg-onyx",
-          {
-            paused: !isFirstSeparatorVisible,
-            running: isFirstSeparatorVisible,
-          }
-        )}
-        orientation="vertical"
-        style={{
-          "--line-height": "2.5rem",
+    <>
+      <motion.h3
+        className='text-4xl italic font-medium text-center text-onyx'
+        initial={{
+          opacity: 0,
+          y: '-10%',
         }}
-      />
-      <div ref={imagesRef} className="absolute inset-y-[8.75rem] -inset-x-6">
-        <Image
-          className={cn(
-            "animate-scale-in animate-duration-[1000ms] animate-delay-[700ms] fill-mode-forwards p-6 ml-24 rounded-lg shadow-md bg-gray-50",
-            {
-              paused: !isImagesVisible,
-              running: isImagesVisible,
-            }
-          )}
-          src="/DS.webp"
-          alt="Data Science Illustration"
-          width={460}
-          height={400}
-          style={{ scale: 0 }}
+        whileInView={{
+          opacity: 1,
+          y: '0%',
+        }}
+        transition={{
+          type: 'tween',
+          duration: 0.7,
+          delay: 0.4,
+        }}
+        viewport={{
+          once: true,
+        }}>
+        Data Science
+      </motion.h3>
+      <div className='flex flex-col items-center gap-3'>
+        <div className='flex flex-col items-center'>
+          <motion.span
+            className='w-6 h-6 mt-10 rounded-full bg-onyx'
+            initial={{
+              scale: 0,
+            }}
+            whileInView={{
+              scale: 1,
+            }}
+            transition={{
+              type: 'spring',
+              damping: 8,
+              duration: 0.7,
+            }}
+            viewport={{
+              once: true,
+            }}
+          />
+          <motion.div
+            className='w-1 bg-onyx'
+            variants={lineHeightGrowthVariants}
+            custom={{ lineHeight: '2.5vh', duration: 0.4, delay: 0.8 }}
+            whileInView='animate'
+            viewport={{
+              once: true,
+            }}
+          />
+        </div>
+
+        <div className='relative'>
+          <motion.img
+            className='p-6 ml-12 rounded-lg shadow-md bg-gray-50'
+            src='/DS.webp'
+            alt='Data Science Illustration'
+            width={460}
+            height={400}
+            initial={{
+              scale: 0,
+            }}
+            whileInView={{
+              scale: 1,
+            }}
+            transition={{
+              type: 'spring',
+              duration: 1,
+              delay: 0.8,
+            }}
+            viewport={{
+              once: true,
+            }}
+          />
+          <motion.div
+            className='z-[-1] absolute inset-x-40 -inset-y-2 w-[320px] h-[320px] rounded-2xl bg-ruddy-blue'
+            initial={{
+              scale: 0,
+            }}
+            whileInView={{
+              scale: 1,
+              rotate: '-45deg',
+            }}
+            transition={{
+              type: 'spring',
+              duration: 1,
+              delay: 1.5,
+            }}
+            viewport={{
+              once: true,
+            }}
+          />
+        </div>
+        <motion.div
+          className='w-1 bg-onyx'
+          variants={lineHeightGrowthVariants}
+          custom={{ lineHeight: '2.5rem', duration: 0.4, delay: 0.8 }}
+          whileInView='animate'
+          viewport={{
+            once: true,
+          }}
         />
-        <div
-          className={cn(
-            "animate-bg-appearance animate-duration-[1000ms] animate-delay-[1000ms] fill-mode-forwards z-[-1] absolute inset-x-56 -inset-y-2 w-[320px] h-[320px] rounded-2xl bg-ruddy-blue",
-            {
-              paused: !isImagesVisible,
-              running: isImagesVisible,
-            }
-          )}
-          style={{ scale: 0, "--rotation": "rotate(-45deg)" }}
+        <motion.p
+          className='text-2xl leading-[150%] italic text-center max-w-[340px] text-onyx'
+          initial={{
+            opacity: 0,
+            y: '-15%',
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            type: 'spring',
+            duration: 1,
+            delay: 0.8,
+          }}
+          viewport={{
+            once: true,
+          }}>
+          My expedition as a software developer commenced with the elegant
+          language of Python. This initial foray into the realm of Data Science
+          set the foundation for my evolving voyage.
+        </motion.p>
+        <motion.div
+          className='w-1 bg-onyx'
+          variants={lineHeightGrowthVariants}
+          custom={{ lineHeight: '2.5rem', duration: 0.4, delay: 0.8 }}
+          whileInView='animate'
+          viewport={{
+            once: true,
+          }}
         />
       </div>
-      <Separator
-        ref={textSeparatorRef}
-        className={cn(
-          "absolute inset-x-[50%] inset-y-[28.5rem] w-1 h-0 animate-grow-line-vertical animate-duration-[1500ms] animate-delay-[1000ms] fill-mode-forwards bg-onyx",
-          {
-            paused: !isTextSeparatorVisible,
-            running: isTextSeparatorVisible,
-          }
-        )}
-        orientation="vertical"
-        style={{
-          "--line-height": "2.5rem",
-        }}
-      />
-      <p
-        ref={textRef}
-        className={cn(
-          "animate-fade-down animate-duration-[1000ms] animate-delay-[700ms] animate-ease-in-out absolute inset-y-[31rem] h-80 text-2xl leading-[150%] italic text-center max-w-[340px] text-onyx",
-          {
-            paused: !isTextVisible,
-            running: isTextVisible,
-          }
-        )}>
-        My expedition as a software developer commenced with the elegant
-        language of Python. This initial foray into the realm of Data Science
-        set the foundation for my evolving voyage.
-      </p>
-      <Separator
-        ref={lastSeparatorRef}
-        className={cn(
-          "absolute inset-x-[50%] inset-y-[52.5rem] w-1 h-0 animate-grow-line-vertical animate-duration-[1000ms] animate-delay-[700ms] fill-mode-forwards bg-onyx",
-          {
-            paused: !isLastSeparatorVisible,
-            running: isLastSeparatorVisible,
-          }
-        )}
-        orientation="vertical"
-        style={{
-          "--line-height": "2.5rem",
-        }}
-      />
-    </div>
+    </>
   );
 };
 

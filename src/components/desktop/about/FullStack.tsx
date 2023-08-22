@@ -112,6 +112,7 @@ const FullStack = () => {
 
             return (
               <Link
+                key={contact.icon}
                 href={contact.link}
                 target='_blank'
                 rel='noopener noreferrer'
