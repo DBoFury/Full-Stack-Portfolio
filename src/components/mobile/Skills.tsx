@@ -33,13 +33,13 @@ const SkillsMobile = () => {
         className='flex flex-col items-center w-full pt-5'>
         <TabsList className='flex space-x-5 bg-transparent border h-fit border-battleship-gray'>
           <TabsTrigger
-            className='w-28 text-3xl data-[state=active]:text-pine-green'
+            className='w-28 text-3xl data-[state=active]:text-pine-green data-[state=active]:bg-transparent dark:data-[state=active]:bg-transparent'
             value='hard'>
             Hard
           </TabsTrigger>
           <Separator className='h-10 bg-gray-300' orientation='vertical' />
           <TabsTrigger
-            className='w-28 text-3xl data-[state=active]:text-pine-green'
+            className='w-28 text-3xl data-[state=active]:text-pine-green data-[state=active]:bg-transparent dark:data-[state=active]:bg-transparent'
             value='soft'>
             Soft
           </TabsTrigger>
