@@ -36,7 +36,7 @@ const DataScience = () => {
         </motion.h3>
 
         <motion.span
-          className='absolute -inset-x-[0.75rem] rounded-full w-7 h-7 bg-onyx'
+          className='absolute -inset-x-[0.75rem] rounded-full w-7 h-7 bg-onyx transition-colors dark:bg-slate-200'
           initial={{
             scale: 0,
           }}
@@ -55,7 +55,7 @@ const DataScience = () => {
         />
 
         <motion.div
-          className='w-1 mt-6 bg-onyx'
+          className='w-1 mt-6 transition-colors bg-onyx dark:bg-slate-200'
           variants={lineHeightGrowthVariants}
           custom={{ lineHeight: '60vh', duration: 1.2, delay: 0.9 }}
           whileInView='animate'
@@ -66,7 +66,7 @@ const DataScience = () => {
 
         <div className='absolute inset-y-36 -inset-x-[30rem] w-96 h-96'>
           <motion.div
-            className='absolute top-48 h-px -right-[4.5rem] bg-battleship-gray'
+            className='absolute top-48 h-px -right-[4.5rem] bg-battleship-gray transition-colors dark:bg-slate-200'
             variants={lineWidthGrowthVariants}
             custom={{ lineWidth: '40px', delay: 1.9 }}
             whileInView='animate'
@@ -96,7 +96,7 @@ const DataScience = () => {
             }}
           />
           <motion.div
-            className='absolute -inset-x-28 z-[-1] -inset-y-28 w-80 h-80 bg-ruddy-blue rounded-2xl'
+            className='absolute -inset-x-28 z-[-1] -inset-y-28 w-80 h-80 bg-ruddy-blue rounded-2xl dark:bg-ruddy-blue/60'
             initial={{
               scale: 0,
             }}
@@ -125,7 +125,7 @@ const DataScience = () => {
             }}
           />
           <motion.p
-            className='text-[1.75rem] leading-[150%] pt-3 italic text-left max-w-[420px] text-onyx'
+            className='text-[1.75rem] leading-[150%] pt-3 italic text-left max-w-[420px] text-onyx transition-colors dark:text-slate-300'
             initial={{
               opacity: 0,
               x: '-15%',

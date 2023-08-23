@@ -31,7 +31,7 @@ const Header: FC<HeaderProps> = () => {
                 className='relative flex items-center justify-center h-3/4'
                 key={section.id}>
                 <Link
-                  className='flex items-center justify-center w-full transition hover:-translate-y-2 dark:text-gray-500 dark:hover:text-gray-300'
+                  className='flex items-center justify-center w-full transition hover:-translate-y-1 dark:text-slate-300'
                   href={`#${section.id}`}
                   onClick={() => {
                     setActiveSection(section.name);
@@ -41,7 +41,7 @@ const Header: FC<HeaderProps> = () => {
 
                   {activeSection === section.name && (
                     <motion.span
-                      className='absolute left-0 w-full h-1 bg-ruddy-blue -bottom-1 -z-10 dark:bg-gray-800'
+                      className='absolute left-0 w-full h-1 bg-ruddy-blue -bottom-1 -z-10'
                       layoutId='activeSection'
                       transition={{
                         type: 'spring',

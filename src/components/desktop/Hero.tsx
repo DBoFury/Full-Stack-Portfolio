@@ -30,14 +30,14 @@ const Hero = () => {
           <h2 className='text-5xl font-bold cursor-default text-pine-green'>
             Full-Stack Developer
           </h2>
-          <p className='text-onyx text-2xl leading-[165%] pr-1 cursor-default'>
+          <p className='text-onyx text-2xl leading-[165%] pr-1 cursor-default transition-colors dark:text-slate-300'>
             Greetings! I'm Oleg Didechkin, a dedicated and imaginative
             web-developer with a rich array of expertise and a passion for
             crafting digital experiences.
           </p>
         </div>
         <div className='relative'>
-          <span className='absolute font-semibold -inset-y-8 text-2xl rotate-45 inset-x-[200px] text-pine-green cursor-default'>
+          <span className='absolute font-semibold -inset-y-8 text-2xl rotate-45 inset-x-[200px] text-pine-green cursor-default '>
             *click
           </span>
           <Switch
@@ -49,7 +49,7 @@ const Hero = () => {
       </div>
 
       <div className='pt-16'>
-        <h2 className='text-4xl font-semibold text-center cursor-default text-pine-green'>
+        <h2 className='text-4xl font-semibold text-center cursor-default text-pine-green '>
           Skills
         </h2>
 
@@ -74,7 +74,7 @@ const Hero = () => {
                       transition={{
                         delay: 0.05 * index,
                       }}>
-                      <Icon />
+                      <Icon className='dark:fill-slate-200' />
                     </motion.li>
                   );
                 })}
@@ -98,7 +98,7 @@ const Hero = () => {
                       transition={{
                         delay: 0.05 * index,
                       }}>
-                      <Icon />
+                      <Icon className='dark:fill-slate-200' />
                     </motion.li>
                   );
                 })}
@@ -120,10 +120,10 @@ const Hero = () => {
                 <h3 className='text-2xl font-medium text-pine-green'>
                   Problem solving
                 </h3>
-                <span className='text-2xl font-medium text-battleship-gray'>
+                <span className='text-2xl font-medium text-battleship-gray dark:text-slate-300'>
                   /
                 </span>
-                <p className='pt-[2px] text-left text-onyx text-lg'>
+                <p className='pt-[2px] text-left text-onyx text-lg dark:text-slate-300'>
                   creative and effective ways to find innovative solutions
                 </p>
               </motion.div>
@@ -135,10 +135,10 @@ const Hero = () => {
                   duration: 0.5,
                   delay: 0.4,
                 }}>
-                <p className='pt-[2px] text-left text-onyx text-lg'>
+                <p className='pt-[2px] text-left text-onyx text-lg dark:text-slate-300'>
                   The ability to analyze situations, evaluate different options
                 </p>
-                <span className='text-2xl font-medium text-battleship-gray'>
+                <span className='text-2xl font-medium text-battleship-gray dark:text-slate-300'>
                   /
                 </span>
                 <h3 className='text-2xl font-medium text-pine-green'>
@@ -156,10 +156,10 @@ const Hero = () => {
                 <h3 className='text-2xl font-medium text-pine-green'>
                   Adaptability
                 </h3>
-                <span className='text-2xl font-medium text-battleship-gray'>
+                <span className='text-2xl font-medium text-battleship-gray dark:text-slate-300'>
                   /
                 </span>
-                <p className='pt-[2px] text-left text-onyx text-lg'>
+                <p className='pt-[2px] text-left text-onyx text-lg dark:text-slate-300'>
                   fluent flexibility across full-stack technologies and tasks
                 </p>
               </motion.div>

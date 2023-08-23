@@ -12,10 +12,10 @@ import {
 const WebDevelopment = () => {
   return (
     <section className='flex flex-col items-center justify-center cursor-default section'>
-      <div className='absolute -inset-x-52 inset-y-40 w-72 h-[32rem] bg-ruddy-blue rounded-2xl -rotate-12' />
+      <div className='absolute -inset-x-52 inset-y-40 w-72 h-[32rem] bg-ruddy-blue rounded-2xl -rotate-12 dark:bg-ruddy-blue/60' />
       <div className='relative h-[40vh] dt:mr-20'>
         <motion.div
-          className='absolute w-1 -mt-[15vh] bg-onyx'
+          className='absolute w-1 -mt-[15vh] bg-onyx transition-colors dark:bg-slate-200'
           variants={lineHeightGrowthVariants}
           custom={{ lineHeight: '15vh', duration: 0.5, delay: 0.7 }}
           whileInView='animate'
@@ -24,7 +24,7 @@ const WebDevelopment = () => {
           }}
         />
         <motion.span
-          className='inset-y-0 -inset-x-[0.75rem] w-7 h-7 rounded-full absolute bg-onyx'
+          className='inset-y-0 -inset-x-[0.75rem] w-7 h-7 rounded-full absolute bg-onyx transition-colors dark:bg-slate-200'
           initial={{
             scale: 0,
           }}
@@ -64,7 +64,7 @@ const WebDevelopment = () => {
         </motion.h3>
 
         <motion.div
-          className='absolute w-1 bg-onyx'
+          className='absolute w-1 transition-colors bg-onyx dark:bg-slate-200'
           variants={lineHeightGrowthVariants}
           custom={{ lineHeight: '57vh', duration: 0.8, delay: 1.4 }}
           whileInView='animate'
@@ -74,7 +74,7 @@ const WebDevelopment = () => {
         />
         <div className='absolute inset-y-20 -inset-x-[25.5rem] w-[20rem] h-[22rem] dt:w-[22rem] dt:-inset-x-[29.5rem]'>
           <motion.div
-            className='absolute h-px top-44 -right-[4.5rem] bg-battleship-gray dt:-right-[5.5rem]'
+            className='absolute h-px top-44 -right-[4.5rem] bg-battleship-gray dt:-right-[5.5rem] transition-colors dark:bg-slate-200'
             variants={lineWidthGrowthVariants}
             custom={{ lineWidth: '40px', delay: 2 }}
             whileInView='animate'
@@ -83,7 +83,7 @@ const WebDevelopment = () => {
             }}
           />
           <motion.p
-            className='text-[1.6rem] leading-[150%] pt-3 italic text-center text-onyx'
+            className='text-[1.6rem] leading-[150%] pt-3 italic text-center text-onyx transition-colors dark:text-slate-300'
             initial={{
               opacity: 0,
               x: '15%',
@@ -107,7 +107,7 @@ const WebDevelopment = () => {
         </div>
         <div className='absolute inset-y-80 inset-x-[5.5rem] w-[26rem] h-36'>
           <motion.div
-            className='absolute h-px top-16 -left-[3.5rem] bg-battleship-gray'
+            className='absolute h-px top-16 -left-[3.5rem] bg-battleship-gray transition-colors dark:text-slate-300'
             variants={lineWidthGrowthVariants}
             custom={{ lineWidth: '40px', delay: 3 }}
             whileInView='animate'
@@ -151,12 +151,14 @@ const WebDevelopment = () => {
               viewport={{
                 once: true,
               }}>
-              <Icons.django />
-              <p className='text-4xl font-semibold text-onyx'>/</p>
-              <Icons.flask />
+              <Icons.django className='dark:fill-slate-300' />
+              <p className='text-4xl font-semibold transition-colors text-onyx dark:text-slate-300'>
+                /
+              </p>
+              <Icons.flask className='dark:fill-slate-300' />
             </motion.div>
             <motion.div
-              className='z-[-1] absolute -inset-x-4 -inset-y-0 w-[180px] h-[130px] bg-ruddy-blue rounded-2xl'
+              className='z-[-1] absolute -inset-x-4 -inset-y-0 w-[180px] h-[130px] bg-ruddy-blue rounded-2xl dark:bg-ruddy-blue/80'
               initial={{
                 scale: 0,
               }}
