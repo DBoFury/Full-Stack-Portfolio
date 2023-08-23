@@ -69,7 +69,7 @@ const WebDevelopment = () => {
           once: true,
         }}
       />
-      <div className='relative flex items-center justify-center mr-10 space-x-3 rounded-lg shadow-sm'>
+      <div className='relative flex items-center justify-center space-x-3 rounded-lg shadow-sm'>
         <motion.span
           initial={{
             scale: 0,

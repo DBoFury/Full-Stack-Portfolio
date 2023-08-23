@@ -56,7 +56,6 @@ const FullStack = () => {
             y: 0,
           }}
           transition={{
-            type: 'tween',
             duration: 1,
             delay: 1,
           }}
@@ -76,7 +75,6 @@ const FullStack = () => {
             y: 0,
           }}
           transition={{
-            type: 'tween',
             duration: 1.2,
             delay: 1.6,
           }}
@@ -100,7 +98,6 @@ const FullStack = () => {
             y: 0,
           }}
           transition={{
-            type: 'tween',
             duration: 1,
             delay: 2.2,
           }}

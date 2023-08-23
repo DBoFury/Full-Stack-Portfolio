@@ -62,8 +62,8 @@ const DataScience = () => {
             className='p-6 ml-12 rounded-lg shadow-md bg-gray-50'
             src='/DS.webp'
             alt='Data Science Illustration'
-            width={460}
-            height={400}
+            width={380}
+            height={320}
             initial={{
               scale: 0,
             }}
@@ -80,7 +80,7 @@ const DataScience = () => {
             }}
           />
           <motion.div
-            className='z-[-1] absolute inset-x-40 -inset-y-2 w-[320px] h-[320px] rounded-2xl bg-ruddy-blue'
+            className='z-[-1] absolute inset-x-40 -inset-y-0 w-[320px] h-[320px] rounded-2xl bg-ruddy-blue'
             initial={{
               scale: 0,
             }}
