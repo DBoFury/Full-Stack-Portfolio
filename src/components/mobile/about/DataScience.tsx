@@ -59,7 +59,7 @@ const DataScience = () => {
 
         <div className='relative'>
           <motion.img
-            className='p-6 ml-12 rounded-lg shadow-md bg-gray-50'
+            className='p-6 ml-12 rounded-lg shadow-md bg-slate-50'
             src='/DS.webp'
             alt='Data Science Illustration'
             width={380}

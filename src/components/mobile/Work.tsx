@@ -13,7 +13,7 @@ const WorkMobile = () => {
       <div className='flex flex-col items-center justify-center pt-10'>
         <div className='relative'>
           <Image
-            className='p-10 shadow-md bg-gray-50 rounded-xl'
+            className='p-10 shadow-md bg-slate-50 rounded-xl'
             src='/Project-1.webp'
             alt='Project 1 image'
             width={340}

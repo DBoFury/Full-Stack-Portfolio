@@ -31,7 +31,7 @@ const Header: FC<HeaderProps> = () => {
                 className='relative flex items-center justify-center h-3/4'
                 key={section.id}>
                 <Link
-                  className='flex items-center justify-center w-full transition hover:text-gray-950 dark:text-gray-500 dark:hover:text-gray-300'
+                  className='flex items-center justify-center w-full transition hover:-translate-y-2 dark:text-gray-500 dark:hover:text-gray-300'
                   href={`#${section.id}`}
                   onClick={() => {
                     setActiveSection(section.name);

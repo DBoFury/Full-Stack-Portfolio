@@ -75,7 +75,7 @@ const DataScience = () => {
             }}
           />
           <motion.img
-            className='py-6 rounded-lg shadow-xl pointer-events-none bg-gray-50'
+            className='py-6 rounded-lg shadow-xl pointer-events-none bg-slate-50'
             src='/DS.webp'
             alt='Data Science Illustration'
             width={440}
