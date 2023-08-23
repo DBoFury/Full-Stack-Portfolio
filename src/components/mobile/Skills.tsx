@@ -10,8 +10,6 @@ import { motion } from 'framer-motion';
 
 import { skills } from '@/helpers/data';
 
-import { fadeInAnimationVariants } from '@/helpers/animations';
-
 const SkillsMobile = () => {
   const [tabsValue, setTabsValue] = useState<string>('hard');
   const [isInit, setIsInit] = useState<boolean>(true);
@@ -55,10 +53,17 @@ const SkillsMobile = () => {
                 return (
                   <motion.li
                     key={skill.name.toLowerCase()}
-                    variants={fadeInAnimationVariants}
-                    initial={isInit ? false : 'initial'}
-                    whileInView='animate'
-                    custom={index}>
+                    initial={{
+                      opacity: isInit ? 1 : 0,
+                      y: isInit ? 0 : 100,
+                    }}
+                    animate={{
+                      opacity: 1,
+                      y: 0,
+                    }}
+                    transition={{
+                      delay: 0.05 * index,
+                    }}>
                     <Icon />
                   </motion.li>
                 );
@@ -72,10 +77,17 @@ const SkillsMobile = () => {
                 return (
                   <motion.li
                     key={skill.name.toLowerCase()}
-                    variants={fadeInAnimationVariants}
-                    initial={isInit ? false : 'initial'}
-                    whileInView='animate'
-                    custom={index + skills.frontend.length}>
+                    initial={{
+                      opacity: isInit ? 1 : 0,
+                      y: isInit ? 0 : 100,
+                    }}
+                    animate={{
+                      opacity: 1,
+                      y: 0,
+                    }}
+                    transition={{
+                      delay: 0.05 * (index + skills.frontend.length),
+                    }}>
                     <Icon />
                   </motion.li>
                 );

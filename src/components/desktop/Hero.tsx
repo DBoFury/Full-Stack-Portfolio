@@ -9,8 +9,6 @@ import { Switch } from '@/components/ui/switch';
 
 import { skills } from '@/helpers/data';
 
-import { fadeInAnimationVariants } from '@/helpers/animations';
-
 const Hero = () => {
   const [tabsValue, setTabsValue] = useState<string>('hard');
   const [isInit, setIsInit] = useState<boolean>(true);
@@ -65,10 +63,17 @@ const Hero = () => {
                   return (
                     <motion.li
                       key={skill.name.toLowerCase()}
-                      variants={fadeInAnimationVariants}
-                      initial={isInit ? false : 'initial'}
-                      whileInView='animate'
-                      custom={index}>
+                      initial={{
+                        opacity: isInit ? 1 : 0,
+                        y: isInit ? 0 : 100,
+                      }}
+                      animate={{
+                        opacity: 1,
+                        y: 0,
+                      }}
+                      transition={{
+                        delay: 0.05 * index,
+                      }}>
                       <Icon />
                     </motion.li>
                   );
@@ -82,10 +87,17 @@ const Hero = () => {
                   return (
                     <motion.li
                       key={skill.name.toLowerCase()}
-                      variants={fadeInAnimationVariants}
-                      initial={isInit ? false : 'initial'}
-                      whileInView='animate'
-                      custom={index}>
+                      initial={{
+                        opacity: isInit ? 1 : 0,
+                        y: isInit ? 0 : 100,
+                      }}
+                      animate={{
+                        opacity: 1,
+                        y: 0,
+                      }}
+                      transition={{
+                        delay: 0.05 * index,
+                      }}>
                       <Icon />
                     </motion.li>
                   );
