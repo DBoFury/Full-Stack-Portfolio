@@ -1,9 +1,5 @@
-'use client';
-
 import type { Metadata } from 'next';
 import { Work_Sans } from 'next/font/google';
-
-import { LazyMotion, domAnimation } from 'framer-motion';
 
 import ActiveSectionContextProvider from '@/context/active-section-context';
 import ThemeContextProvider from '@/context/theme-context';
@@ -17,14 +13,10 @@ const work_sans = Work_Sans({
   style: ['normal', 'italic'],
 });
 
-const metadata: Metadata = {
+export const metadata: Metadata = {
   title: 'leg D.',
   description: 'Personal full-stack portfolio of Didechkin Oleg.',
-  metadataBase: new URL(
-    process.env.NODE_ENV === 'production'
-      ? 'https://oleg.didechkin.com'
-      : 'http://localhost:3000'
-  ),
+  metadataBase: new URL('https://oleg.didechkin.com'),
 };
 
 export default function RootLayout({
@@ -39,7 +31,7 @@ export default function RootLayout({
         <div className='bg-[#dbd7fb] fixed top-[-1rem] -z-10 left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[10rem] lg:absolute sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-[#5a586b]'></div>
         <ThemeContextProvider>
           <ActiveSectionContextProvider>
-            <LazyMotion features={domAnimation}>{children}</LazyMotion>
+            {children}
           </ActiveSectionContextProvider>
           <ThemeSwitch />
         </ThemeContextProvider>
