@@ -4,7 +4,7 @@ import { useEffect, useRef } from 'react';
 
 import { useActiveSectionContext } from '@/context/active-section-context';
 
-import { LazyMotion, domAnimation } from 'framer-motion';
+import { LazyMotion, domAnimation, domMax } from 'framer-motion';
 
 import Contact from '@/components/desktop/Contact';
 import Header from '@/components/desktop/Header';
@@ -86,8 +86,11 @@ const Desktop = () => {
 
   return (
     <main className='hidden content lg:block'>
-      <LazyMotion features={domAnimation}>
+      <LazyMotion features={domMax}>
         <Header />
+      </LazyMotion>
+
+      <LazyMotion features={domAnimation}>
         <Hero />
         <About />
         <Work />
