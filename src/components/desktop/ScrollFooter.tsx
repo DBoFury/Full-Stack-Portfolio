@@ -1,7 +1,7 @@
 const ScrollFooter = () => {
   return (
-    <div className="fixed bottom-0 left-8">
-      <h1 className="uppercase cursor-default text-7xl text-battleship-gray">
+    <div className='fixed bottom-0 left-8'>
+      <h1 className='uppercase cursor-default text-7xl text-battleship-gray'>
         Scroll
       </h1>
     </div>
