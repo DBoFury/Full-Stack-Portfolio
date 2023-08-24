@@ -42,38 +42,10 @@ module.exports = {
           from: { height: 'var(--radix-accordion-content-height)' },
           to: { height: 0 },
         },
-        'grow-line-vertical': {
-          from: { height: '0' },
-          to: { height: 'var(--line-height)' },
-        },
-        'grow-line-horizontal': {
-          from: { width: '0' },
-          to: { width: 'var(--line-width)' },
-        },
-        'scale-in': {
-          from: { scale: 0 },
-          to: { scale: '100%' },
-        },
-        'bg-appearance': {
-          from: { scale: 0, transform: 'rotate(0deg)' },
-          to: { scale: '100%', transform: 'var(--rotation)' },
-        },
-        'plus-appearance': {
-          from: { scale: 0, transform: 'rotate(-180deg)' },
-          to: { scale: '100%', transform: 'rotate(0deg)' },
-        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
-        'grow-line-vertical': 'grow-line-vertical',
-        'grow-line-horizontal': 'grow-line-horizontal',
-        'scale-in': 'scale-in',
-        'bg-appearance': 'bg-appearance',
-        'plus-appearance': 'plus-appearance',
-      },
-      animationDuration: {
-        1500: '1500ms',
       },
     },
   },
