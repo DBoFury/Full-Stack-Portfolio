@@ -7,10 +7,10 @@ const HeroMobile = () => {
       </div>
 
       <div className='px-8 pt-5'>
-        <h2 className='text-5xl font-bold text-center text-pine-green'>
+        <h2 className='text-5xl font-bold text-center cursor-default text-pine-green'>
           Full-Stack Developer
         </h2>
-        <p className='pt-4 text-center text-onyx text-2xl leading-[165%] transition-colors dark:text-slate-300'>
+        <p className='pt-4 text-center text-onyx text-2xl leading-[165%] cursor-default transition-colors dark:text-slate-300'>
           Greetings! I'm Oleg Didechkin, a dedicated and imaginative
           web-developer with a rich array of expertise and a passion for
           crafting digital experiences.

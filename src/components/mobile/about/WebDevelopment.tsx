@@ -18,7 +18,7 @@ const WebDevelopment: FC<WebDevelopmentProps> = ({ about }) => {
   return (
     <>
       <motion.h3
-        className='text-4xl italic font-medium text-center transition-colors text-onyx dark:text-slate-200'
+        className='text-4xl italic font-medium text-center transition-colors cursor-default text-onyx dark:text-slate-200'
         initial={{
           opacity: 0,
           y: '-15%',
@@ -47,7 +47,7 @@ const WebDevelopment: FC<WebDevelopmentProps> = ({ about }) => {
         }}
       />
       <motion.p
-        className='text-2xl leading-[150%] pt-3 italic text-center max-w-[340px] text-onyx transition-colors dark:text-slate-300'
+        className='text-2xl leading-[150%] cursor-default pt-3 italic text-center max-w-[340px] text-onyx transition-colors dark:text-slate-300'
         initial={{
           opacity: 0,
           y: '-15%',

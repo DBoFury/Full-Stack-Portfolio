@@ -137,8 +137,41 @@ const WebDevelopment: FC<WebDevelopmentProps> = ({ about }) => {
               viewport={{
                 once: true,
               }}>
-              <Icons.python className='fill-white' />
-              <Icons.plus className='stroke-white' size={60} />
+              <motion.span
+                initial={{
+                  scale: 0,
+                }}
+                whileInView={{
+                  scale: 1,
+                }}
+                transition={{
+                  type: 'spring',
+                  duration: 1,
+                  delay: 3.5,
+                }}
+                viewport={{
+                  once: true,
+                }}>
+                <Icons.python className='fill-white' />
+              </motion.span>
+              <motion.span
+                initial={{
+                  scale: 0,
+                }}
+                whileInView={{
+                  scale: 1,
+                  rotate: '360deg',
+                }}
+                transition={{
+                  type: 'spring',
+                  duration: 1,
+                  delay: 3.5,
+                }}
+                viewport={{
+                  once: true,
+                }}>
+                <Icons.plus className='stroke-white' size={60} />
+              </motion.span>
             </motion.div>
             <motion.div
               className='flex items-center justify-center space-x-2'

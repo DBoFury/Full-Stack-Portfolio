@@ -16,7 +16,7 @@ const DataScience: FC<DataScienceProps> = ({ about }) => {
   return (
     <>
       <motion.h3
-        className='text-4xl italic font-medium text-center transition-colors text-onyx dark:text-slate-300'
+        className='text-4xl italic font-medium text-center transition-colors cursor-default text-onyx dark:text-slate-300'
         initial={{
           opacity: 0,
           y: '-10%',
@@ -67,7 +67,7 @@ const DataScience: FC<DataScienceProps> = ({ about }) => {
 
         <div className='relative'>
           <motion.img
-            className='p-6 ml-12 rounded-lg shadow-md bg-slate-50 dark:bg-slate-100'
+            className='p-6 ml-12 rounded-lg shadow-md pointer-events-none bg-slate-50 dark:bg-slate-100'
             src={about.image?.src}
             alt={about.image?.alt}
             width={320}
@@ -117,7 +117,7 @@ const DataScience: FC<DataScienceProps> = ({ about }) => {
           }}
         />
         <motion.p
-          className='text-2xl leading-[150%] italic text-center max-w-[340px] text-onyx transition-colors dark:text-slate-300'
+          className='text-2xl leading-[150%] italic cursor-default text-center max-w-[340px] text-onyx transition-colors dark:text-slate-300'
           initial={{
             opacity: 0,
             y: '-15%',

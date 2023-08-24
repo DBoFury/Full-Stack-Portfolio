@@ -7,7 +7,7 @@ import { about } from '@/helpers/data';
 const AboutMobile = () => {
   return (
     <section className='flex flex-col items-center justify-center gap-3 pt-24'>
-      <h2 className='text-6xl font-semibold text-center text-pine-green'>
+      <h2 className='text-6xl font-semibold text-center cursor-default text-pine-green'>
         About Me
       </h2>
       <DataScience about={about[0]} />

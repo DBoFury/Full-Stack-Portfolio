@@ -6,7 +6,7 @@ import { contacts } from '@/helpers/data';
 const ContactMobile = () => {
   return (
     <section className='relative w-full h-[110vh] pt-36 flex items-center flex-col overflow-clip min-h-[700px]'>
-      <h2 className='text-6xl font-semibold text-center text-pine-green'>
+      <h2 className='text-6xl font-semibold text-center cursor-default text-pine-green'>
         Contact Me
       </h2>
 
@@ -32,7 +32,7 @@ const ContactMobile = () => {
         </div>
       </div>
 
-      <small className='absolute w-full text-xs font-semibold text-center bottom-2 text-battleship-gray'>
+      <small className='absolute w-full text-xs font-semibold text-center cursor-default bottom-2 text-battleship-gray'>
         &copy; 2023 Oleg Didechkin. All rights reserved.
       </small>
 

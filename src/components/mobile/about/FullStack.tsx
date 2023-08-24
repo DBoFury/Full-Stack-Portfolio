@@ -51,7 +51,7 @@ const FullStack: FC<FullStackProps> = ({ about }) => {
         />
       </div>
       <motion.h3
-        className='text-4xl italic font-medium text-center transition-colors text-onyx dark:text-slate-200'
+        className='text-4xl italic font-medium text-center transition-colors cursor-default text-onyx dark:text-slate-200'
         initial={{
           opacity: 0,
           y: '-30%',
@@ -71,7 +71,7 @@ const FullStack: FC<FullStackProps> = ({ about }) => {
         {about.title}
       </motion.h3>
       <motion.p
-        className='w-[340px] text-2xl leading-[150%] italic text-center text-onyx transition-colors dark:text-slate-200'
+        className='w-[340px] text-2xl cursor-default leading-[150%] italic text-center text-onyx transition-colors dark:text-slate-200'
         initial={{
           opacity: 0,
           y: '-10%',

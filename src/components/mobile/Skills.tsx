@@ -24,7 +24,7 @@ const SkillsMobile = () => {
 
   return (
     <section className='pt-16'>
-      <h2 className='text-4xl font-semibold text-center text-pine-green'>
+      <h2 className='text-4xl font-semibold text-center cursor-default text-pine-green'>
         Skills
       </h2>
       <Tabs
@@ -114,7 +114,7 @@ const SkillsMobile = () => {
                     delay: 0.4 * index,
                   }}>
                   <Icon className='dark:fill-slate-200' />
-                  <p className='text-2xl font-medium transition-colors text-onyx dark:text-slate-300'>
+                  <p className='text-2xl font-medium transition-colors cursor-default text-onyx dark:text-slate-300'>
                     {skill.name}
                   </p>
                 </motion.div>
