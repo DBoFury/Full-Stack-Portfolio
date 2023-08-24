@@ -4,6 +4,8 @@ import { useEffect, useRef } from 'react';
 
 import { useActiveSectionContext } from '@/context/active-section-context';
 
+import { LazyMotion, domAnimation } from 'framer-motion';
+
 import Contact from '@/components/desktop/Contact';
 import Header from '@/components/desktop/Header';
 import ScrollFooter from '@/components/desktop/ScrollFooter';
@@ -84,11 +86,14 @@ const Desktop = () => {
 
   return (
     <main className='hidden content lg:block'>
-      <Header />
-      <Hero />
-      <About />
-      <Work />
-      <Contact />
+      <LazyMotion features={domAnimation}>
+        <Header />
+        <Hero />
+        <About />
+        <Work />
+        <Contact />
+      </LazyMotion>
+
       <ScrollFooter />
     </main>
   );

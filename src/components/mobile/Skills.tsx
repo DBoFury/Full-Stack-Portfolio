@@ -105,6 +105,7 @@ const SkillsMobile = () => {
 
               return (
                 <m.div
+                  key={skill.name.toLowerCase()}
                   className='w-[340px] h-[85px] flex items-center justify-center px-5 space-x-5 border rounded-lg shadow-md border-onyx dark:border-slate-300'
                   initial={{ opacity: 0, y: -30 }}
                   animate={{ opacity: 1, y: 0 }}
