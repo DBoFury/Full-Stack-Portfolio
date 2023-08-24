@@ -15,7 +15,7 @@ const FirstWorkSection: FC<FirstWorkSectionProps> = ({ projects }) => {
     <section
       id='work'
       className='flex flex-col items-center justify-start px-10 pt-20 space-y-20 section'>
-      <div className='absolute z-[-1] -inset-x-44 inset-y-96 w-72 h-96 bg-ruddy-blue rounded-2xl -rotate-12' />
+      <div className='absolute z-[-1] -inset-x-44 inset-y-96 w-72 h-96 bg-ruddy-blue rounded-2xl -rotate-12 dark:bg-ruddy-blue/60' />
 
       <div className='flex items-center justify-center space-x-20 dt:space-x-32'>
         <div className='flex flex-col items-center justify-center space-y-5'>
@@ -35,7 +35,7 @@ const FirstWorkSection: FC<FirstWorkSectionProps> = ({ projects }) => {
               </Button>
             </Link>
           </div>
-          <p className='text-xl leading-[150%] dt:text-2xl italic text-center text-onyx max-w-[50rem] cursor-default'>
+          <p className='text-xl leading-[150%] dt:text-2xl italic text-center text-onyx max-w-[50rem] cursor-default transition-colors dark:text-slate-300'>
             {projects[0]['description']}
           </p>
         </div>
@@ -48,7 +48,7 @@ const FirstWorkSection: FC<FirstWorkSectionProps> = ({ projects }) => {
             height={200}
             loading='eager'
           />
-          <div className='absolute z-[-1] inset-y-10 -right-24 w-48 h-40 bg-ruddy-blue rounded-2xl -rotate-12' />
+          <div className='absolute z-[-1] inset-y-10 -right-24 w-48 h-40 bg-ruddy-blue rounded-2xl -rotate-12 dark:bg-ruddy-blue/60' />
         </div>
       </div>
 
@@ -80,7 +80,7 @@ const FirstWorkSection: FC<FirstWorkSectionProps> = ({ projects }) => {
               {projects[1]['title']}
             </h2>
           </div>
-          <p className='text-xl leading-[150%] dt:text-2xl italic text-center text-onyx max-w-[50rem] cursor-default'>
+          <p className='text-xl leading-[150%] dt:text-2xl italic text-center text-onyx max-w-[50rem] cursor-default transition-colors dark:text-slate-300'>
             {projects[1]['description']}
           </p>
         </div>

@@ -31,7 +31,7 @@ const SecondWorkSection: FC<SecondWorkSectionProps> = ({ projects }) => {
               </Button>
             </Link>
           </div>
-          <p className='text-xl leading-[150%] dt:text-2xl italic text-center text-onyx max-w-[50rem] cursor-default'>
+          <p className='text-xl leading-[150%] dt:text-2xl italic text-center text-onyx max-w-[50rem] cursor-default transition-colors dark:text-slate-300'>
             {projects[0]['description']}
           </p>
         </div>
@@ -44,7 +44,7 @@ const SecondWorkSection: FC<SecondWorkSectionProps> = ({ projects }) => {
             height={200}
             loading='eager'
           />
-          <div className='absolute z-[-1] inset-y-20 -right-24 w-64 h-64 bg-ruddy-blue rounded-2xl -rotate-12' />
+          <div className='absolute z-[-1] inset-y-20 -right-24 w-64 h-64 bg-ruddy-blue rounded-2xl -rotate-12 dark:bg-ruddy-blue/60' />
         </div>
       </div>
 
@@ -58,7 +58,7 @@ const SecondWorkSection: FC<SecondWorkSectionProps> = ({ projects }) => {
             height={300}
             loading='eager'
           />
-          <div className='absolute z-[-1] -inset-y-12 -inset-x-16 w-52 h-52 bg-ruddy-blue rounded-2xl -rotate-[25deg]' />
+          <div className='absolute z-[-1] -inset-y-12 -inset-x-16 w-52 h-52 bg-ruddy-blue rounded-2xl -rotate-[25deg] dark:bg-ruddy-blue/60' />
         </div>
         <div className='flex flex-col items-center justify-center space-y-5'>
           <div className='flex items-center justify-center space-x-10'>
@@ -77,7 +77,7 @@ const SecondWorkSection: FC<SecondWorkSectionProps> = ({ projects }) => {
               {projects[1]['title']}
             </h2>
           </div>
-          <p className='text-xl leading-[150%] dt:text-2xl italic text-center text-onyx max-w-[50rem] cursor-default'>
+          <p className='text-xl leading-[150%] dt:text-2xl italic text-center text-onyx max-w-[50rem] cursor-default transition-colors dark:text-slate-300'>
             {projects[1]['description']}
           </p>
         </div>
