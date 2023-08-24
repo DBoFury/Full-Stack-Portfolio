@@ -17,9 +17,14 @@ const work_sans = Work_Sans({
   style: ['normal', 'italic'],
 });
 
-export const metadata: Metadata = {
+const metadata: Metadata = {
   title: 'leg D.',
   description: 'Personal full-stack portfolio of Didechkin Oleg.',
+  metadataBase: new URL(
+    process.env.NODE_ENV === 'production'
+      ? 'https://oleg.didechkin.com'
+      : 'http://localhost:3000'
+  ),
 };
 
 export default function RootLayout({
