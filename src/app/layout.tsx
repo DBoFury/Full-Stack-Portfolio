@@ -14,7 +14,7 @@ const work_sans = Work_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'leg D.',
+  title: 'Oleg D.',
   description: 'Personal full-stack portfolio of Didechkin Oleg.',
   metadataBase: new URL('https://olegdidechkin.com'),
 };
