@@ -1,5 +1,7 @@
 'use client';
 
+import { FC } from 'react';
+
 import { motion } from 'framer-motion';
 
 import {
@@ -7,7 +9,13 @@ import {
   lineWidthGrowthVariants,
 } from '@/helpers/animations';
 
-const DataScience = () => {
+import { AboutType } from '@/types/data';
+
+interface DataScienceProps {
+  about: AboutType;
+}
+
+const DataScience: FC<DataScienceProps> = ({ about }) => {
   return (
     <section
       id='about'
@@ -32,7 +40,7 @@ const DataScience = () => {
           viewport={{
             once: true,
           }}>
-          Data Science
+          {about.title}
         </motion.h3>
 
         <motion.span
@@ -76,8 +84,8 @@ const DataScience = () => {
           />
           <motion.img
             className='py-6 rounded-lg shadow-xl pointer-events-none bg-slate-50'
-            src='/DS.webp'
-            alt='Data Science Illustration'
+            src={about.image?.src}
+            alt={about.image?.alt}
             width={440}
             height={440}
             initial={{
@@ -116,7 +124,7 @@ const DataScience = () => {
         </div>
         <div className='absolute inset-y-24 inset-x-24 w-96 h-96'>
           <motion.div
-            className='absolute top-36 h-px -left-[4rem] bg-battleship-gray'
+            className='absolute top-36 h-px -left-[4rem] bg-battleship-gray transition-colors dark:bg-slate-200'
             variants={lineWidthGrowthVariants}
             custom={{ lineWidth: '40px', delay: 2.3 }}
             whileInView='animate'
@@ -142,9 +150,7 @@ const DataScience = () => {
             viewport={{
               once: true,
             }}>
-            My expedition as a software developer commenced with the elegant
-            language of Python. This initial foray into the realm of Data
-            Science set the foundation for my evolving voyage.
+            {about.content}
           </motion.p>
         </div>
       </div>

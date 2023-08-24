@@ -130,3 +130,22 @@ export const skills = {
     },
   ],
 };
+
+export const about = [
+  {
+    title: 'Data Science',
+    content:
+      'My expedition as a software developer commenced with the elegant language of Python. This initial foray into the realm of Data Science set the foundation for my evolving voyage.',
+    image: { src: '/DS.webp', alt: 'Data Science Illustration' },
+  },
+  {
+    title: 'Web-development',
+    content:
+      'Transitioning, I immersed myself in web development, powered by Python. Guided by Django and Flask frameworks, I sculpted web applications, combining functionality and aesthetics seamlessly.',
+  },
+  {
+    title: 'Full-Stack',
+    content:
+      "Today, I stand at a crossroads, merging experience with vision. Embracing full-stack potential, I've embarked on the Node.js journey. I now craft comprehensive applications, seamlessly blending frontend and backend expertise, using efficient tools and techniques.",
+  },
+];

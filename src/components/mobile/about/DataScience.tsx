@@ -1,14 +1,22 @@
 'use client';
 
+import { FC } from 'react';
+
 import { motion } from 'framer-motion';
 
 import { lineHeightGrowthVariants } from '@/helpers/animations';
 
-const DataScience = () => {
+import { AboutType } from '@/types/data';
+
+interface DataScienceProps {
+  about: AboutType;
+}
+
+const DataScience: FC<DataScienceProps> = ({ about }) => {
   return (
     <>
       <motion.h3
-        className='text-4xl italic font-medium text-center text-onyx'
+        className='text-4xl italic font-medium text-center transition-colors text-onyx dark:text-slate-300'
         initial={{
           opacity: 0,
           y: '-10%',
@@ -25,12 +33,12 @@ const DataScience = () => {
         viewport={{
           once: true,
         }}>
-        Data Science
+        {about.title}
       </motion.h3>
       <div className='flex flex-col items-center gap-3'>
         <div className='flex flex-col items-center'>
           <motion.span
-            className='w-6 h-6 mt-10 rounded-full bg-onyx'
+            className='w-6 h-6 mt-10 transition-colors rounded-full bg-onyx dark:bg-slate-200'
             initial={{
               scale: 0,
             }}
@@ -47,7 +55,7 @@ const DataScience = () => {
             }}
           />
           <motion.div
-            className='w-1 bg-onyx'
+            className='w-1 transition-colors bg-onyx dark:bg-slate-200'
             variants={lineHeightGrowthVariants}
             custom={{ lineHeight: '2.5vh', duration: 0.4, delay: 0.8 }}
             whileInView='animate'
@@ -59,11 +67,11 @@ const DataScience = () => {
 
         <div className='relative'>
           <motion.img
-            className='p-6 ml-12 rounded-lg shadow-md bg-slate-50'
-            src='/DS.webp'
-            alt='Data Science Illustration'
-            width={380}
-            height={320}
+            className='p-6 ml-12 rounded-lg shadow-md bg-slate-50 dark:bg-slate-100'
+            src={about.image?.src}
+            alt={about.image?.alt}
+            width={320}
+            height={260}
             initial={{
               scale: 0,
             }}
@@ -80,7 +88,7 @@ const DataScience = () => {
             }}
           />
           <motion.div
-            className='z-[-1] absolute inset-x-40 -inset-y-0 w-[320px] h-[320px] rounded-2xl bg-ruddy-blue'
+            className='z-[-1] absolute inset-x-40 -inset-y-3 w-[310px] h-[310px] rounded-2xl bg-ruddy-blue dark:bg-ruddy-blue/60'
             initial={{
               scale: 0,
             }}
@@ -99,7 +107,8 @@ const DataScience = () => {
           />
         </div>
         <motion.div
-          className='w-1 bg-onyx'
+          className='w-1 bg-onyx dark:bg-slate-200'
+          transition-colors
           variants={lineHeightGrowthVariants}
           custom={{ lineHeight: '2.5rem', duration: 0.4, delay: 0.8 }}
           whileInView='animate'
@@ -108,7 +117,7 @@ const DataScience = () => {
           }}
         />
         <motion.p
-          className='text-2xl leading-[150%] italic text-center max-w-[340px] text-onyx'
+          className='text-2xl leading-[150%] italic text-center max-w-[340px] text-onyx transition-colors dark:text-slate-300'
           initial={{
             opacity: 0,
             y: '-15%',
@@ -125,12 +134,10 @@ const DataScience = () => {
           viewport={{
             once: true,
           }}>
-          My expedition as a software developer commenced with the elegant
-          language of Python. This initial foray into the realm of Data Science
-          set the foundation for my evolving voyage.
+          {about.content}
         </motion.p>
         <motion.div
-          className='w-1 bg-onyx'
+          className='w-1 transition-colors bg-onyx dark:bg-slate-200'
           variants={lineHeightGrowthVariants}
           custom={{ lineHeight: '2.5rem', duration: 0.4, delay: 0.8 }}
           whileInView='animate'

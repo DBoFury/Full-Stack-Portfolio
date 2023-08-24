@@ -1,5 +1,7 @@
 'use client';
 
+import { FC } from 'react';
+
 import { motion } from 'framer-motion';
 
 import { Icons } from '@/components/Icons';
@@ -9,7 +11,13 @@ import {
   lineWidthGrowthVariants,
 } from '@/helpers/animations';
 
-const WebDevelopment = () => {
+import { AboutType } from '@/types/data';
+
+interface WebDevelopmentProps {
+  about: AboutType;
+}
+
+const WebDevelopment: FC<WebDevelopmentProps> = ({ about }) => {
   return (
     <section className='flex flex-col items-center justify-center cursor-default section'>
       <div className='absolute -inset-x-52 inset-y-40 w-72 h-[32rem] bg-ruddy-blue rounded-2xl -rotate-12 dark:bg-ruddy-blue/60' />
@@ -43,7 +51,7 @@ const WebDevelopment = () => {
         />
 
         <motion.h3
-          className='absolute h-10 text-4xl italic font-medium text-center w-80 inset-x-6 -inset-y-10 text-pine-green'
+          className='absolute h-10 text-4xl italic font-medium text-center w-[22rem] inset-x-6 -inset-y-10 text-pine-green'
           initial={{
             opacity: 0,
             x: '-10%',
@@ -60,7 +68,7 @@ const WebDevelopment = () => {
           viewport={{
             once: true,
           }}>
-          Web Development
+          {about.title}
         </motion.h3>
 
         <motion.div
@@ -100,14 +108,12 @@ const WebDevelopment = () => {
             viewport={{
               once: true,
             }}>
-            Transitioning, I immersed myself in web development, powered by
-            Python. Guided by Django and Flask frameworks, I sculpted web
-            applications, combining functionality and aesthetics seamlessly.
+            {about.content}
           </motion.p>
         </div>
         <div className='absolute inset-y-80 inset-x-[5.5rem] w-[26rem] h-36'>
           <motion.div
-            className='absolute h-px top-16 -left-[3.5rem] bg-battleship-gray transition-colors dark:text-slate-300'
+            className='absolute h-px top-16 -left-[3.5rem] bg-battleship-gray transition-colors dark:bg-slate-200'
             variants={lineWidthGrowthVariants}
             custom={{ lineWidth: '40px', delay: 3 }}
             whileInView='animate'
@@ -132,7 +138,7 @@ const WebDevelopment = () => {
                 once: true,
               }}>
               <Icons.python className='fill-white' />
-              <Icons.plus stroke='#FFFFFF' size={60} />
+              <Icons.plus className='stroke-white' size={60} />
             </motion.div>
             <motion.div
               className='flex items-center justify-center space-x-2'
@@ -152,7 +158,7 @@ const WebDevelopment = () => {
                 once: true,
               }}>
               <Icons.django className='dark:fill-slate-300' />
-              <p className='text-4xl font-semibold transition-colors text-onyx dark:text-slate-300'>
+              <p className='text-4xl font-semibold text-onyx dark:text-slate-300'>
                 /
               </p>
               <Icons.flask className='dark:fill-slate-300' />

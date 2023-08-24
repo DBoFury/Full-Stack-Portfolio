@@ -1,5 +1,7 @@
 'use client';
 
+import { FC } from 'react';
+
 import { motion } from 'framer-motion';
 
 import Link from 'next/link';
@@ -8,14 +10,20 @@ import { Icons } from '@/components/Icons';
 import { Button } from '@/components/ui/button';
 
 import { lineHeightGrowthVariants } from '@/helpers/animations';
-import { contacts } from '@/helpers/data';
 
-const FullStack = () => {
+import { contacts } from '@/helpers/data';
+import { AboutType } from '@/types/data';
+
+interface FullStackProps {
+  about: AboutType;
+}
+
+const FullStack: FC<FullStackProps> = ({ about }) => {
   return (
     <>
       <div className='flex flex-col items-center'>
         <motion.div
-          className='w-1 bg-onyx'
+          className='w-1 bg-onyx dark:bg-slate-200'
           variants={lineHeightGrowthVariants}
           custom={{ lineHeight: '8rem', duration: 0.6, delay: 0.8 }}
           whileInView='animate'
@@ -24,7 +32,7 @@ const FullStack = () => {
           }}
         />
         <motion.span
-          className='w-6 h-6 rounded-full bg-onyx'
+          className='w-6 h-6 rounded-full bg-onyx dark:bg-slate-200'
           initial={{
             scale: 0,
           }}
@@ -43,7 +51,7 @@ const FullStack = () => {
         />
       </div>
       <motion.h3
-        className='text-4xl italic font-medium text-center text-onyx'
+        className='text-4xl italic font-medium text-center transition-colors text-onyx dark:text-slate-200'
         initial={{
           opacity: 0,
           y: '-30%',
@@ -60,10 +68,10 @@ const FullStack = () => {
         viewport={{
           once: true,
         }}>
-        Full-Stack
+        {about.title}
       </motion.h3>
       <motion.p
-        className='w-[340px] text-2xl leading-[150%] italic text-center text-onyx'
+        className='w-[340px] text-2xl leading-[150%] italic text-center text-onyx transition-colors dark:text-slate-200'
         initial={{
           opacity: 0,
           y: '-10%',
@@ -80,10 +88,7 @@ const FullStack = () => {
         viewport={{
           once: true,
         }}>
-        Today, I stand at a crossroads, merging experience with vision.
-        Embracing full-stack potential, I've embarked on the Node.js journey. I
-        now craft comprehensive applications, seamlessly blending frontend and
-        backend expertise, using efficient tools and techniques.
+        {about.content}
       </motion.p>
       <motion.div
         className='flex flex-col items-center justify-center px-2 space-y-5 mb:flex-row mb:space-y-0 mb:justify-between mb:gap-5 mb:px-0'

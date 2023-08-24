@@ -1,5 +1,7 @@
 'use client';
 
+import { FC } from 'react';
+
 import Link from 'next/link';
 
 import { motion } from 'framer-motion';
@@ -8,9 +10,16 @@ import { Icons } from '@/components/Icons';
 import { Button } from '@/components/ui/button';
 
 import { lineHeightGrowthVariants } from '@/helpers/animations';
+
 import { contacts } from '@/helpers/data';
 
-const FullStack = () => {
+import { AboutType } from '@/types/data';
+
+interface WebDevelopmentProps {
+  about: AboutType;
+}
+
+const FullStack: FC<WebDevelopmentProps> = ({ about }) => {
   return (
     <section className='flex flex-col items-center justify-start gap-4 pt-20 cursor-default section'>
       <div className='absolute -inset-x-36 inset-y-44 w-[20rem] h-[32rem] bg-ruddy-blue rounded-2xl rotate-12 dark:bg-ruddy-blue/60' />
@@ -62,7 +71,7 @@ const FullStack = () => {
           viewport={{
             once: true,
           }}>
-          Full-Stack
+          {about.title}
         </motion.h3>
         <motion.p
           className='text-[1.5rem] leading-[150%] pt-3 italic text-center max-w-[44rem] text-onyx transition-colors dark:text-slate-300'
@@ -81,10 +90,7 @@ const FullStack = () => {
           viewport={{
             once: true,
           }}>
-          Today, I stand at a crossroads, merging experience with vision.
-          Embracing full-stack potential, I've embarked on the Node.js journey.
-          I now craft comprehensive applications, seamlessly blending frontend
-          and backend expertise, using efficient tools and techniques.
+          {about.content}
         </motion.p>
 
         <motion.div

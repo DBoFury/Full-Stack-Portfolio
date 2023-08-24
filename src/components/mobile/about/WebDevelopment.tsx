@@ -1,16 +1,24 @@
 'use client';
 
+import { FC } from 'react';
+
 import { motion } from 'framer-motion';
 
 import { Icons } from '@/components/Icons';
 
 import { lineHeightGrowthVariants } from '@/helpers/animations';
 
-const WebDevelopment = () => {
+import { AboutType } from '@/types/data';
+
+interface WebDevelopmentProps {
+  about: AboutType;
+}
+
+const WebDevelopment: FC<WebDevelopmentProps> = ({ about }) => {
   return (
     <>
       <motion.h3
-        className='text-4xl italic font-medium text-center text-onyx'
+        className='text-4xl italic font-medium text-center transition-colors text-onyx dark:text-slate-200'
         initial={{
           opacity: 0,
           y: '-15%',
@@ -27,10 +35,10 @@ const WebDevelopment = () => {
         viewport={{
           once: true,
         }}>
-        Web-development
+        {about.title}
       </motion.h3>
       <motion.div
-        className='w-1 bg-onyx'
+        className='w-1 bg-onyx dark:bg-slate-200'
         variants={lineHeightGrowthVariants}
         custom={{ lineHeight: '2.5rem', duration: 0.4, delay: 0.8 }}
         whileInView='animate'
@@ -39,7 +47,7 @@ const WebDevelopment = () => {
         }}
       />
       <motion.p
-        className='text-2xl leading-[150%] pt-3 italic text-center max-w-[340px] text-onyx'
+        className='text-2xl leading-[150%] pt-3 italic text-center max-w-[340px] text-onyx transition-colors dark:text-slate-300'
         initial={{
           opacity: 0,
           y: '-15%',
@@ -56,12 +64,10 @@ const WebDevelopment = () => {
         viewport={{
           once: true,
         }}>
-        Transitioning, I immersed myself in web development, powered by Python.
-        Guided by Django and Flask frameworks, I sculpted web applications,
-        combining functionality and aesthetics seamlessly.
+        {about.content}
       </motion.p>
       <motion.div
-        className='w-1 bg-onyx'
+        className='w-1 bg-onyx dark:bg-slate-200'
         variants={lineHeightGrowthVariants}
         custom={{ lineHeight: '2.5rem', duration: 0.4, delay: 0.8 }}
         whileInView='animate'
@@ -69,7 +75,7 @@ const WebDevelopment = () => {
           once: true,
         }}
       />
-      <div className='relative flex items-center justify-center space-x-3 rounded-lg shadow-sm'>
+      <div className='relative flex items-center justify-center space-x-3'>
         <motion.span
           initial={{
             scale: 0,
@@ -104,7 +110,7 @@ const WebDevelopment = () => {
           viewport={{
             once: true,
           }}>
-          <Icons.plus stroke='#424241' size={60} />
+          <Icons.plus className='stroke-onyx dark:stroke-slate-300' size={60} />
         </motion.span>
 
         <motion.div
@@ -124,12 +130,14 @@ const WebDevelopment = () => {
           viewport={{
             once: true,
           }}>
-          <Icons.django />
-          <p className='text-4xl font-semibold text-onyx'>/</p>
-          <Icons.flask />
+          <Icons.django className='dark:fill-slate-300' />
+          <p className='text-4xl font-semibold text-onyx dark:text-slate-300'>
+            /
+          </p>
+          <Icons.flask className='dark:fill-slate-300' />
         </motion.div>
         <motion.div
-          className='z-[-1] absolute -inset-x-24 -inset-y-[6rem] w-[150px] h-[200px] bg-ruddy-blue rounded-2xl'
+          className='z-[-1] absolute -inset-x-24 -inset-y-[6rem] w-[150px] h-[200px] bg-ruddy-blue rounded-2xl dark:bg-ruddy-blue/60'
           initial={{
             scale: 0,
           }}
