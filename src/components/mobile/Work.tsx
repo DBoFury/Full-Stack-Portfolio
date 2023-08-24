@@ -18,8 +18,8 @@ const WorkMobile = () => {
             className='p-10 shadow-md pointer-events-none bg-slate-50 rounded-xl dark:bg-slate-100'
             src={projects[0].image}
             alt='Project 1 image'
-            width={340}
-            height={200}
+            width={300}
+            height={300}
             loading='eager'
           />
           <div className='z-[-1] absolute inset-x-64 inset-y-16 w-[200px] h-[140px] bg-ruddy-blue rounded-2xl -rotate-12 dark:bg-ruddy-blue/70' />
@@ -115,7 +115,7 @@ const WorkMobile = () => {
             className='shadow-md pointer-events-none rounded-xl'
             src='/Project-4.webp'
             alt='Project 4 image'
-            width={460}
+            width={320}
             height={300}
             loading='eager'
           />
