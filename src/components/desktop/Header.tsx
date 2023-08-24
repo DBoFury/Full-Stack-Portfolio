@@ -6,7 +6,7 @@ import { useActiveSectionContext } from '@/context/active-section-context';
 
 import Link from 'next/link';
 
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 
 import { sections } from '@/helpers/data';
 
@@ -40,14 +40,14 @@ const Header: FC<HeaderProps> = () => {
                   {section.name}
 
                   {activeSection === section.name && (
-                    <motion.span
+                    <m.span
                       className='absolute left-0 w-full h-1 bg-ruddy-blue -bottom-1 -z-10'
                       layoutId='activeSection'
                       transition={{
                         type: 'spring',
                         stiffness: 380,
                         damping: 30,
-                      }}></motion.span>
+                      }}></m.span>
                   )}
                 </Link>
               </li>

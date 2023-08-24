@@ -2,7 +2,7 @@
 
 import { FC } from 'react';
 
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 
 import {
   lineHeightGrowthVariants,
@@ -22,7 +22,7 @@ const DataScience: FC<DataScienceProps> = ({ about }) => {
       className='flex flex-col items-center justify-center space-y-16 cursor-default section'>
       <h2 className='text-6xl font-bold text-pine-green dt:mr-20'>About Me</h2>
       <div className='relative h-[60vh] dt:mr-20'>
-        <motion.h3
+        <m.h3
           className='absolute w-64 text-4xl italic font-medium text-center -top-8 right-[110%] text-pine-green'
           initial={{
             opacity: 0,
@@ -41,9 +41,9 @@ const DataScience: FC<DataScienceProps> = ({ about }) => {
             once: true,
           }}>
           {about.title}
-        </motion.h3>
+        </m.h3>
 
-        <motion.span
+        <m.span
           className='absolute -inset-x-[0.75rem] rounded-full w-7 h-7 bg-onyx transition-colors dark:bg-slate-200'
           initial={{
             scale: 0,
@@ -62,7 +62,7 @@ const DataScience: FC<DataScienceProps> = ({ about }) => {
           }}
         />
 
-        <motion.div
+        <m.div
           className='w-1 mt-6 transition-colors bg-onyx dark:bg-slate-200'
           variants={lineHeightGrowthVariants}
           custom={{ lineHeight: '60vh', duration: 1.2, delay: 0.9 }}
@@ -73,7 +73,7 @@ const DataScience: FC<DataScienceProps> = ({ about }) => {
         />
 
         <div className='absolute inset-y-36 -inset-x-[30rem] w-96 h-96'>
-          <motion.div
+          <m.div
             className='absolute top-48 h-px -right-[4.5rem] bg-battleship-gray transition-colors dark:bg-slate-200'
             variants={lineWidthGrowthVariants}
             custom={{ lineWidth: '40px', delay: 1.9 }}
@@ -82,7 +82,7 @@ const DataScience: FC<DataScienceProps> = ({ about }) => {
               once: true,
             }}
           />
-          <motion.img
+          <m.img
             className='py-6 rounded-lg shadow-xl pointer-events-none bg-slate-50'
             src={about.image?.src}
             alt={about.image?.alt}
@@ -103,7 +103,7 @@ const DataScience: FC<DataScienceProps> = ({ about }) => {
               once: true,
             }}
           />
-          <motion.div
+          <m.div
             className='absolute -inset-x-28 z-[-1] -inset-y-28 w-80 h-80 bg-ruddy-blue rounded-2xl dark:bg-ruddy-blue/60'
             initial={{
               scale: 0,
@@ -123,7 +123,7 @@ const DataScience: FC<DataScienceProps> = ({ about }) => {
           />
         </div>
         <div className='absolute inset-y-24 inset-x-24 w-96 h-96'>
-          <motion.div
+          <m.div
             className='absolute top-36 h-px -left-[4rem] bg-battleship-gray transition-colors dark:bg-slate-200'
             variants={lineWidthGrowthVariants}
             custom={{ lineWidth: '40px', delay: 2.3 }}
@@ -132,7 +132,7 @@ const DataScience: FC<DataScienceProps> = ({ about }) => {
               once: true,
             }}
           />
-          <motion.p
+          <m.p
             className='text-[1.75rem] leading-[150%] pt-3 italic text-left max-w-[420px] text-onyx transition-colors dark:text-slate-300'
             initial={{
               opacity: 0,
@@ -151,7 +151,7 @@ const DataScience: FC<DataScienceProps> = ({ about }) => {
               once: true,
             }}>
             {about.content}
-          </motion.p>
+          </m.p>
         </div>
       </div>
     </section>

@@ -2,7 +2,7 @@
 
 import { FC } from 'react';
 
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 
 import Link from 'next/link';
 
@@ -22,7 +22,7 @@ const FullStack: FC<FullStackProps> = ({ about }) => {
   return (
     <>
       <div className='flex flex-col items-center'>
-        <motion.div
+        <m.div
           className='w-1 bg-onyx dark:bg-slate-200'
           variants={lineHeightGrowthVariants}
           custom={{ lineHeight: '8rem', duration: 0.6, delay: 0.8 }}
@@ -31,7 +31,7 @@ const FullStack: FC<FullStackProps> = ({ about }) => {
             once: true,
           }}
         />
-        <motion.span
+        <m.span
           className='w-6 h-6 rounded-full bg-onyx dark:bg-slate-200'
           initial={{
             scale: 0,
@@ -50,7 +50,7 @@ const FullStack: FC<FullStackProps> = ({ about }) => {
           }}
         />
       </div>
-      <motion.h3
+      <m.h3
         className='text-4xl italic font-medium text-center transition-colors cursor-default text-onyx dark:text-slate-200'
         initial={{
           opacity: 0,
@@ -69,8 +69,8 @@ const FullStack: FC<FullStackProps> = ({ about }) => {
           once: true,
         }}>
         {about.title}
-      </motion.h3>
-      <motion.p
+      </m.h3>
+      <m.p
         className='w-[340px] text-2xl cursor-default leading-[150%] italic text-center text-onyx transition-colors dark:text-slate-200'
         initial={{
           opacity: 0,
@@ -89,8 +89,8 @@ const FullStack: FC<FullStackProps> = ({ about }) => {
           once: true,
         }}>
         {about.content}
-      </motion.p>
-      <motion.div
+      </m.p>
+      <m.div
         className='flex flex-col items-center justify-center px-2 space-y-5 mb:flex-row mb:space-y-0 mb:justify-between mb:gap-5 mb:px-0'
         initial={{
           opacity: 0,
@@ -127,7 +127,7 @@ const FullStack: FC<FullStackProps> = ({ about }) => {
             </Link>
           );
         })}
-      </motion.div>
+      </m.div>
     </>
   );
 };

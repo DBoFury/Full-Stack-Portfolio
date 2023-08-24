@@ -2,7 +2,7 @@
 
 import { FC } from 'react';
 
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 
 import { Icons } from '@/components/Icons';
 
@@ -17,7 +17,7 @@ interface WebDevelopmentProps {
 const WebDevelopment: FC<WebDevelopmentProps> = ({ about }) => {
   return (
     <>
-      <motion.h3
+      <m.h3
         className='text-4xl italic font-medium text-center transition-colors cursor-default text-onyx dark:text-slate-200'
         initial={{
           opacity: 0,
@@ -36,8 +36,8 @@ const WebDevelopment: FC<WebDevelopmentProps> = ({ about }) => {
           once: true,
         }}>
         {about.title}
-      </motion.h3>
-      <motion.div
+      </m.h3>
+      <m.div
         className='w-1 bg-onyx dark:bg-slate-200'
         variants={lineHeightGrowthVariants}
         custom={{ lineHeight: '2.5rem', duration: 0.4, delay: 0.8 }}
@@ -46,7 +46,7 @@ const WebDevelopment: FC<WebDevelopmentProps> = ({ about }) => {
           once: true,
         }}
       />
-      <motion.p
+      <m.p
         className='text-2xl leading-[150%] cursor-default pt-3 italic text-center max-w-[340px] text-onyx transition-colors dark:text-slate-300'
         initial={{
           opacity: 0,
@@ -65,8 +65,8 @@ const WebDevelopment: FC<WebDevelopmentProps> = ({ about }) => {
           once: true,
         }}>
         {about.content}
-      </motion.p>
-      <motion.div
+      </m.p>
+      <m.div
         className='w-1 bg-onyx dark:bg-slate-200'
         variants={lineHeightGrowthVariants}
         custom={{ lineHeight: '2.5rem', duration: 0.4, delay: 0.8 }}
@@ -76,7 +76,7 @@ const WebDevelopment: FC<WebDevelopmentProps> = ({ about }) => {
         }}
       />
       <div className='relative flex items-center justify-center space-x-3'>
-        <motion.span
+        <m.span
           initial={{
             scale: 0,
           }}
@@ -92,9 +92,9 @@ const WebDevelopment: FC<WebDevelopmentProps> = ({ about }) => {
             once: true,
           }}>
           <Icons.python className='fill-white' />
-        </motion.span>
+        </m.span>
 
-        <motion.span
+        <m.span
           initial={{
             scale: 0,
           }}
@@ -111,9 +111,9 @@ const WebDevelopment: FC<WebDevelopmentProps> = ({ about }) => {
             once: true,
           }}>
           <Icons.plus className='stroke-onyx dark:stroke-slate-300' size={60} />
-        </motion.span>
+        </m.span>
 
-        <motion.div
+        <m.div
           className='flex items-center justify-center space-x-2'
           initial={{
             opacity: 0,
@@ -135,8 +135,8 @@ const WebDevelopment: FC<WebDevelopmentProps> = ({ about }) => {
             /
           </p>
           <Icons.flask className='dark:fill-slate-300' />
-        </motion.div>
-        <motion.div
+        </m.div>
+        <m.div
           className='z-[-1] absolute -inset-x-24 -inset-y-[6rem] w-[150px] h-[200px] bg-ruddy-blue rounded-2xl dark:bg-ruddy-blue/60'
           initial={{
             scale: 0,
