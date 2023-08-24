@@ -17,7 +17,7 @@ const Header: FC<HeaderProps> = () => {
     useActiveSectionContext();
 
   return (
-    <header className='sticky top-0 z-10 w-full h-0 bg-white'>
+    <header className='fixed top-0 z-10 w-full h-0 bg-white'>
       <nav className='flex items-end justify-between p-3 px-10'>
         <Link href='/' className='w-fit'>
           <h1 className='text-5xl font-medium uppercase w-fit text-pine-green'>
@@ -31,7 +31,7 @@ const Header: FC<HeaderProps> = () => {
                 className='relative flex items-center justify-center h-3/4'
                 key={section.id}>
                 <Link
-                  className='flex items-center justify-center w-full transition hover:-translate-y-1 dark:text-slate-300'
+                  className='flex items-center justify-center w-full transition hover:-translate-y-1 dark:font-semibold'
                   href={`#${section.id}`}
                   onClick={() => {
                     setActiveSection(section.name);
@@ -47,7 +47,8 @@ const Header: FC<HeaderProps> = () => {
                         type: 'spring',
                         stiffness: 380,
                         damping: 30,
-                      }}></m.span>
+                      }}
+                    />
                   )}
                 </Link>
               </li>
