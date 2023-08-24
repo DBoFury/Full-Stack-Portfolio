@@ -100,47 +100,26 @@ const SkillsMobile = () => {
         </TabsContent>
         <TabsContent value='soft' className='h-[320px]'>
           <div className='flex flex-col items-center justify-center pt-4 space-y-5'>
-            <motion.div
-              className='w-[340px] h-[85px] flex items-center justify-center px-5 space-x-5 border rounded-lg shadow-md border-onyx dark:border-slate-300'
-              initial={{ opacity: 0, y: -50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.6,
-                ease: [0, 0.6, 0.8, 1],
-              }}>
-              <Icons.cogs className='dark:fill-slate-200' />
-              <p className='text-2xl font-medium transition-colors text-onyx dark:text-slate-300'>
-                Problem solving
-              </p>
-            </motion.div>
-            <motion.div
-              className='w-[340px] h-[85px] flex items-center justify-center px-5 space-x-5 border rounded-lg shadow-md border-onyx dark:border-slate-300'
-              initial={{ opacity: 0, y: -50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.6,
-                delay: 0.4,
-                ease: [0, 0.7, 0.8, 1],
-              }}>
-              <Icons.chart className='dark:fill-slate-200' />
-              <p className='text-2xl font-medium transition-colors text-onyx dark:text-slate-300'>
-                Critical thinking
-              </p>
-            </motion.div>
-            <motion.div
-              className='w-[340px] h-[85px] flex items-center justify-center px-5 space-x-5 border rounded-lg shadow-md border-onyx dark:border-slate-300'
-              initial={{ opacity: 0, y: -50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.6,
-                delay: 0.8,
-                ease: [0, 0.7, 0.8, 1],
-              }}>
-              <Icons.shapes className='dark:fill-slate-200' />
-              <p className='text-2xl font-medium transition-colors text-onyx dark:text-slate-300'>
-                Adaptability
-              </p>
-            </motion.div>
+            {skills.soft.map((skill, index) => {
+              const Icon = Icons[skill.icon as keyof typeof Icons];
+
+              return (
+                <motion.div
+                  className='w-[340px] h-[85px] flex items-center justify-center px-5 space-x-5 border rounded-lg shadow-md border-onyx dark:border-slate-300'
+                  initial={{ opacity: 0, y: -30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{
+                    duration: 0.5,
+                    ease: [0, 0.6, 0.8, 1],
+                    delay: 0.4 * index,
+                  }}>
+                  <Icon className='dark:fill-slate-200' />
+                  <p className='text-2xl font-medium transition-colors text-onyx dark:text-slate-300'>
+                    {skill.name}
+                  </p>
+                </motion.div>
+              );
+            })}
           </div>
         </TabsContent>
       </Tabs>

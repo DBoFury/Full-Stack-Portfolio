@@ -8,6 +8,7 @@ import { Icons } from '@/components/Icons';
 import { Switch } from '@/components/ui/switch';
 
 import { skills } from '@/helpers/data';
+import { cn } from '@/lib/utils';
 
 const Hero = () => {
   const [tabsValue, setTabsValue] = useState<string>('hard');
@@ -110,59 +111,30 @@ const Hero = () => {
         {tabsValue === 'soft' && (
           <div className='h-[210px] cursor-default'>
             <div className='flex flex-col items-center justify-center pt-4 space-y-4'>
-              <motion.div
-                className='flex items-center space-x-2'
-                initial={{ opacity: 0, y: -30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.5,
-                }}>
-                <h3 className='text-2xl font-medium text-pine-green'>
-                  Problem solving
-                </h3>
-                <span className='text-2xl font-medium text-battleship-gray dark:text-slate-300'>
-                  /
-                </span>
-                <p className='pt-[2px] text-left text-onyx text-lg dark:text-slate-300'>
-                  creative and effective ways to find innovative solutions
-                </p>
-              </motion.div>
-              <motion.div
-                className='flex items-center space-x-2 animate-delay-[700ms]'
-                initial={{ opacity: 0, y: -30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.5,
-                  delay: 0.4,
-                }}>
-                <p className='pt-[2px] text-left text-onyx text-lg dark:text-slate-300'>
-                  The ability to analyze situations, evaluate different options
-                </p>
-                <span className='text-2xl font-medium text-battleship-gray dark:text-slate-300'>
-                  /
-                </span>
-                <h3 className='text-2xl font-medium text-pine-green'>
-                  Critical Thinking
-                </h3>
-              </motion.div>
-              <motion.div
-                className='flex items-center space-x-2 animate-delay-[1400ms]'
-                initial={{ opacity: 0, y: -30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.5,
-                  delay: 0.8,
-                }}>
-                <h3 className='text-2xl font-medium text-pine-green'>
-                  Adaptability
-                </h3>
-                <span className='text-2xl font-medium text-battleship-gray dark:text-slate-300'>
-                  /
-                </span>
-                <p className='pt-[2px] text-left text-onyx text-lg dark:text-slate-300'>
-                  fluent flexibility across full-stack technologies and tasks
-                </p>
-              </motion.div>
+              {skills.soft.map((skill, index) => {
+                return (
+                  <motion.div
+                    className={cn('flex items-center gap-2', {
+                      'flex-row-reverse': index % 2 !== 0,
+                    })}
+                    initial={{ opacity: 0, y: -30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{
+                      duration: 0.5,
+                      delay: 0.4 * index,
+                    }}>
+                    <h3 className='text-2xl font-medium text-pine-green'>
+                      {skill.name}
+                    </h3>
+                    <span className='text-2xl font-medium text-battleship-gray dark:text-slate-300'>
+                      /
+                    </span>
+                    <p className='pt-[2px] text-left text-onyx text-lg dark:text-slate-300'>
+                      {skill.description}
+                    </p>
+                  </motion.div>
+                );
+              })}
             </div>
           </div>
         )}

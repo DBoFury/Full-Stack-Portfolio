@@ -129,6 +129,25 @@ export const skills = {
       icon: 'docker',
     },
   ],
+  soft: [
+    {
+      name: 'Problem solving',
+      description: 'creative and effective ways to find innovative solutions',
+      icon: 'cogs',
+    },
+    {
+      name: 'Critical Thinking',
+      description:
+        'The ability to analyze situations, evaluate different options',
+      icon: 'chart',
+    },
+    {
+      name: 'Adaptability',
+      description:
+        'fluent flexibility across full-stack technologies and tasks',
+      icon: 'shapes',
+    },
+  ],
 };
 
 export const about = [
