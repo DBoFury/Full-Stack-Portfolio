@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 
 import { Icons } from '@/components/Icons';
 import { Switch } from '@/components/ui/switch';
@@ -62,7 +62,7 @@ const Hero = () => {
                   const Icon = Icons[skill.icon as keyof typeof Icons];
 
                   return (
-                    <motion.li
+                    <m.li
                       key={skill.name.toLowerCase()}
                       initial={{
                         opacity: isInit ? 1 : 0,
@@ -76,7 +76,7 @@ const Hero = () => {
                         delay: 0.05 * index,
                       }}>
                       <Icon className='dark:fill-slate-200' />
-                    </motion.li>
+                    </m.li>
                   );
                 })}
               </ul>
@@ -86,7 +86,7 @@ const Hero = () => {
                   const Icon = Icons[skill.icon as keyof typeof Icons];
 
                   return (
-                    <motion.li
+                    <m.li
                       key={skill.name.toLowerCase()}
                       initial={{
                         opacity: isInit ? 1 : 0,
@@ -100,7 +100,7 @@ const Hero = () => {
                         delay: 0.05 * index,
                       }}>
                       <Icon className='dark:fill-slate-200' />
-                    </motion.li>
+                    </m.li>
                   );
                 })}
               </ul>
@@ -113,7 +113,7 @@ const Hero = () => {
             <div className='flex flex-col items-center justify-center pt-4 space-y-4'>
               {skills.soft.map((skill, index) => {
                 return (
-                  <motion.div
+                  <m.div
                     className={cn('flex items-center gap-2', {
                       'flex-row-reverse': index % 2 !== 0,
                     })}
@@ -132,7 +132,7 @@ const Hero = () => {
                     <p className='pt-[2px] text-left text-onyx text-lg dark:text-slate-300'>
                       {skill.description}
                     </p>
-                  </motion.div>
+                  </m.div>
                 );
               })}
             </div>

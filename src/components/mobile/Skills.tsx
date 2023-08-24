@@ -6,7 +6,7 @@ import { Icons } from '@/components/Icons';
 import { Separator } from '@/components/ui/separator';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 
 import { skills } from '@/helpers/data';
 
@@ -54,7 +54,7 @@ const SkillsMobile = () => {
                 const Icon = Icons[skill.icon as keyof typeof Icons];
 
                 return (
-                  <motion.li
+                  <m.li
                     key={skill.name.toLowerCase()}
                     initial={{
                       opacity: isInit ? 1 : 0,
@@ -68,7 +68,7 @@ const SkillsMobile = () => {
                       delay: 0.05 * index,
                     }}>
                     <Icon className='dark:fill-slate-200' />
-                  </motion.li>
+                  </m.li>
                 );
               })}
             </ul>
@@ -78,7 +78,7 @@ const SkillsMobile = () => {
                 const Icon = Icons[skill.icon as keyof typeof Icons];
 
                 return (
-                  <motion.li
+                  <m.li
                     key={skill.name.toLowerCase()}
                     initial={{
                       opacity: isInit ? 1 : 0,
@@ -92,7 +92,7 @@ const SkillsMobile = () => {
                       delay: 0.05 * (index + skills.frontend.length),
                     }}>
                     <Icon className='dark:fill-slate-200' />
-                  </motion.li>
+                  </m.li>
                 );
               })}
             </ul>
@@ -104,7 +104,7 @@ const SkillsMobile = () => {
               const Icon = Icons[skill.icon as keyof typeof Icons];
 
               return (
-                <motion.div
+                <m.div
                   className='w-[340px] h-[85px] flex items-center justify-center px-5 space-x-5 border rounded-lg shadow-md border-onyx dark:border-slate-300'
                   initial={{ opacity: 0, y: -30 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -117,7 +117,7 @@ const SkillsMobile = () => {
                   <p className='text-2xl font-medium transition-colors cursor-default text-onyx dark:text-slate-300'>
                     {skill.name}
                   </p>
-                </motion.div>
+                </m.div>
               );
             })}
           </div>

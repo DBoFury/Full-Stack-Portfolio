@@ -1,5 +1,9 @@
+'use client';
+
 import type { Metadata } from 'next';
 import { Work_Sans } from 'next/font/google';
+
+import { LazyMotion, domAnimation } from 'framer-motion';
 
 import ActiveSectionContextProvider from '@/context/active-section-context';
 import ThemeContextProvider from '@/context/theme-context';
@@ -30,7 +34,7 @@ export default function RootLayout({
         <div className='bg-[#dbd7fb] fixed top-[-1rem] -z-10 left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[10rem] lg:absolute sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-[#5a586b]'></div>
         <ThemeContextProvider>
           <ActiveSectionContextProvider>
-            {children}
+            <LazyMotion features={domAnimation}>{children}</LazyMotion>
           </ActiveSectionContextProvider>
           <ThemeSwitch />
         </ThemeContextProvider>

@@ -2,7 +2,7 @@
 
 import { FC } from 'react';
 
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 
 import { Icons } from '@/components/Icons';
 
@@ -22,7 +22,7 @@ const WebDevelopment: FC<WebDevelopmentProps> = ({ about }) => {
     <section className='flex flex-col items-center justify-center cursor-default section'>
       <div className='absolute -inset-x-52 inset-y-40 w-72 h-[32rem] bg-ruddy-blue rounded-2xl -rotate-12 dark:bg-ruddy-blue/60' />
       <div className='relative h-[40vh] dt:mr-20'>
-        <motion.div
+        <m.div
           className='absolute w-1 -mt-[15vh] bg-onyx transition-colors dark:bg-slate-200'
           variants={lineHeightGrowthVariants}
           custom={{ lineHeight: '15vh', duration: 0.5, delay: 0.7 }}
@@ -31,7 +31,7 @@ const WebDevelopment: FC<WebDevelopmentProps> = ({ about }) => {
             once: true,
           }}
         />
-        <motion.span
+        <m.span
           className='inset-y-0 -inset-x-[0.75rem] w-7 h-7 rounded-full absolute bg-onyx transition-colors dark:bg-slate-200'
           initial={{
             scale: 0,
@@ -50,7 +50,7 @@ const WebDevelopment: FC<WebDevelopmentProps> = ({ about }) => {
           }}
         />
 
-        <motion.h3
+        <m.h3
           className='absolute h-10 text-4xl italic font-medium text-center w-[22rem] inset-x-6 -inset-y-10 text-pine-green'
           initial={{
             opacity: 0,
@@ -69,9 +69,9 @@ const WebDevelopment: FC<WebDevelopmentProps> = ({ about }) => {
             once: true,
           }}>
           {about.title}
-        </motion.h3>
+        </m.h3>
 
-        <motion.div
+        <m.div
           className='absolute w-1 transition-colors bg-onyx dark:bg-slate-200'
           variants={lineHeightGrowthVariants}
           custom={{ lineHeight: '57vh', duration: 0.8, delay: 1.4 }}
@@ -81,7 +81,7 @@ const WebDevelopment: FC<WebDevelopmentProps> = ({ about }) => {
           }}
         />
         <div className='absolute inset-y-20 -inset-x-[25.5rem] w-[20rem] h-[22rem] dt:w-[22rem] dt:-inset-x-[29.5rem]'>
-          <motion.div
+          <m.div
             className='absolute h-px top-44 -right-[4.5rem] bg-battleship-gray dt:-right-[5.5rem] transition-colors dark:bg-slate-200'
             variants={lineWidthGrowthVariants}
             custom={{ lineWidth: '40px', delay: 2 }}
@@ -90,7 +90,7 @@ const WebDevelopment: FC<WebDevelopmentProps> = ({ about }) => {
               once: true,
             }}
           />
-          <motion.p
+          <m.p
             className='text-[1.6rem] leading-[150%] pt-3 italic text-center text-onyx transition-colors dark:text-slate-300'
             initial={{
               opacity: 0,
@@ -109,10 +109,10 @@ const WebDevelopment: FC<WebDevelopmentProps> = ({ about }) => {
               once: true,
             }}>
             {about.content}
-          </motion.p>
+          </m.p>
         </div>
         <div className='absolute inset-y-80 inset-x-[5.5rem] w-[26rem] h-36'>
-          <motion.div
+          <m.div
             className='absolute h-px top-16 -left-[3.5rem] bg-battleship-gray transition-colors dark:bg-slate-200'
             variants={lineWidthGrowthVariants}
             custom={{ lineWidth: '40px', delay: 3 }}
@@ -122,7 +122,7 @@ const WebDevelopment: FC<WebDevelopmentProps> = ({ about }) => {
             }}
           />
           <div className='relative flex items-center justify-center p-5 mt-5 space-x-3'>
-            <motion.div
+            <m.div
               className='flex items-center justify-center gap-3'
               initial={{
                 scale: 0,
@@ -137,7 +137,7 @@ const WebDevelopment: FC<WebDevelopmentProps> = ({ about }) => {
               viewport={{
                 once: true,
               }}>
-              <motion.span
+              <m.span
                 initial={{
                   scale: 0,
                 }}
@@ -153,8 +153,8 @@ const WebDevelopment: FC<WebDevelopmentProps> = ({ about }) => {
                   once: true,
                 }}>
                 <Icons.python className='fill-white' />
-              </motion.span>
-              <motion.span
+              </m.span>
+              <m.span
                 initial={{
                   scale: 0,
                 }}
@@ -171,9 +171,9 @@ const WebDevelopment: FC<WebDevelopmentProps> = ({ about }) => {
                   once: true,
                 }}>
                 <Icons.plus className='stroke-white' size={60} />
-              </motion.span>
-            </motion.div>
-            <motion.div
+              </m.span>
+            </m.div>
+            <m.div
               className='flex items-center justify-center space-x-2'
               initial={{
                 opacity: 0,
@@ -195,8 +195,8 @@ const WebDevelopment: FC<WebDevelopmentProps> = ({ about }) => {
                 /
               </p>
               <Icons.flask className='dark:fill-slate-300' />
-            </motion.div>
-            <motion.div
+            </m.div>
+            <m.div
               className='z-[-1] absolute -inset-x-4 -inset-y-0 w-[180px] h-[130px] bg-ruddy-blue rounded-2xl dark:bg-ruddy-blue/80'
               initial={{
                 scale: 0,
