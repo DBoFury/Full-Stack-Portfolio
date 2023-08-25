@@ -16,7 +16,7 @@ const DataScience: FC<DataScienceProps> = ({ about }) => {
   return (
     <>
       <m.h3
-        className='text-4xl italic font-medium text-center transition-colors cursor-default text-onyx dark:text-slate-300'
+        className='text-3xl italic font-medium text-center transition-colors cursor-default text-onyx dark:text-slate-300'
         initial={{
           opacity: 0,
           y: '-10%',
@@ -67,11 +67,11 @@ const DataScience: FC<DataScienceProps> = ({ about }) => {
 
         <div className='relative'>
           <m.img
-            className='p-6 ml-12 rounded-lg shadow-md pointer-events-none bg-slate-50 dark:bg-slate-100'
+            className='px-4 py-6 ml-12 rounded-lg shadow-md pointer-events-none bg-slate-50 dark:bg-slate-100'
             src={about.image?.src}
             alt={about.image?.alt}
-            width={320}
-            height={260}
+            width={260}
+            height={240}
             initial={{
               scale: 0,
             }}
@@ -88,7 +88,7 @@ const DataScience: FC<DataScienceProps> = ({ about }) => {
             }}
           />
           <m.div
-            className='z-[-1] absolute inset-x-40 -inset-y-3 w-[310px] h-[310px] rounded-2xl bg-ruddy-blue dark:bg-ruddy-blue/60'
+            className='z-[-1] absolute inset-x-40 -inset-y-3 w-[260px] h-[260px] rounded-2xl bg-ruddy-blue dark:bg-ruddy-blue/60'
             initial={{
               scale: 0,
             }}
@@ -117,7 +117,7 @@ const DataScience: FC<DataScienceProps> = ({ about }) => {
           }}
         />
         <m.p
-          className='text-2xl leading-[150%] italic cursor-default text-center max-w-[340px] text-onyx transition-colors dark:text-slate-300'
+          className='text-xl leading-[150%] italic cursor-default text-center max-w-[340px] text-onyx transition-colors dark:text-slate-300'
           initial={{
             opacity: 0,
             y: '-15%',
