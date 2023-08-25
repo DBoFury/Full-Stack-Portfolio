@@ -51,7 +51,7 @@ const FullStack: FC<FullStackProps> = ({ about }) => {
         />
       </div>
       <m.h3
-        className='text-4xl italic font-medium text-center transition-colors cursor-default text-onyx dark:text-slate-200'
+        className='text-3xl italic font-medium text-center transition-colors cursor-default text-onyx dark:text-slate-200'
         initial={{
           opacity: 0,
           y: '-30%',
@@ -71,7 +71,7 @@ const FullStack: FC<FullStackProps> = ({ about }) => {
         {about.title}
       </m.h3>
       <m.p
-        className='w-[340px] text-2xl cursor-default leading-[150%] italic text-center text-onyx transition-colors dark:text-slate-200'
+        className='w-[340px] text-xl cursor-default leading-[150%] italic text-center text-onyx transition-colors dark:text-slate-200'
         initial={{
           opacity: 0,
           y: '-10%',
@@ -91,7 +91,7 @@ const FullStack: FC<FullStackProps> = ({ about }) => {
         {about.content}
       </m.p>
       <m.div
-        className='flex flex-col items-center justify-center px-2 space-y-5 mb:flex-row mb:space-y-0 mb:justify-between mb:gap-5 mb:px-0'
+        className='flex flex-col items-center justify-center px-2 pt-6 space-y-5 mb:flex-row mb:space-y-0 mb:justify-between mb:gap-5 mb:px-0'
         initial={{
           opacity: 0,
           y: '-10%',
@@ -120,7 +120,7 @@ const FullStack: FC<FullStackProps> = ({ about }) => {
               aria-label={contact.ariaLabel}>
               <Button
                 aria-label={`${contact.name} page`}
-                className='flex items-center justify-center px-6 space-x-3 text-2xl font-semibold ease-out bg-white py-7 rounded-2xl shadow-button text-onyx hover:shadow-button-hover hover:translate-y-1 hover:bg-white'>
+                className='flex items-center justify-center px-6 space-x-3 text-xl font-semibold ease-out bg-white py-7 rounded-2xl shadow-button text-onyx hover:shadow-button-hover hover:translate-y-1 hover:bg-white'>
                 <Icon />
                 <span>{contact.name}</span>
               </Button>

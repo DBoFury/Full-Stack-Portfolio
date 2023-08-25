@@ -18,7 +18,7 @@ const WebDevelopment: FC<WebDevelopmentProps> = ({ about }) => {
   return (
     <>
       <m.h3
-        className='text-4xl italic font-medium text-center transition-colors cursor-default text-onyx dark:text-slate-200'
+        className='text-3xl italic font-medium text-center transition-colors cursor-default text-onyx dark:text-slate-200'
         initial={{
           opacity: 0,
           y: '-15%',
@@ -47,7 +47,7 @@ const WebDevelopment: FC<WebDevelopmentProps> = ({ about }) => {
         }}
       />
       <m.p
-        className='text-2xl leading-[150%] cursor-default pt-3 italic text-center max-w-[340px] text-onyx transition-colors dark:text-slate-300'
+        className='text-xl leading-[150%] cursor-default pt-3 italic text-center max-w-[340px] text-onyx transition-colors dark:text-slate-300'
         initial={{
           opacity: 0,
           y: '-15%',
