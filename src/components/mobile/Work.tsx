@@ -8,7 +8,7 @@ import { projects } from '@/helpers/data';
 const WorkMobile = () => {
   return (
     <section className='pt-24 overflow-x-clip'>
-      <h2 className='text-6xl font-semibold text-center cursor-default text-pine-green'>
+      <h2 className='text-6xl font-semibold text-center cursor-default text-pine-green dark:drop-shadow-sm'>
         Work
       </h2>
 
@@ -25,7 +25,7 @@ const WorkMobile = () => {
           <div className='z-[-1] absolute inset-x-48 inset-y-12 w-[200px] h-[140px] bg-ruddy-blue rounded-2xl -rotate-12 dark:bg-ruddy-blue/70' />
         </div>
 
-        <h3 className='px-24 pt-10 text-4xl font-semibold text-center cursor-default text-pine-green'>
+        <h3 className='px-24 pt-10 text-4xl font-semibold text-center cursor-default text-pine-green dark:drop-shadow-sm'>
           {projects[0].title}
         </h3>
         <p className='text-xl cursor-default leading-[150%] pt-3 italic text-center max-w-[340px] text-onyx transition-colors dark:text-slate-300'>
@@ -39,7 +39,7 @@ const WorkMobile = () => {
           aria-label='Review first project'>
           <Button
             aria-label='Review first project'
-            className='text-3xl font-semibold ease-out bg-white px-7 py-7 rounded-2xl shadow-button text-onyx hover:shadow-button-hover hover:translate-y-1 hover:bg-white'>
+            className='px-12 text-xl font-semibold ease-out bg-white py-7 rounded-2xl shadow-button text-onyx hover:shadow-button-hover hover:translate-y-1 hover:bg-white'>
             Review
           </Button>
         </Link>
@@ -57,7 +57,7 @@ const WorkMobile = () => {
           />
           <div className='z-[-1] absolute -inset-x-36 w-52 h-32 -inset-y-10 bg-ruddy-blue rounded-2xl rotate-12 dark:bg-ruddy-blue/70' />
         </div>
-        <h3 className='px-24 pt-10 text-4xl font-semibold text-center cursor-default text-pine-green'>
+        <h3 className='px-24 pt-10 text-4xl font-semibold text-center cursor-default text-pine-green dark:drop-shadow-sm'>
           {projects[1].title}
         </h3>
         <p className='text-xl cursor-default leading-[150%] pt-3 italic text-center max-w-[340px] text-onyx transition-colors dark:text-slate-300'>
@@ -71,7 +71,7 @@ const WorkMobile = () => {
           aria-label='Review second project'>
           <Button
             aria-label='Review second project'
-            className='text-3xl font-semibold ease-out bg-white px-7 py-7 rounded-2xl shadow-button text-onyx hover:shadow-button-hover hover:translate-y-1 hover:bg-white'>
+            className='px-12 text-xl font-semibold ease-out bg-white py-7 rounded-2xl shadow-button text-onyx hover:shadow-button-hover hover:translate-y-1 hover:bg-white'>
             Review
           </Button>
         </Link>
@@ -89,7 +89,7 @@ const WorkMobile = () => {
           />
           <div className='z-[-1] absolute inset-x-6 -inset-y-10 w-64 h-40 bg-ruddy-blue rounded-2xl rotate-12 dark:bg-ruddy-blue/70' />
         </div>
-        <h3 className='px-24 pt-10 text-4xl font-semibold text-center cursor-default text-pine-green'>
+        <h3 className='px-24 pt-10 text-4xl font-semibold text-center cursor-default text-pine-green dark:drop-shadow-sm'>
           {projects[2].title}
         </h3>
         <p className='text-xl cursor-default leading-[150%] pt-3 italic text-center max-w-[340px] text-onyx transition-colors dark:text-slate-300'>
@@ -103,7 +103,7 @@ const WorkMobile = () => {
           aria-label='Review third project'>
           <Button
             aria-label='Review third project'
-            className='text-3xl font-semibold ease-out bg-white px-7 py-7 rounded-2xl shadow-button text-onyx hover:shadow-button-hover hover:translate-y-1 hover:bg-white'>
+            className='px-12 text-xl font-semibold ease-out bg-white py-7 rounded-2xl shadow-button text-onyx hover:shadow-button-hover hover:translate-y-1 hover:bg-white'>
             Review
           </Button>
         </Link>
@@ -121,7 +121,7 @@ const WorkMobile = () => {
           />
           <div className='z-[-1] absolute inset-x-20 -inset-y-20 w-[300px] h-[200px] bg-ruddy-blue rounded-2xl rotate-12 dark:bg-ruddy-blue/70' />
         </div>
-        <h3 className='px-24 pt-10 text-4xl font-semibold text-center cursor-default text-pine-green'>
+        <h3 className='px-24 pt-10 text-4xl font-semibold text-center cursor-default text-pine-green dark:drop-shadow-sm'>
           {projects[3].title}
         </h3>
         <p className='text-xl cursor-default leading-[150%] pt-3 italic text-center max-w-[340px] text-onyx transition-colors dark:text-slate-300'>
@@ -135,7 +135,7 @@ const WorkMobile = () => {
           aria-label='Repository of fourth project'>
           <Button
             aria-label='Repository of fourth project'
-            className='text-3xl font-semibold ease-out bg-white px-7 py-7 rounded-2xl shadow-button text-onyx hover:shadow-button-hover hover:translate-y-1 hover:bg-white'>
+            className='px-8 text-xl font-semibold ease-out bg-white py-7 rounded-2xl shadow-button text-onyx hover:shadow-button-hover hover:translate-y-1 hover:bg-white'>
             Repository
           </Button>
         </Link>

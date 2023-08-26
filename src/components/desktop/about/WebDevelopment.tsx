@@ -51,7 +51,7 @@ const WebDevelopment: FC<WebDevelopmentProps> = ({ about }) => {
         />
 
         <m.h3
-          className='absolute h-10 text-4xl italic font-medium text-center w-[22rem] inset-x-6 -inset-y-10 text-pine-green'
+          className='absolute h-10 text-4xl italic font-medium text-center w-[22rem] inset-x-6 -inset-y-10 text-pine-green dark:drop-shadow-sm'
           initial={{
             opacity: 0,
             x: '-10%',

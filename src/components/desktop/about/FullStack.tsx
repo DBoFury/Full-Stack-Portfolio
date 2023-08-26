@@ -55,7 +55,7 @@ const FullStack: FC<WebDevelopmentProps> = ({ about }) => {
       </div>
       <div className='flex flex-col items-center gap-2 dt:mr-20'>
         <m.h3
-          className='h-10 text-4xl italic font-medium text-center w-52 text-pine-green'
+          className='h-10 text-4xl italic font-medium text-center w-52 text-pine-green dark:drop-shadow-sm'
           initial={{
             opacity: 0,
             y: '-30%',

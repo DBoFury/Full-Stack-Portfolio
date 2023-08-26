@@ -12,11 +12,11 @@ interface SecondWorkSectionProps {
 
 const SecondWorkSection: FC<SecondWorkSectionProps> = ({ projects }) => {
   return (
-    <section className='flex flex-col items-center justify-start px-10 space-y-24 section pt-44 dt:space-y-12 dt:pt-28'>
+    <section className='flex flex-col items-center justify-start px-10 space-y-24 section pt-36 dt:space-y-12 dt:pt-28'>
       <div className='flex items-center justify-center space-x-20 dt:space-x-32'>
         <div className='flex flex-col items-center justify-center space-y-5'>
           <div className='flex items-center justify-center space-x-10'>
-            <h2 className='text-[1.6rem] font-semibold text-pine-green dt:text-[2.8rem] cursor-default'>
+            <h2 className='text-3xl font-semibold cursor-default text-pine-green dt:text-5xl dark:drop-shadow-sm'>
               {projects[0]['title']}
             </h2>
             <Link
@@ -73,7 +73,7 @@ const SecondWorkSection: FC<SecondWorkSectionProps> = ({ projects }) => {
                 Repository
               </Button>
             </Link>
-            <h2 className='text-[1.6rem] dt:text-[2.5rem] font-semibold text-pine-green cursor-default'>
+            <h2 className='text-3xl font-semibold cursor-default dt:text-5xl text-pine-green dark:drop-shadow-sm'>
               {projects[1]['title']}
             </h2>
           </div>
