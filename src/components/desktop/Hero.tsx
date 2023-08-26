@@ -28,7 +28,7 @@ const Hero = () => {
       className='flex flex-col items-center justify-center section'>
       <div className='flex space-x-12 max-w-[78rem] lg:mx-16 dt:mx-24 pt-28'>
         <div className='flex flex-col items-start justify-center space-y-4 text-left'>
-          <h2 className='text-5xl font-bold cursor-default text-pine-green'>
+          <h2 className='text-5xl font-bold cursor-default text-pine-green dark:drop-shadow-sm'>
             Full-Stack Developer
           </h2>
           <p className='text-onyx text-2xl leading-[165%] pr-1 cursor-default transition-colors dark:text-slate-300'>
@@ -50,7 +50,7 @@ const Hero = () => {
       </div>
 
       <div className='pt-16'>
-        <h2 className='text-4xl font-semibold text-center cursor-default text-pine-green '>
+        <h2 className='text-4xl font-semibold text-center cursor-default text-pine-green dark:drop-shadow-sm'>
           Skills
         </h2>
 

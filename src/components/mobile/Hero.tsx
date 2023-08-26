@@ -7,7 +7,7 @@ const HeroMobile = () => {
       </div>
 
       <div className='px-8 pt-5'>
-        <h2 className='text-4xl font-bold text-center cursor-default text-pine-green'>
+        <h2 className='text-4xl font-bold text-center cursor-default text-pine-green dark:drop-shadow-sm'>
           Full-Stack Developer
         </h2>
         <p className='pt-4 text-center text-onyx text-xl leading-[165%] cursor-default transition-colors dark:text-slate-300'>

@@ -34,9 +34,15 @@ export const contacts = [
     icon: 'resume',
   },
   {
+    name: 'Twitter',
+    link: 'https://twitter.com/Olacdy',
+    ariaLabel: 'Twitter profile',
+    icon: 'twitter',
+  },
+  {
     name: 'LinkedIn',
     link: 'https://www.linkedin.com/in/oleg-didechkin/',
-    ariaLabel: 'LinkedIn profil',
+    ariaLabel: 'LinkedIn profile',
     icon: 'linkedin',
   },
   {
@@ -44,6 +50,12 @@ export const contacts = [
     link: 'https://t.me/golovakanta',
     ariaLabel: 'Telegram contact',
     icon: 'telegram',
+  },
+  {
+    name: 'Fiverr',
+    link: 'https://www.fiverr.com/olacdy',
+    ariaLabel: 'Fiverr profile',
+    icon: 'fiverr',
   },
   {
     name: 'Email',

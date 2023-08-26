@@ -20,10 +20,12 @@ const DataScience: FC<DataScienceProps> = ({ about }) => {
     <section
       id='about'
       className='flex flex-col items-center justify-center space-y-16 cursor-default section'>
-      <h2 className='text-6xl font-bold text-pine-green dt:mr-20'>About Me</h2>
+      <h2 className='text-6xl font-bold text-pine-green dt:mr-20 dark:drop-shadow-sm'>
+        About Me
+      </h2>
       <div className='relative h-[60vh] dt:mr-20'>
         <m.h3
-          className='absolute w-64 text-4xl italic font-medium text-center -top-8 right-[110%] text-pine-green'
+          className='absolute w-64 text-4xl italic font-medium text-center -top-8 right-[110%] text-pine-green dark:drop-shadow-sm'
           initial={{
             opacity: 0,
             x: '7%',

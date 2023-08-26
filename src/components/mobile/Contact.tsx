@@ -6,12 +6,12 @@ import { contacts } from '@/helpers/data';
 const ContactMobile = () => {
   return (
     <section className='relative w-full h-[110vh] pt-36 flex items-center flex-col overflow-clip min-h-[700px]'>
-      <h2 className='text-6xl font-semibold text-center cursor-default text-pine-green'>
-        Contact Me
+      <h2 className='text-6xl font-semibold text-center cursor-default text-pine-green dark:drop-shadow-sm'>
+        Contacts
       </h2>
 
       <div className='flex items-center justify-center flex-grow w-full'>
-        <div className='flex flex-col items-center space-x-0 space-y-7 mb:flex-row mb:space-y-0 mb:space-x-10'>
+        <div className='flex flex-col items-center space-x-0 space-y-7 sm:flex-row sm:space-y-0 sm:space-x-10'>
           {contacts.slice(2).map((contact) => {
             const Icon = Icons[contact.icon as keyof typeof Icons];
 
@@ -24,7 +24,7 @@ const ContactMobile = () => {
                 rel='noopener noreferrer'
                 aria-label={contact.ariaLabel}>
                 <div className='group'>
-                  <Icon className='focus:outline-none group-hover:scale-90 dark:fill-slate-200' />
+                  <Icon className='w-16 h-16 focus:outline-none group-hover:scale-90 dark:fill-slate-200 sm:w-20 sm:h-20' />
                 </div>
               </Link>
             );

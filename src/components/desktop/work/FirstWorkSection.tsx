@@ -20,7 +20,7 @@ const FirstWorkSection: FC<FirstWorkSectionProps> = ({ projects }) => {
       <div className='flex items-center justify-center space-x-20 dt:space-x-32'>
         <div className='flex flex-col items-center justify-center space-y-5'>
           <div className='flex items-center justify-center space-x-10'>
-            <h2 className='text-[1.6rem] font-semibold text-pine-green dt:text-[2.8rem] cursor-default'>
+            <h2 className='text-3xl font-semibold cursor-default text-pine-green dt:text-5xl dark:drop-shadow-sm'>
               {projects[0]['title']}
             </h2>
             <Link
@@ -76,7 +76,7 @@ const FirstWorkSection: FC<FirstWorkSectionProps> = ({ projects }) => {
                 Review
               </Button>
             </Link>
-            <h2 className='text-[1.6rem] dt:text-[2.5rem] font-semibold text-pine-green cursor-default'>
+            <h2 className='text-3xl font-semibold cursor-default dt:text-5xl text-pine-green dark:drop-shadow-sm'>
               {projects[1]['title']}
             </h2>
           </div>
