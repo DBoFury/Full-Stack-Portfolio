@@ -14,9 +14,40 @@ const work_sans = Work_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'Oleg D.',
+  title: 'leg D.',
   description: 'Personal full-stack portfolio of Didechkin Oleg.',
+  referrer: 'origin-when-cross-origin',
+  keywords: ['Portfolio', 'Full-Stack', 'Developer'],
+  themeColor: [
+    { media: '(prefers-color-scheme: dark)', color: '#1e293b' },
+    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
+  ],
   metadataBase: new URL('https://olegdidechkin.com'),
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Oleg D.',
+    description: 'Personal full-stack portfolio',
+    creator: '@Olacdy',
+    images: {
+      url: 'https://olegdidechkin.com/twitter-image.jpg',
+      alt: 'Portfolio preview',
+    },
+  },
+  openGraph: {
+    title: 'Oleg D.',
+    description: 'Personal full-stack portfolio',
+    url: 'https://olegdidechkin.com',
+    siteName: 'Next.js',
+    images: [
+      {
+        url: 'https://olegdidechkin.com/opengraph-image.jpg',
+        width: 1200,
+        height: 600,
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
 };
 
 export default function RootLayout({
