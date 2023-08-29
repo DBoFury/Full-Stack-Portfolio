@@ -58,6 +58,12 @@ export const contacts = [
     icon: 'fiverr',
   },
   {
+    name: 'UpWork',
+    link: 'https://www.upwork.com/freelancers/~01bc2c6d8b19205903',
+    ariaLable: 'UpWork profile',
+    icon: 'upwork',
+  },
+  {
     name: 'Email',
     link: 'mailto:oleg.didechkin@gmail.com',
     ariaLabel: 'Send an email',
