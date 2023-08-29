@@ -23,7 +23,7 @@ const Hero = () => {
   };
 
   return (
-    <div
+    <section
       id='home'
       className='flex flex-col items-center justify-center section'>
       <div className='flex space-x-12 max-w-[78rem] lg:mx-16 dt:mx-24 pt-28'>
@@ -139,7 +139,7 @@ const Hero = () => {
           </div>
         )}
       </div>
-    </div>
+    </section>
   );
 };
 
