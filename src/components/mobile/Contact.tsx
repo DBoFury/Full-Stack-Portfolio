@@ -11,7 +11,7 @@ const ContactMobile = () => {
       </h2>
 
       <div className='flex items-center justify-center flex-grow w-full'>
-        <div className='flex flex-col items-center space-x-0 space-y-7 sm:flex-row sm:space-y-0 sm:space-x-10'>
+        <div className='flex flex-col items-center space-x-0 space-y-7 md:flex-row md:space-y-0 md:space-x-10'>
           {contacts.slice(2).map((contact) => {
             const Icon = Icons[contact.icon as keyof typeof Icons];
 

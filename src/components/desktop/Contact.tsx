@@ -30,8 +30,8 @@ const Contact = () => {
                 target='_blank'
                 rel='noopener noreferrer'
                 aria-label={contact.ariaLabel}>
-                <Icon className='w-16 h-16 transition-all ease-out group-hover:-translate-y-6 dark:fill-slate-200 lg:w-24 lg:h-24 dt:w-28 dt:h-28' />
-                <span className='text-3xl font-semibold transition-colors text-onyx dark:text-slate-300 lg:text-5xl dt:text-6xl'>
+                <Icon className='w-20 h-20 transition-all ease-out group-hover:-translate-y-6 dark:fill-slate-200 dt:w-28 dt:h-28' />
+                <span className='text-4xl font-semibold transition-colors text-onyx dark:text-slate-300 dt:text-6xl'>
                   {contact.name}
                 </span>
               </Link>
