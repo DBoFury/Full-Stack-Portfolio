@@ -47,7 +47,7 @@ export const contacts = [
   },
   {
     name: 'Telegram',
-    link: 'https://t.me/golovakanta',
+    link: 'https://t.me/olacdy',
     ariaLabel: 'Telegram contact',
     icon: 'telegram',
   },
