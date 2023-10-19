@@ -55,7 +55,7 @@ const FirstWorkSection: FC<FirstWorkSectionProps> = ({ projects }) => {
       <div className='flex items-center justify-center space-x-10 dt:space-x-20'>
         <div className='relative'>
           <Image
-            className='pointer-events-none'
+            className='shadow-lg pointer-events-none rounded-xl'
             src={projects[1]['image']}
             alt='Project 2 image'
             width={460}

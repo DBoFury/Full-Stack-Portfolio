@@ -51,7 +51,7 @@ const SecondWorkSection: FC<SecondWorkSectionProps> = ({ projects }) => {
       <div className='flex items-center justify-center space-x-10 dt:space-x-20'>
         <div className='relative'>
           <Image
-            className='rounded-lg pointer-events-none'
+            className='rounded-lg shadow-lg pointer-events-none'
             src={projects[1]['image']}
             alt='Project 4 image'
             width={420}
