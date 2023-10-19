@@ -81,11 +81,11 @@ export const projects = [
     image: '/Project-1.webp',
   },
   {
-    title: 'Interactive Comments Section',
+    title: 'CheckMate',
     description:
-      'All-encompassing full-stack web application empowering users to create, edit, and delete diverse comments within a unified global comments section. Account creation is a prerequisite for accessing this feature-rich platform. Originally initiated as a Frontend Mentor task, I expanded its scope to develop a comprehensive web application.',
+      'Revolutionize data validation with our user-friendly UI. Generate validation endpoints equipped with authorization keys for instant, real-time validation of all your schemas, ensuring error-free data processing.',
     tags: '',
-    link: 'https://interactive-comments-section-mocha.vercel.app/',
+    link: 'https://checkmate-inky.vercel.app/',
     image: '/Project-2.webp',
   },
   {
@@ -97,11 +97,11 @@ export const projects = [
     image: '/Project-3.webp',
   },
   {
-    title: 'DinoNN',
+    title: 'Docses',
     description:
-      'Python script that launches a Chrome browser, generates multiple agents (neural networks) to compete for top scores in Dino game, identifies the most successful agent, and mutates its genes to spawn a new generation of agents.',
+      'Energize users by enabling them to effortlessly upload PDF documents, extract concise content summaries, and engage in collaborative discussions through our innovative web application, fostering enhanced information sharing and productivity.',
     tags: '',
-    link: 'https://github.com/Olacdy/DinoNN',
+    link: 'https://github.com/Olacdy/docses',
     image: '/Project-4.webp',
   },
 ];

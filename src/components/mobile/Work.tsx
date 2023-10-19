@@ -48,7 +48,7 @@ const WorkMobile = () => {
       <div className='flex flex-col items-center justify-center pt-16'>
         <div className='relative'>
           <Image
-            className='pointer-events-none'
+            className='shadow-lg pointer-events-none rounded-xl'
             src={projects[1].image}
             alt='Project 2 image'
             width={320}
