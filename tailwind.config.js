@@ -31,7 +31,7 @@ module.exports = {
         'battleship-gray': '#8E8D89',
       },
       backgroundImage: {
-        'oleg-d': "url('/Oleg-D.webp')",
+        'oleg-d': "url('/Full-Stack-Portfolio/Oleg-D.webp')",
       },
       keyframes: {
         'accordion-down': {
