@@ -78,7 +78,7 @@ export const projects = [
       "A collection of Frontend Mentor tasks I've solved and deployed on GitHub Pages. Utilizing the Next router, I've harmoniously integrated all pages into one cohesive website, dedicating a unique page to each solution. Dive into this exhibit of my technical skills and creative design.",
     tags: '',
     link: 'https://olacdy.github.io/frontend-mentor-challenges/',
-    image: '/Project-1.webp',
+    image: '/Full-Stack-Portfolio/Project-1.webp',
   },
   {
     title: 'CheckMate',
@@ -86,7 +86,7 @@ export const projects = [
       'Revolutionize data validation with our user-friendly UI. Generate validation endpoints equipped with authorization keys for instant, real-time validation of all your schemas, ensuring error-free data processing.',
     tags: '',
     link: 'https://checkmate-inky.vercel.app/',
-    image: '/Project-2.webp',
+    image: '/Full-Stack-Portfolio/Project-2.webp',
   },
   {
     title: 'Bellify',
@@ -94,7 +94,7 @@ export const projects = [
       'Telegram bot project – a user-centered hub for tracking preferred YouTube and Twitch channels. Receive instant notifications for new content while benefiting from commerce practices like user agreements, tutorials, and plan upgrades, with payments via Stripe for a seamless experience.',
     tags: '',
     link: 'https://bellify.org/',
-    image: '/Project-3.webp',
+    image: '/Full-Stack-Portfolio/Full-Stack-Portfolio/Project-3.webp',
   },
   {
     title: 'Docses',
@@ -102,7 +102,7 @@ export const projects = [
       'Energize users by enabling them to effortlessly upload PDF documents, extract concise content summaries, and engage in collaborative discussions through our innovative web application, fostering enhanced information sharing and productivity.',
     tags: '',
     link: 'https://github.com/Olacdy/docses',
-    image: '/Project-4.webp',
+    image: '/Full-Stack-Portfolio/Project-4.webp',
   },
 ];
 
@@ -173,7 +173,10 @@ export const about = [
     title: 'Data Science',
     content:
       'My expedition as a software developer commenced with the elegant language of Python. This initial foray into the realm of Data Science set the foundation for my evolving voyage.',
-    image: { src: '/DS.webp', alt: 'Data Science Illustration' },
+    image: {
+      src: '/Full-Stack-Portfolio/DS.webp',
+      alt: 'Data Science Illustration',
+    },
   },
   {
     title: 'Web-development',
